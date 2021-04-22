@@ -1,4 +1,4 @@
-## Hi there 👋
+## Hey there 👋
 
 I'm Gokul, a developer who likes delicious food and games.
 
