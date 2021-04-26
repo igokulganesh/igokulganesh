@@ -5,7 +5,7 @@ I'm Gokul, a developer who likes delicious food and games.
 - 🔭 I’m currently looking for opportunities
 - 🌱 I’m currently learning Data Structures & Algorithm
 - 💬 Ask me about anything [here](https://github.com/igokulganesh/igokulganesh/issues)
-- 📫 How to reach me: [Email](mailto:igokulganesh@gmail.com) or [LinkedIn](https://www.linkedin.com/in/gokulganeshi/)
+- 📫 How to reach me: [Email](mailto:digokkulganesh@gmail.com) or [LinkedIn](https://www.linkedin.com/in/digokkulganesh/)
 - ⚡ Fun fact: I'm a daydreamer 
 <!-- 
 - 👯 I’m looking to collaborate on ...
