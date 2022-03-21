@@ -5,7 +5,7 @@ I'm Gokul, a developer who likes delicious food and games.
 - 🔭 I’m currently looking for opportunities
 - 🌱 I’m currently learning Data Structures & Algorithm
 - 💬 Ask me about anything [here](https://github.com/igokulganesh/igokulganesh/issues)
-- 📫 How to reach me: [Email](mailto:digokkulganesh@gmail.com) or [LinkedIn](https://www.linkedin.com/in/digokkulganesh/)
+- 📫 How to reach me: [Email](mailto:igokulganesh@gmail.com) or [LinkedIn](https://www.linkedin.com/in/igokulganesh/)
 - ⚡ Fun fact: I'm a daydreamer 
 <!-- 
 - 👯 I’m looking to collaborate on ...
@@ -26,16 +26,39 @@ I'm Gokul, a developer who likes delicious food and games.
 
 
 ![Wakatime Week Stats](https://github-readme-stats.vercel.app/api/wakatime?username=igokulganesh&layout=compact&theme=react)
+
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=igokulganesh&layout=compact&theme=react)
+
 -->
 
 ### Stats
 
 ![github stats](https://github-readme-stats.vercel.app/api?username=igokulganesh&show_icons=true&theme=react)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=igokulganesh&layout=compact&theme=react)
+### Profile Links
 
 
+<a href="https://twitter.com/IGokulGanesh">
+  <img align="left" alt="Gokul's Twitter" width="22px" src="https://cdn-icons-png.flaticon.com/512/124/124021.png" />
+</a>
+<a href="https://www.linkedin.com/in/igokulganesh/">
+  <img align="left" alt="Gokul's Linkdein" width="22px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
+</a>
+<a href="https://www.instagram.com/igokulganesh/">
+  <img align="left" alt="Gokul's Instagram" width="22px" src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" />
+</a>
+<a href="https://www.youtube.com/channel/UCBm7Eg2p8O8pImOrv8Udu3A/featured">
+  <img align="left" alt="Gokul's Youtube" width="22px" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" />
+</a>
+<a href="https://leetcode.com/igokulganesh/">
+  <img align="left" alt="Gokul's Leetcode" width="22px" src="https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png" />
+</a>
+<a href="https://leetcode.com/igokulganesh/">
+  <img align="left" alt="Gokul's Facebook" width="22px" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" />
+</a>
 
+<br/><br/>
 
 
 <!--
