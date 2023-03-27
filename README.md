@@ -1,16 +1,15 @@
 ## Hey there 👋
 
-I'm Gokul, a developer who likes delicious food and games.
+I'm Gokul, a developer who loves learning new technologies and solving complex problems.
 
 - 🔭 I’m currently looking for opportunities
 - 🌱 I’m currently learning Data Structures & Algorithm
 - 💬 Ask me about anything [here](https://github.com/igokulganesh/igokulganesh/issues)
 - 📫 How to reach me: [Email](mailto:igokulganesh@gmail.com) or [LinkedIn](https://www.linkedin.com/in/igokulganesh/)
-- ⚡ Fun fact: I'm a daydreamer 
+- 👯 I'm looking to collaborate on Blockchain, Cryptography, and Rust projects
 <!-- 
-- 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
-
+- ⚡ Fun fact: I'm a daydreamer 
 - 😄 Pronouns: ...
 
 #### Languages & Tools
