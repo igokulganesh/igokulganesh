@@ -1,0 +1,89 @@
+.hero {
+    background-color: #f8f8f8;
+    margin: auto;
+    padding: 8rem 1rem 0 1rem;
+    width: 100%;
+}
+
+.hero .container {
+    width: 1240px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.H2 {
+    font-size: 3rem;
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black;
+    animation: typing 2s steps(26, end), blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.hero .col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.hero .col-2 p:first-of-type {
+    margin: 2rem 0;
+}
+
+.hero .col-2 p:nth-child(4) {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.hero button {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width:940px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero .container {
+        width: 100%;
+    }
+
+    .hero .container img {
+        padding: 0rem;
+        width: 90vw;
+    }
+
+    .hero .container .col-2 {
+        padding: 0;
+    }
+
+    .hero button {
+        margin-bottom: 1rem;
+    }
+}
