@@ -1,16 +1,16 @@
 import React from 'react';
 import Contact from './components/Contact';
-import Navbar from './components/Navbar';
 import Resume from './components/Resume';
 import Hero from './components/Hero';
-
+import NavigationBar from "./components/NavigationBar";
+import Experience from './components/Experience';
 
 function App() {
   return (
     <>
-      <Navbar />
+      <NavigationBar />
       <Hero />
-      {/* <NavigationBar /> */}
+      <Experience />
       <Resume />
       <Contact />
     </>

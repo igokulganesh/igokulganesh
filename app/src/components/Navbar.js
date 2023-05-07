@@ -8,18 +8,18 @@ const Navbar = () => {
   const closeMenu = () => setClick(false);
 
   const headers = [
-    { label: "About me", to: "hero" },
-    { label: "Relevant experience", to: "about" },
-    { label: "Personal projects", to: "projects" },
-    { label: "Relevant skills", to: "skills" },
-    { label: "Resume", to: "resume" },
-    { label: "Contact", to: "contact" },
+    { label: "About me", to: "hero", offset: -100 },
+    { label: "Relevant experience", to: "experience", offset: -100 },
+    { label: "Personal projects", to: "projects", offset: -120 },
+    { label: "Relevant skills", to: "skills", offset: -120 },
+    { label: "Resume", to: "resume", offset: -120 },
+    { label: "Contact", to: "contact", offset: -120 },
   ];
 
   const NavItems = headers.map(item => {
     return (
       <li className='my-navItem'>
-        <Link to={item.to} spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu} className="text-50 no-underline cursor-pointer">
+        <Link to={item.to} spy={true} smooth={true} offset={item.offset} duration={0} onClick={closeMenu} className="text-50 no-underline cursor-pointer">
           {item.label}
         </Link>
       </li>

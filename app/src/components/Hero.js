@@ -6,14 +6,14 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <div className="mt-7" id="hero">
-      <div className="grid p-5">
-        <div className="col-5">
-          <img src={igokulganesh} alt="john" height={600} />
+    <div className="hero" id="hero">
+      <div className="container">
+        <div>
+          <img className="image" src={igokulganesh} alt="Gokul Ganesh I" height={600} />
         </div>
-        <div className="col-5">
-          <div className="pt-6">
-            <h2 className="mt-6 H2 font-bold">Gokul Ganesh I</h2>
+        <div className="content">
+          <div className="">
+            <h2 className="typing-header font-bold text-bluegray-800">Gokul Ganesh I</h2>
             <p className="font-light">
               Software Engineer of Secure Product Groups at Microchip
             </p>
@@ -29,17 +29,18 @@ function Hero() {
             </p>
             <SocialMedia />
             <Link
-              to="resume"
+              to="experience"
               spy={true}
               smooth={true}
               offset={-120}
-              duration={500}
+              duration={50}
             >
               <button className="button">Explore More</button>
             </Link>
           </div>
         </div>
       </div>
+      {/* What I do? */}
     </div>
   );
 }
