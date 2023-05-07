@@ -2,13 +2,13 @@ import React from 'react';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Hero from './components/Hero';
-import NavigationBar from "./components/NavigationBar";
+import Navbar from './components/Navbar';
 import Experience from './components/Experience';
 
 function App() {
   return (
     <>
-      <NavigationBar />
+      <Navbar />
       <Hero />
       <Experience />
       <Resume />
