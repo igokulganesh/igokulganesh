@@ -110,7 +110,7 @@ function Experience() {
 
   return (
     <div className="card m-5" id="experience">
-      <h2 className="section-title m-3">Experience</h2>
+      <h4 className="m-3">Experience</h4>
       {
         experience.map((exp, index) => {
 
