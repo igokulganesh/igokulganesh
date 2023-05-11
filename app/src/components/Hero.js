@@ -34,8 +34,8 @@ function Hero() {
                 to="experience"
                 spy={true}
                 smooth={true}
-                offset={-120}
-                duration={50}
+                offset={-70}
+                duration={10}
               >
                 <button className="button">Explore More</button>
               </Link>

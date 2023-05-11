@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const headers = [
     { label: "About me", to: "hero", offset: -100 },
-    { label: "Relevant experience", to: "experience", offset: -100 },
+    { label: "Relevant experience", to: "experience", offset: -70 },
     { label: "Personal projects", to: "projects", offset: -120 },
     { label: "Relevant skills", to: "skills", offset: -120 },
     { label: "Resume", to: "resume", offset: -120 },

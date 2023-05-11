@@ -107,47 +107,48 @@ function roles(role) {
 }
 
 function Experience() {
-
   return (
-    <div className="card m-5" id="experience">
-      <h4 className="m-3">Experience</h4>
-      {
-        experience.map((exp, index) => {
+    <div id="experience" className='bg-green-50 p-5'>
+      <div className="card" >
+        <h4 className="m-3">Experience</h4>
+        {
+          experience.map((exp, index) => {
 
-          const duration = calculateDuration(exp.startDate, exp.endDate);
+            const duration = calculateDuration(exp.startDate, exp.endDate);
 
-          return (
-            <div key={exp.company}>
-              <div className="grid card-container gap-3">
-                <div className="col-1">
-                  <div className="flex align-content-center justify-content-center flex-wrap card-container">
-                    <a href={exp?.link} target="_blank" rel="noreferrer">
-                      <img src={exp?.logo} align="left" alt={exp?.company} width="75px" className='align-items-center  ml-5 mt-3' />
-                    </a>
+            return (
+              <div key={exp.company}>
+                <div className="grid card-container gap-3">
+                  <div className="col-1">
+                    <div className="flex align-content-center justify-content-center flex-wrap card-container">
+                      <a href={exp?.link} target="_blank" rel="noreferrer">
+                        <img src={exp?.logo} align="left" alt={exp?.company} width="75px" className='align-items-center  ml-5 mt-3' />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col m-2">
+                    <h3 className="text-lg font-bold">
+                      <a href={exp?.link} target="_blank" rel="noreferrer" className='no-underline text-bluegray-700'>
+                        {exp.company}
+                      </a>
+                    </h3>
+                    <p className='text-sm text-gray-700'>
+                      {exp.roles.length > 1 ? <>{duration}<br /></> : ""}
+                      {exp.location}
+                    </p>
                   </div>
                 </div>
-                <div className="col m-2">
-                  <h3 className="text-lg font-bold">
-                    <a href={exp?.link} target="_blank" rel="noreferrer" className='no-underline text-bluegray-700'>
-                      {exp.company}
-                    </a>
-                  </h3>
-                  <p className='text-sm text-gray-700'>
-                    {exp.roles.length > 1 ? <>{duration}<br /></> : ""}
-                    {exp.location}
-                  </p>
+                <div className='flex' style={{ width: "100%" }}>
+                  <Timeline className='timeline' value={exp.roles} content={roles} />
                 </div>
+                {
+                  (index !== experience.length - 1) ? <Divider /> : <></>
+                }
               </div>
-              <div className='flex' style={{ width: "100%" }}>
-                <Timeline className='timeline' value={exp.roles} content={roles} />
-              </div>
-              {
-                (index !== experience.length - 1) ? <Divider /> : <></>
-              }
-            </div>
-          );
-        })
-      }
+            );
+          })
+        }
+      </div>
     </div>
   );
 };

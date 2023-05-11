@@ -21,13 +21,13 @@ function Skills() {
   ]
 
   return (
-    <div id="skills" className="card m-5">
+    <div id="skills" className="bg-blue-50 card m-5">
       <h4 className="mt-3 flex align-items-center justify-content-center">Technical Expertise</h4>
       <div className="grid m-3 gap-3 flex align-items-center justify-content-center">
         {
           skills.map(skill => {
             return (
-              <div className="card p-3 align-items-center justify-content-center  h-15rem" key={skill.group}>
+              <div className="card p-3 align-items-center justify-content-center h-15rem w-20rem p-card shadow-3 PopCard" key={skill.group}>
                 <div className="m-2 flex font-medium text-lg text-gray-800">
                   {skill.group}
                 </div>
