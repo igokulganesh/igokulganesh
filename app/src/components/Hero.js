@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import SocialMedia from "./SocialMedia";
 import igokulganesh from "../assets/images/igokulganesh.png";
+import resume from "../assets/Gokul Ganesh I (Resume).pdf"
 import "./Hero.css";
 
 function Hero() {
@@ -28,15 +29,20 @@ function Hero() {
               collaborate for exciting opportunities!
             </p>
             <SocialMedia />
-            <Link
-              to="experience"
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={50}
-            >
-              <button className="button">Explore More</button>
-            </Link>
+            <div className="flex gap-3">
+              <Link
+                to="experience"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={50}
+              >
+                <button className="button">Explore More</button>
+              </Link>
+              <a href={resume} download="Gokul Ganesh I (Resume)">
+                <button className="download bg-primary-reverse">Download Resume</button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

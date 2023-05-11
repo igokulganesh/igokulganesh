@@ -69,6 +69,45 @@
     margin-top: 1rem;
 }
 
+.button {
+    padding: 17px 28px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+button:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
+}
+
+.download {
+    padding: 17px 28px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.download:hover {
+    background: var(--primary-dark);
+    color: var(--primary-dark) !important;
+    background-color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
 @media screen and (max-width:940px) {
     .hero .container {
         grid-template-columns: 1fr;
