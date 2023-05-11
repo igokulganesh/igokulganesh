@@ -27,7 +27,7 @@ function Skills() {
         {
           skills.map(skill => {
             return (
-              <div className="card p-3 align-items-center justify-content-center" key={skill.group}>
+              <div className="card p-3 align-items-center justify-content-center  h-15rem" key={skill.group}>
                 <div className="m-2 flex font-medium text-lg text-gray-800">
                   {skill.group}
                 </div>
