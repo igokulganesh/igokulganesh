@@ -21,7 +21,7 @@ function Skills() {
   ]
 
   return (
-    <div id="skills" className="bg-blue-50 card m-5">
+    <div id="skills" className="bg-blue-50 card m-5" style={{ minHeight: "75vh" }}>
       <h4 className="mt-3 flex align-items-center justify-content-center">Technical Expertise</h4>
       <div className="grid m-3 gap-3 flex align-items-center justify-content-center">
         {
