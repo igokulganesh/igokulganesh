@@ -1,9 +1,14 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import CopyPlugin from 'copy-webpack-plugin';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+const webpackConfig = () => ({
   entry: './src/index.js',
+  devtool: 'eval-source-map',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   output: {
     publicPath: 'auto',
     path: path.resolve(__dirname, '..', 'dist'),
@@ -22,7 +27,7 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: ['style-loader', 'css-loader'],
       },
       {
@@ -54,21 +59,28 @@ module.exports = {
         use: ['file-loader?name=[name].[ext]']
       },
       {
-        test: /\.(yaml|yml)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'js-yaml-loader'
-          }
-        ]
+        test: /\.pdf$/,
+        use: ['file-loader'],
       },
     ],
+  },
+  devServer: {
+    port: 3000,
+    open: true,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      favicon: './public/favicon.ico',
+      manifest: './public/manifest.json',
       filename: 'index.html',
       inject: 'body',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.PRODUCTION': true,
+      'process.env.NAME': JSON.stringify(require('./package.json').name),
+      'process.env.VERSION': JSON.stringify(require('./package.json').version),
     }),
     new CopyPlugin({
       patterns: [
@@ -76,4 +88,6 @@ module.exports = {
       ]
     }),
   ],
-};
+});
+
+export default webpackConfig;
