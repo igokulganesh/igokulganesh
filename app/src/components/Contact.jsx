@@ -3,6 +3,7 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { InputTextarea } from 'primereact/inputtextarea';
 import SocialMedia from "./SocialMedia";
+import { ScrollTop } from 'primereact/scrolltop';
 
 
 function Contact() {
@@ -55,6 +56,7 @@ function Contact() {
           </div>
         </form>
       </div>
+      <ScrollTop />
     </div>
   );
 }
