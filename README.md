@@ -3,7 +3,7 @@
 I'm Gokul, a developer who loves learning new technologies and solving complex problems.
 
 - 🔭 I’m currently looking for opportunities
-- 🌱 I’m currently learning Data Structures & Algorithm
+- 🌱 I’m currently learning Cryptography & Blockchain technology
 - 💬 Ask me about anything [here](https://github.com/igokulganesh/igokulganesh/issues)
 - 📫 How to reach me: [Email](mailto:igokulganesh@gmail.com) or [LinkedIn](https://www.linkedin.com/in/igokulganesh/)
 - 👯 I'm looking to collaborate on Blockchain, Cryptography, and Rust projects
