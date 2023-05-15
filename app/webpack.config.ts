@@ -60,7 +60,14 @@ const webpackConfig = () => ({
       },
       {
         test: /\.pdf$/,
-        use: ['file-loader'],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
+          },
+        ],
       },
     ],
   },
