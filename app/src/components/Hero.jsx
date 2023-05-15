@@ -39,7 +39,7 @@ function Hero() {
               >
                 <button className="button">Explore More</button>
               </Link>
-              <a href={resume} download="Gokul Ganesh I (Resume)">
+              <a href={resume} download="Gokul Ganesh I (Resume)" target="_blank" rel="noopener noreferrer">
                 <button className="download bg-primary-reverse">Download Resume</button>
               </a>
             </div>
