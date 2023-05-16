@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import './Navbar.css';
+import '../assets/css/Navbar.css';
 
 const Navbar = () => {
   const [dropDownShow, setDropDown] = useState(false);

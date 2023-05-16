@@ -3,7 +3,7 @@ import { Timeline } from 'primereact/timeline';
 import { Divider } from 'primereact/divider';
 import microchip from "../assets/images/microchip.png";
 import zoho from "../assets/images/zoho.png";
-import './Experience.css';
+import '../assets/css/Experience.css';
 
 
 const experience = [
