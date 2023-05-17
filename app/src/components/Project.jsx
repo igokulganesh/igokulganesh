@@ -1,11 +1,14 @@
 import React from 'react';
+import { Card } from 'primereact/card';
+import { Button } from 'primereact/button';
 import ftp from "../assets/images/FTP.png";
-import connect4 from "../assets/images/connect4.png";
+import connect4 from "../assets/images/connect4.jpg";
 import exam from "../assets/images/exam.png"
 
 const projects = [
   {
     title: "Multithreaded File Transfer",
+    subTitle: "File Transfer Protocol using Multithreads concept in Java",
     description:
       `Multithreaded file transfer is a technique that uses multiple threads to copy files
       from one location to another. This can significantly improve the speed of file transfer,
@@ -18,6 +21,7 @@ const projects = [
   },
   {
     title: "Connect Four Game",
+    subTitle: "Classic Connect Four Game: Compete with Friends and AI Opponents",
     description:
       `Connect four is a two player connection board game, in which the players choose a color
       and then take turns dropping colored discs into a seven-column, six-row vertically suspended grid.
@@ -29,6 +33,7 @@ const projects = [
   },
   {
     title: "EasyExam",
+    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
     description:
       `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
     in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
@@ -42,20 +47,48 @@ const projects = [
 
 
 function Project() {
+
+
+
+  const ProjectCard = ({ project }) => {
+
+    const header = (
+      <img alt={project.title} src={project.img} style={{ maxHeight: "200px" }} />
+    );
+
+    const footer = (
+      <div className="flex flex-wrap justify-content-end">
+        <a href={project.link} className=' no-underline text-white' target="_blank" rel="noreferrer">
+          <Button icon="pi pi-arrow-up-right" size="small" />
+        </a>
+      </div>
+    );
+
+    return (
+      <div className="flex justify-content-center m-3">
+        <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="md:w-25rem">
+          <p className="m-0">
+            {project.description}
+          </p>
+        </Card>
+      </div>
+    );
+  }
+
   return (
     <div id="projects" className='bg-blue-900 p-5' style={{ minHeight: "96vh" }}>
       <h3 className='text-white'>Projects</h3>
       <div className='card'></div>
-      <div className='p-card'>
+      <div className='grid'>
         {
           projects.map(project => (
-            <div className='p-card'>
-              <h1>{project.title}</h1>
-              <p>{project.description}</p>
+            <div className='col-auto'>
+              <ProjectCard project={project} />
             </div>
           ))
         }
       </div>
+
     </div>
   );
 }
