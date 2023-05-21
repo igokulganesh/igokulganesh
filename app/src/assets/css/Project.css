@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.elements {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element {
+    margin-right: 10px;
+    /* Add some space between elements */
+}
+
+.button-container {
+    margin-left: auto;
+    /* Push the button to the right */
+}

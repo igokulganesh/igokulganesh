@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-scroll";
 import SocialMedia from "./SocialMedia";
 import igokulganesh from "../assets/images/igokulganesh.png";
-import resume from "../assets/Gokul Ganesh I (Resume).pdf"
-import "./Hero.css";
+import resume from "../assets/Gokul Ganesh I (Resume).pdf";
+import "../assets/css/Hero.css";
 
 function Hero() {
   return (
@@ -39,7 +39,7 @@ function Hero() {
               >
                 <button className="button">Explore More</button>
               </Link>
-              <a href={resume} download="Gokul Ganesh I (Resume)">
+              <a href={resume} download="Gokul Ganesh I (Resume)" target="_blank" rel="noopener noreferrer">
                 <button className="download bg-primary-reverse">Download Resume</button>
               </a>
             </div>

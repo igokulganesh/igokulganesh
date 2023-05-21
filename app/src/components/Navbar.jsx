@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import './Navbar.css';
+import '../assets/css/Navbar.css';
 
 const Navbar = () => {
   const [dropDownShow, setDropDown] = useState(false);
@@ -10,9 +10,9 @@ const Navbar = () => {
   const headers = [
     { label: "About me", to: "hero", offset: -100 },
     { label: "Relevant experience", to: "experience", offset: -70 },
-    { label: "Relevant skills", to: "skills", offset: -120 },
-    { label: "Personal projects", to: "projects", offset: -120 },
-    { label: "Contact", to: "contact", offset: -120 },
+    { label: "Relevant skills", to: "skills", offset: -100 },
+    { label: "Personal projects", to: "projects", offset: -90 },
+    { label: "Contact", to: "contact", offset: -90 },
   ];
 
   const NavItems = headers.map(item => {
