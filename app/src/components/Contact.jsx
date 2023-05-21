@@ -34,7 +34,7 @@ function Contact() {
           <h2 className='mt-5 flex justify-content-center align-items-center font-bold'>Let's Connect</h2>
         </div>
         <div className='flex justify-content-center'>
-          <p className='justify-content-center align-items-center'>Please fill out the form below to convey your message.</p>
+          <p className='justify-content-center align-items-center'>Write me an email</p>
         </div>
         <div className='flex justify-content-center'>
           <SocialMedia />

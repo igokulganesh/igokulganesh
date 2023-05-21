@@ -3,7 +3,8 @@ import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import ftp from "../assets/images/FTP.png";
 import connect4 from "../assets/images/connect4.jpg";
-import exam from "../assets/images/exam.png"
+import exam from "../assets/images/exam.png";
+import "../assets/css/Project.css";
 
 const projects = [
   {
@@ -17,7 +18,7 @@ const projects = [
       the overall time it takes to complete the transfer.`,
     link: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
     img: ftp,
-    tech: [],
+    tech: ["Java", "Threads"],
   },
   {
     title: "Connect Four Game",
@@ -29,36 +30,38 @@ const projects = [
       The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.`,
     link: "https://igokulganesh.github.io/Connect-Four/computer",
     img: connect4,
-    tech: [],
+    tech: ["JavaScript", "HTML5", "CSS"],
   },
   {
     title: "EasyExam",
     subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
     description:
       `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
-    in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
-    The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
-    be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
+      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
+      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
+      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
     link: "https://github.com/igokulganesh/EasyExam",
     img: exam,
-    tech: []
+    tech: ["Python", "Django", "ML"]
   },
 ];
 
 
 function Project() {
 
-
-
   const ProjectCard = ({ project }) => {
-
     const header = (
       <img alt={project.title} src={project.img} style={{ maxHeight: "200px" }} />
     );
 
     const footer = (
-      <div className="flex flex-wrap justify-content-end">
-        <a href={project.link} className=' no-underline text-white' target="_blank" rel="noreferrer">
+      <div className="container">
+        <div className='elements'>
+          {
+            project.tech.map((item => (<span className='element p-badge bg-blue-900'>{item}</span>)))
+          }
+        </div>
+        <a href={project.link} className='button-container' target="_blank" rel="noreferrer">
           <Button icon="pi pi-arrow-up-right" size="small" />
         </a>
       </div>
@@ -66,8 +69,8 @@ function Project() {
 
     return (
       <div className="flex justify-content-center m-3">
-        <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="md:w-25rem">
-          <p className="m-0">
+        <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="w-25rem shadow-6">
+          <p className="m-0 overflow-auto" style={{ height: "200px" }}>
             {project.description}
           </p>
         </Card>
@@ -76,7 +79,7 @@ function Project() {
   }
 
   return (
-    <div id="projects" className='bg-blue-900 p-5' style={{ minHeight: "96vh" }}>
+    <div id="projects" className='p-5' style={{ backgroundColor: "#071a33" }}>
       <h3 className='text-white'>Projects</h3>
       <div className='card'></div>
       <div className='grid'>
@@ -88,7 +91,11 @@ function Project() {
           ))
         }
       </div>
-
+      <div className='flex align-content-center justify-content-center'>
+        <a href="https://github.com/igokulganesh?tab=repositories" target="_blank" rel="noreferrer">
+          <Button label='View All Projects' outlined className='text-white' />
+        </a>
+      </div>
     </div>
   );
 }
