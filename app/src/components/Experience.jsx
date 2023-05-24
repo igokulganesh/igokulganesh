@@ -79,13 +79,19 @@ const experience = [
     startDate: new Date(2021, 5, 1),
     endDate: new Date(2021, 7, 1),
     link: "https://www.zoho.com/",
+    description: (undefined),
     roles: [
       {
         title: "Summer Internship",
         startDate: new Date(2021, 5, 1),
         endDate: new Date(2021, 7, 1),
         skills: ["Java", "Object-Oriented Programming (OOP)", "Database Design"],
-        description: "",
+        description: (
+          <p>
+            Completed the internship program offered by Zoho Corporation,
+            during which I developed a banking application using Java and PostgreSql
+          </p>
+        ),
       },
     ],
   },
@@ -119,6 +125,28 @@ function calculateDuration(startDate, endDate) {
   return duration;
 }
 
+function Description({ description }) {
+  const [toggle, setToggle] = useState(false);
+  return (
+    <>
+      {
+        description && (
+          <Button
+            label={toggle ? "View less" : "View more"}
+            onClick={() => setToggle(!toggle)}
+            size='small'
+            className='mb-3 p-button-text more-button'
+            icon={toggle ? "pi pi-angle-up" : "pi pi-angle-down"} iconPos='right'
+          />
+        )
+      }
+      {
+        toggle ? description : <></>
+      }
+    </>
+  );
+}
+
 function Roles({ role }) {
 
   const duration = calculateDuration(role.startDate, role.endDate);
@@ -131,8 +159,6 @@ function Roles({ role }) {
 
   const timeLine = `${startDate} - ${endDate} · ${duration}`;
 
-  const [toggle, setToggle] = useState(false);
-
   return (
     <div style={{ width: "200%" }} key={role.title}>
       <h6>{role.title}</h6>
@@ -143,20 +169,7 @@ function Roles({ role }) {
         <span className='font-medium'>Skills:</span>
         {role.skills.map((skill, index) => ` ${skill} ${index !== role.skills.length - 1 ? " · " : ""}`)}
       </p>
-      {
-        role?.description && (
-          <Button
-            label={toggle ? "View less" : "View more"}
-            onClick={() => setToggle(!toggle)}
-            size='small'
-            className='mb-3 p-button-text more-button'
-            icon={toggle ? "pi pi-angle-up" : "pi pi-angle-down"} iconPos='right'
-          />
-        )
-      }
-      {
-        toggle ? role.description : <></>
-      }
+      <Description description={role?.description} />
     </div>
   );
 }
@@ -195,6 +208,9 @@ function Experience() {
                 </div>
                 <div className='flex' style={{ width: "100%" }}>
                   <Timeline className='timeline' value={exp.roles} content={(item) => <Roles role={item} />} />
+                </div>
+                <div className='card-container ml-5'>
+                  <Description description={exp?.description} />
                 </div>
                 {
                   (index !== experience.length - 1) ? <Divider /> : <></>
