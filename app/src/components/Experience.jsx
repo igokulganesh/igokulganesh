@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Timeline } from 'primereact/timeline';
 import { Divider } from 'primereact/divider';
+import { Button } from 'primereact/button';
 import microchip from "../assets/images/microchip.png";
 import zoho from "../assets/images/zoho.png";
 import '../assets/css/Experience.css';
@@ -20,7 +21,47 @@ const experience = [
         startDate: new Date(2022, 8, 1),
         endDate: new Date(),
         skills: ["C", "Embedded C", "Python", "Cryptography", "React JS"],
-        description: "",
+        description: (
+          <div>
+            <p>I have been working on Trust Platform Design Suit (TPDS) Application and CryptoAuthLib within the Secure Product Groups.
+            </p>
+            <b>Responsibilities includes:</b>
+            <ul className='list-disc'>
+              <li>
+                Development of Trust Platform Design Suite (TPDS) using Python and React applications to
+                demonstrate Crypto product features and usage.
+              </li>
+              <li>
+                Development of library support for Microchip Crypto Products.
+              </li>
+              <li>
+                Development of Secure Provisioning Services for Microchip Crypto Products through TPDS.
+              </li>
+            </ul>
+            <b>Projects executed/executing:</b>
+            <ul className='list-disc'>
+              <li>Developed WPC (Wireless Power Consortium) Qi 1.3 application usecase and firmware project for
+                Microchip secure elements using Python, C, Reactjs and cryptographic library.</li>
+              <li>Created Symmetric and Asymmetric Authentication use cases for Secure Devices</li>
+              <li>
+                Design and developed various utility tools for the TPDS Application to support factory programming for
+                microchip boards, an X509 certificate parser, and a Microchip manifest file decoder.
+              </li>
+              <li>
+                Developed the Configurators to Generate the Provisioning Package for Secure Provisioning Services.
+              </li>
+              <li>
+                Added support for Proto Provisioning the Microchip secure devices in the TPDS Application.
+
+              </li>
+              <li>
+                Enhanced the user experience by integrating Redux and Formik for state management and
+                streamlining user forms.
+              </li>
+              <li>Added Package manager to the TPDS Application for managing the installation of packages.</li>
+            </ul>
+          </div>
+        ),
       },
       {
         title: "Intern",
@@ -38,13 +79,19 @@ const experience = [
     startDate: new Date(2021, 5, 1),
     endDate: new Date(2021, 7, 1),
     link: "https://www.zoho.com/",
+    description: (undefined),
     roles: [
       {
         title: "Summer Internship",
         startDate: new Date(2021, 5, 1),
         endDate: new Date(2021, 7, 1),
         skills: ["Java", "Object-Oriented Programming (OOP)", "Database Design"],
-        description: "",
+        description: (
+          <p>
+            Completed the internship program offered by Zoho Corporation,
+            during which I developed a banking application using Java and PostgreSql
+          </p>
+        ),
       },
     ],
   },
@@ -78,7 +125,29 @@ function calculateDuration(startDate, endDate) {
   return duration;
 }
 
-function roles(role) {
+function Description({ description }) {
+  const [toggle, setToggle] = useState(false);
+  return (
+    <>
+      {
+        description && (
+          <Button
+            label={toggle ? "View less" : "View more"}
+            onClick={() => setToggle(!toggle)}
+            size='small'
+            className='mb-3 p-button-text more-button'
+            icon={toggle ? "pi pi-angle-up" : "pi pi-angle-down"} iconPos='right'
+          />
+        )
+      }
+      {
+        toggle ? description : <></>
+      }
+    </>
+  );
+}
+
+function Roles({ role }) {
 
   const duration = calculateDuration(role.startDate, role.endDate);
   const startMonth = role.startDate.toLocaleString('default', { month: 'short' });
@@ -88,20 +157,19 @@ function roles(role) {
   const startDate = `${startMonth} ${startYear}`;
   const endDate = ((endMonth !== new Date().getMonth() && endYear !== new Date().getFullYear()) ? `${endMonth} ${endYear}` : "Present");
 
-  const timeLine = `${startDate} - ${endDate} · ${duration}`
+  const timeLine = `${startDate} - ${endDate} · ${duration}`;
 
   return (
-    <div style={{ width: "200%" }}>
+    <div style={{ width: "200%" }} key={role.title}>
       <h6>{role.title}</h6>
       <p className='text-sm text-gray-700'>
         {timeLine}
       </p>
-      {role.description}
       <p>
         <span className='font-medium'>Skills:</span>
         {role.skills.map((skill, index) => ` ${skill} ${index !== role.skills.length - 1 ? " · " : ""}`)}
       </p>
-      <br />
+      <Description description={role?.description} />
     </div>
   );
 }
@@ -139,7 +207,10 @@ function Experience() {
                   </div>
                 </div>
                 <div className='flex' style={{ width: "100%" }}>
-                  <Timeline className='timeline' value={exp.roles} content={roles} />
+                  <Timeline className='timeline' value={exp.roles} content={(item) => <Roles role={item} />} />
+                </div>
+                <div className='card-container ml-5'>
+                  <Description description={exp?.description} />
                 </div>
                 {
                   (index !== experience.length - 1) ? <Divider /> : <></>

@@ -58,7 +58,7 @@ function Project() {
       <div className="container">
         <div className='elements'>
           {
-            project.tech.map((item => (<span className='element p-badge bg-blue-900'>{item}</span>)))
+            project.tech.map((item => (<span className='element p-badge bg-blue-900' key={item}>{item}</span>)))
           }
         </div>
         <a href={project.link} className='button-container' target="_blank" rel="noreferrer">
@@ -85,7 +85,7 @@ function Project() {
       <div className='grid'>
         {
           projects.map(project => (
-            <div className='col-auto'>
+            <div className='col-auto' key={project.title}>
               <ProjectCard project={project} />
             </div>
           ))
