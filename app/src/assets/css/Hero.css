@@ -1,5 +1,4 @@
 .hero {
-    background-color: #f8f8f8;
     margin: auto;
     padding: 8rem 1rem 0 1rem;
     width: 100%;
@@ -74,8 +73,8 @@
     font-size: 1.2rem;
     color: #fff;
     font-weight: 600;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 4px;
     cursor: pointer;
 }
@@ -86,7 +85,7 @@
 }
 
 button:active {
-    background-color: #3e8e41;
+    background-color: #0b29481a;
     transform: translateY(4px);
 }
 

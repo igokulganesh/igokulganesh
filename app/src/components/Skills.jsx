@@ -21,13 +21,13 @@ function Skills() {
   ]
 
   return (
-    <div id="skills" className="bg-blue-50 card m-5" style={{ minHeight: "75vh" }}>
-      <h4 className="mt-6 mb-3 flex align-items-center justify-content-center font-bold">Technical Expertise</h4>
+    <div id="skills" className="card m-5" style={{ minHeight: "75vh" }}>
+      <h4 className="mt-6 mb-3 flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Skills</h4>
       <div className="grid gap-3 m-4 justify-content-center" >
         {
           skills.map(skill => {
             return (
-              <div className="col-4 card p-3 align-items-center justify-content-center p-card shadow-3 PopCard" key={skill.group} style={{ minHeight: "300px", maxWidth: "350px", minWidth: "240px" }}>
+              <div className="col-4 card p-3 align-items-center justify-content-center p-card shadow-3 PopCard bg-blue-50" key={skill.group} style={{ minHeight: "300px", maxWidth: "350px", minWidth: "240px" }}>
                 <div className="m-2 flex font-medium text-lg text-gray-800">
                   {skill.group}
                 </div>

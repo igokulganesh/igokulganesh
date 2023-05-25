@@ -79,10 +79,9 @@ function Project() {
   }
 
   return (
-    <div id="projects" className='p-5' style={{ backgroundColor: "#071a33" }}>
-      <h3 className='text-white'>Projects</h3>
-      <div className='card'></div>
-      <div className='grid'>
+    <div id="projects" className='p-5 pt-0 pb-0'>
+      <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Personal Projects</h3>
+      <div className='grid align-content-center justify-content-center'>
         {
           projects.map(project => (
             <div className='col-auto' key={project.title}>
@@ -93,9 +92,10 @@ function Project() {
       </div>
       <div className='flex align-content-center justify-content-center'>
         <a href="https://github.com/igokulganesh?tab=repositories" target="_blank" rel="noreferrer">
-          <Button label='View All Projects' outlined className='text-white' />
+          <Button label='View All Projects' outlined />
         </a>
       </div>
+      <div className='card mt-6'></div>
     </div>
   );
 }
