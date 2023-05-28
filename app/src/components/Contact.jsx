@@ -64,7 +64,7 @@ function Contact() {
       <div className='flex justify-content-center mt-5'>
         <SocialMedia />
       </div>
-      <p className='flex justify-content-center text-blue-900 text-sm mt-1 font-semibold'>Check out my profiles on these platforms</p>
+      <p className='flex justify-content-center text-sm mt-1 font-medium'>Check out my profiles on these platforms</p>
       <ScrollTop />
     </div>
   );
