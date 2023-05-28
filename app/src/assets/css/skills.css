@@ -1,7 +1,24 @@
 .swiper-slide {
     text-align: center;
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Custom CSS for Swiper */
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.swiper-button-next {
+    right: 0px;
+    content: url(../images/icons/right-arrow.svg);
+}
+
+.swiper-button-prev {
+    left: 30px;
+    content: url(../images/icons/left-arrow.svg);
 }
