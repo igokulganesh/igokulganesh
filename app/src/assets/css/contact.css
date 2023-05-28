@@ -1,0 +1,43 @@
+.responsive-image {
+    height: 200px;
+    /* Default width for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .responsive-image {
+        height: 300px;
+        /* Adjusted width for screens larger than 768px */
+    }
+}
+
+@media (min-width: 1200px) {
+    .responsive-image {
+        height: 300px;
+        /* Adjusted width for screens larger than 1200px */
+    }
+}
+
+.responsive-textarea {
+    width: 20rem;
+    resize: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .responsive-textarea {
+        width: 25rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .responsive-textarea {
+        width: 30rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}

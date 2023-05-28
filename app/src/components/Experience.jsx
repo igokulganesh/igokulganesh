@@ -167,7 +167,7 @@ function Roles({ role }) {
       </p>
       <p>
         <span className='font-medium text-black-alpha-90'>Skills:</span>
-        {role.skills.map((skill, index) => <span className='text-black-alpha-90'>{` ${skill} ${index !== role.skills.length - 1 ? " · " : ""}`}</span>)}
+        {role.skills.map((skill, index) => <span className='text-black-alpha-90' key={skill}>{` ${skill} ${index !== role.skills.length - 1 ? " · " : ""}`}</span>)}
       </p>
       <Description description={role?.description} />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/socialMedia.css";
 
 function SocialMedia() {
   const socialLinks = [
@@ -51,11 +52,11 @@ function SocialMedia() {
   ];
 
   return (
-    <div className="flex m-2">
+    <div className="grid gap-2">
       {socialLinks.map((item) => {
         return (
-          <a href={item.link} className="m-2" alt={`Gokul's ${item.code}`} key={item.code} target="_blank" rel="noreferrer">
-            <img align="left" alt={item?.alt} width="30px" src={item.image} />
+          <a href={item.link} className="col-auto " alt={`Gokul's ${item.code}`} key={item.code} target="_blank" rel="noreferrer">
+            <img align="left" alt={item?.alt} className="logo-img" src={item.image} />
           </a>
         );
       })}
