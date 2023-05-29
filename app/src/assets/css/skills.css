@@ -19,6 +19,63 @@
 }
 
 .swiper-button-prev {
-    left: 30px;
+    left: 0px;
     content: url(../images/icons/left-arrow.svg);
+}
+
+.skill-card-width {
+    width: 200px;
+    /* Default width for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .skill-card-width {
+        width: 400px;
+        /* Adjusted width for screens larger than 768px */
+    }
+}
+
+@media (min-width: 1200px) {
+    .skill-card-width {
+        width: 400px;
+        /* Adjusted width for screens larger than 1200px */
+    }
+}
+
+.skill-card-height {
+    height: 400px;
+    /* Default width for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .skill-card-height {
+        height: 250px;
+        /* Adjusted width for screens larger than 768px */
+    }
+}
+
+@media (min-width: 1200px) {
+    .skill-card-height {
+        height: 250px;
+        /* Adjusted width for screens larger than 1200px */
+    }
+}
+
+.skill-outer-width {
+    width: 350px;
+    /* Default width for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .skill-outer-width {
+        width: 650px;
+        /* Adjusted width for screens larger than 768px */
+    }
+}
+
+@media (min-width: 1200px) {
+    .skill-outer-width {
+        width: 650px;
+        /* Adjusted width for screens larger than 1200px */
+    }
 }

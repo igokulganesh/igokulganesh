@@ -177,7 +177,7 @@ function Roles({ role }) {
 function Experience() {
   return (
     <div id="experience" className='p-5'>
-      <div className="card" >
+      <div className="card">
         <h4 className="mt-6 mb-3 flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Experience</h4>
         {
           experience.map((exp, index) => {

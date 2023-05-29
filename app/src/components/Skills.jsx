@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from 'primereact/button';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
-import imageSkill from "../assets/images/skills.jpg";
+import imageSkill from "../assets/images/skills.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -44,7 +44,7 @@ function Skills() {
           <img src={imageSkill} alt='skill' height={"100px"} className='responsive-image' />
         </div>
         <div>
-          <div style={{ width: "650px" }} className="">
+          <div className="skill-outer-width">
             <Swiper
               autoplay={{
                 delay: 3500,
@@ -64,9 +64,9 @@ function Skills() {
                 skills.map(skill => {
                   return (
                     <SwiperSlide key={skill.group}>
-                      <div style={{ height: "250px" }} className={`p-5 ml-5 bg-${skill.color}-100`}>
+                      <div className={`p-5 bg-${skill.color}-100 skill-card-height`}>
                         <p className={`flex font-bold text-lg text-${skill.color}-700`}>{skill.group}</p>
-                        <div className="flex flex-wrap gap-2" style={{ width: "400px" }}>
+                        <div className="flex flex-wrap gap-2 skill-card-width">
                           {skill.items.map(item => {
                             return (
                               <div key={item}>
