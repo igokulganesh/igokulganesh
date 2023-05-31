@@ -79,3 +79,10 @@
         /* Adjusted width for screens larger than 1200px */
     }
 }
+
+.MyCard {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}

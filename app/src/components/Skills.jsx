@@ -2,7 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Button } from 'primereact/button';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
-import imageSkill from "../assets/images/skills.png";
+
+/* ******** Image Files ******** */
+import imageSkill from "../assets/images/Skills/skills.png";
+import imgProgram from "../assets/images/Skills/programming.jpg";
+import imgConcept from "../assets/images/Skills/concept.avif";
+import imgWeb from "../assets/images/Skills/web.jpg";
+import imgFrame from "../assets/images/Skills/Frames.jpg";
+import imgTools from "../assets/images/Skills/tool.webp";
+import imgDB from "../assets/images/Skills/db.jpg";
+import imgOS from "../assets/images/Skills/os.jpg";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,13 +21,13 @@ import "swiper/css/navigation";
 import "../assets/css/skills.css";
 
 const skills = [
-  { group: "Programming Languages", color: "blue", items: ["C", "C++", "Python", "Rust", "Java Script", "Java", "SQL"] },
-  { group: "Concepts", color: "green", items: ["Cryptography", "Data Structure", "Algorithm", "Database design", "Object Oriented Programming"] },
-  { group: "Web Designing Languages", color: "red", items: ["React JS", "Redux", "HTML", "CSS", "Jquery", "Bootstrap & Grid System"] },
-  { group: "Frameworks", color: "yellow", items: ["Fast Api", "Django", "Rest Api"] },
-  { group: "Tools & Utilities", color: "teal", items: ["Git", "VS Code", "Visual Studio", "Jira", "Bitbucket", "Shell Script", "Jupyter Notebook"] },
-  { group: "Database System", color: "pink", items: ["PostgreSQL", "MySQL", "MS SQL Server"] },
-  { group: "Operating System", color: "orange", items: ["Linux", "Windows"] },
+  { group: "Programming Languages", color: "blue", bgImg: imgProgram, items: ["C", "C++", "Python", "Rust", "Java Script", "Java", "SQL"] },
+  { group: "Concepts", color: "green", bgImg: imgConcept, items: ["Cryptography", "Data Structure", "Algorithm", "Database design", "Object Oriented Programming"] },
+  { group: "Web Designing Languages", color: "red", bgImg: imgWeb, items: ["React JS", "Redux", "HTML", "CSS", "Jquery", "Bootstrap & Grid System"] },
+  { group: "Frameworks", color: "yellow", bgImg: imgFrame, items: ["Fast Api", "Django", "Rest Api"] },
+  { group: "Tools & Utilities", color: "teal", bgImg: imgTools, items: ["Git", "VS Code", "Visual Studio", "Jira", "Bitbucket", "Shell Script", "Jupyter Notebook"] },
+  { group: "Database System", color: "pink", bgImg: imgDB, items: ["PostgreSQL", "MySQL", "MS SQL Server"] },
+  { group: "Operating System", color: "orange", bgImg: imgOS, items: ["Linux", "Windows"] },
 ];
 
 function Skills() {
@@ -45,6 +55,7 @@ function Skills() {
         </div>
         <div>
           <div className="skill-outer-width">
+            <br />
             <Swiper
               autoplay={{
                 delay: 3500,
@@ -64,13 +75,13 @@ function Skills() {
                 skills.map(skill => {
                   return (
                     <SwiperSlide key={skill.group}>
-                      <div className={`p-5 bg-${skill.color}-100 skill-card-height`}>
-                        <p className={`flex font-bold text-lg text-${skill.color}-700`}>{skill.group}</p>
+                      <div className={`p-5 bg-${skill.color}-900 skill-card-height MyCard`} style={{ backgroundImage: `url(${skill?.bgImg})` }}>
+                        <p className={`flex font-bold text-lg text-${skill.color}-200`}>{skill.group}</p>
                         <div className="flex flex-wrap gap-2 skill-card-width">
                           {skill.items.map(item => {
                             return (
                               <div key={item}>
-                                <Button label={item} raised outlined size="small" className={`text-${skill.color}-500`} />
+                                <Button label={item} raised outlined size="small" className={`text-${skill.color}-300`} />
                               </div>
                             )
                           })}
@@ -81,6 +92,7 @@ function Skills() {
                   );
                 })
               }
+              <br /><br />
             </Swiper>
           </div>
         </div>
