@@ -46,13 +46,13 @@ function Contact() {
           <div className='flex justify-content-center align-content-center flex-wrap'>
             <form className="justify-content-center align-items-center" onSubmit={handleSubmit}>
               <div className=''>
-                <div className="card flex justify-content-center m-3">
+                <div className="card flex justify-content-center">
                   <InputText value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Title' className="responsive-textarea" />
                 </div>
-                <div className="card flex justify-content-center m-3">
+                <div className="card flex justify-content-center mt-2 mb-3">
                   <InputTextarea autoResize value={message} onChange={(e) => setMessage(e.target.value)} rows={5} placeholder='Message' />
                 </div>
-                <div className="grid m-3 gap-2">
+                <div className="grid mt-3 gap-2">
                   <Button label="Submit" className='col' severity="info" />
                   <Button label="Clear" className='col' severity="danger" onClick={clearForm} />
                 </div>

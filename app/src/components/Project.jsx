@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+// PrimeReact components
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
+
+// swiper Components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
+
+// images
 import ftp from "../assets/images/FTP.png";
 import connect4 from "../assets/images/connect4.jpg";
 import exam from "../assets/images/exam.png";
+
+// css
 import "../assets/css/Project.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 
 const projects = [
   {
@@ -48,6 +62,21 @@ const projects = [
 
 
 function Project() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsSmallScreen(window.innerWidth < 768); // Adjust the value according to your definition of a small screen
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial check
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
   const ProjectCard = ({ project }) => {
     const header = (
@@ -69,7 +98,7 @@ function Project() {
 
     return (
       <div className="flex justify-content-center m-3">
-        <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="w-25rem shadow-6">
+        <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="w-30rem shadow-6">
           <p className="m-0 overflow-auto" style={{ height: "200px" }}>
             {project.description}
           </p>
@@ -82,13 +111,31 @@ function Project() {
     <div id="projects" className='p-5 pt-0 pb-0'>
       <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Personal Projects</h3>
       <div className='grid align-content-center justify-content-center'>
-        {
-          projects.map(project => (
-            <div className='col-auto' key={project.title}>
-              <ProjectCard project={project} />
-            </div>
-          ))
-        }
+        <Swiper
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: true,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          loop={true}
+          slidesPerView={1}
+          navigation={!isSmallScreen}
+          modules={[Autoplay, Pagination, Navigation, Keyboard]}
+          className="mySwiper"
+          keyboard={true}
+        >
+          {
+            projects.map(project => (
+              <div className='col-auto' key={project.title}>
+                <SwiperSlide key={project.title}>
+                  <ProjectCard project={project} />
+                </SwiperSlide>
+              </div>
+            ))
+          }
+        </Swiper>
       </div>
       <div className='flex align-content-center justify-content-center'>
         <a href="https://github.com/igokulganesh?tab=repositories" target="_blank" rel="noreferrer">
