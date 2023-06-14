@@ -31,40 +31,36 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className='p-5' style={{ minHeight: "75vh" }}>
+    <div id="contact" style={{ minHeight: "75vh" }}>
       <div className='flex justify-content-center'>
-        <h2 className='flex justify-content-center align-items-center font-bold text-light-blue'>Let's Connect</h2>
+        <h2 className='flex justify-content-center align-items-center font-bold text-light-blue mt-5'>Let's Connect</h2>
       </div>
       <div className='flex justify-content-center'>
         <p className='justify-content-center align-items-center text-light-blue'>Write me an email</p>
       </div>
       <div className='flex justify-content-center flex-wrap  align-items-center gap-3'>
-        <div className=''>
-          <img src={connectImg} alt='contact' height={"300px"} className='responsive-image' />
-        </div>
-        <div className=''>
-          <div className='flex justify-content-center align-content-center flex-wrap'>
-            <form className="justify-content-center align-items-center" onSubmit={handleSubmit}>
-              <div className=''>
-                <div className="card flex justify-content-center">
-                  <InputText value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Title' className="responsive-textarea" />
-                </div>
-                <div className="card flex justify-content-center mt-2 mb-3">
-                  <InputTextarea autoResize value={message} onChange={(e) => setMessage(e.target.value)} rows={5} placeholder='Message' />
-                </div>
-                <div className="grid mt-3 gap-2">
-                  <Button label="Submit" className='col' severity="info" />
-                  <Button label="Clear" className='col' severity="danger" onClick={clearForm} />
-                </div>
-              </div>
-            </form>
-          </div>
+        <img src={connectImg} alt='contact' height={"300px"} className='responsive-image' />
+        <div className='flex justify-content-center align-content-center flex-wrap'>
+          <form onSubmit={handleSubmit} className='responsive-form'>
+            <InputText value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Title' style={{ width: "100%" }} />
+            <div className="card flex justify-content-center mt-2 mb-3">
+              <InputTextarea autoResize value={message} onChange={(e) => setMessage(e.target.value)} rows={5} placeholder='Message' />
+            </div>
+            <div className="flex justify-content-center mt-3 gap-2">
+              <Button label="Submit" size='small' className='' severity="info" />
+              <Button label="Clear" size='small' severity="danger" onClick={clearForm} />
+            </div>
+          </form>
         </div>
       </div>
       <div className='flex justify-content-center mt-5'>
         <SocialMedia />
       </div>
-      <p className='flex justify-content-center text-sm mt-1 font-medium'>Check out my profiles on these platforms</p>
+      <div className='flex justify-content-center'>
+        <p className='justify-content-center align-items-center text-sm mt-1 font-medium'>
+          Check out my profiles on these platforms
+        </p>
+      </div>
       <ScrollTop />
     </div>
   );
