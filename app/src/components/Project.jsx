@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+
+// Slider
+import Slider from "react-slick";
 
 // PrimeReact components
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-
-// swiper Components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
 
 // images
 import ftp from "../assets/images/FTP.png";
@@ -15,10 +15,10 @@ import exam from "../assets/images/exam.png";
 
 // css
 import "../assets/css/Project.css";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { classNames } from 'primereact/utils';
 
 const projects = [
   {
@@ -58,85 +58,142 @@ const projects = [
     img: exam,
     tech: ["Python", "Django", "ML"]
   },
+  {
+    title: "EasyExam",
+    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
+    description:
+      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
+      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
+      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
+      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
+    link: "https://github.com/igokulganesh/EasyExam",
+    img: exam,
+    tech: ["Python", "Django", "ML"]
+  },
+  {
+    title: "EasyExam",
+    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
+    description:
+      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
+      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
+      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
+      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
+    link: "https://github.com/igokulganesh/EasyExam",
+    img: exam,
+    tech: ["Python", "Django", "ML"]
+  },
+  {
+    title: "EasyExam",
+    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
+    description:
+      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
+      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
+      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
+      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
+    link: "https://github.com/igokulganesh/EasyExam",
+    img: exam,
+    tech: ["Python", "Django", "ML"]
+  },
+  {
+    title: "EasyExam",
+    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
+    description:
+      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
+      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
+      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
+      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
+    link: "https://github.com/igokulganesh/EasyExam",
+    img: exam,
+    tech: ["Python", "Django", "ML"]
+  },
 ];
 
+function ArrowComponent(props) {
+  const { className, onClick } = props;
+  return (
+    <span
+      className={className}
+      onClick={onClick}
+    />
+  );
+}
 
-function Project() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+const ProjectComponent = ({ project }) => {
+  const header = (
+    <img alt={project.title} src={project.img} style={{ maxHeight: "200px" }} />
+  );
 
-  useEffect(() => {
-    function handleResize() {
-      setIsSmallScreen(window.innerWidth < 768); // Adjust the value according to your definition of a small screen
-    }
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-
-  const ProjectCard = ({ project }) => {
-    const header = (
-      <img alt={project.title} src={project.img} style={{ maxHeight: "200px" }} />
-    );
-
-    const footer = (
-      <div className="container">
-        <div className='elements'>
-          {
-            project.tech.map((item => (<span className='element p-badge bg-blue-900' key={item}>{item}</span>)))
-          }
-        </div>
-        <a href={project.link} className='button-container' target="_blank" rel="noreferrer">
-          <Button icon="pi pi-arrow-up-right" size="small" />
-        </a>
+  const footer = (
+    <div className="container">
+      <div className='elements'>
+        {
+          project.tech.map((item => (<span className='element p-badge bg-blue-900' key={item}>{item}</span>)))
+        }
       </div>
-    );
-
-    return (
-      <div className="flex justify-content-center m-3">
-        <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="w-30rem shadow-6">
-          <p className="m-0 overflow-auto" style={{ height: "200px" }}>
-            {project.description}
-          </p>
-        </Card>
-      </div>
-    );
-  }
+      <a href={project.link} className='button-container' target="_blank" rel="noreferrer">
+        <Button icon="pi pi-arrow-up-right" size="small" />
+      </a>
+    </div>
+  );
 
   return (
-    <div id="projects" className='p-5 pt-0 pb-0'>
+    <div className="flex justify-content-center m-3">
+      <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="w-25rem shadow-6" style={{ height: "630px" }}>
+        <p className="m-0 overflow-auto" style={{ height: "200px" }}>
+          {project.description}
+        </p>
+      </Card>
+    </div>
+  );
+}
+
+function Project() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: !isMobile,
+    nextArrow: <ArrowComponent />,
+    prevArrow: <ArrowComponent />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div id="projects" className={classNames({ "p-5": !isMobile }, 'pt-0 pb-0')}>
       <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Personal Projects</h3>
-      <div className='grid align-content-center justify-content-center'>
-        <Swiper
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          loop={true}
-          slidesPerView={1}
-          navigation={!isSmallScreen}
-          modules={[Autoplay, Pagination, Navigation, Keyboard]}
-          className="mySwiper"
-          keyboard={true}
-        >
-          {
-            projects.map(project => (
-              <div className='col-auto' key={project.title}>
-                <SwiperSlide key={project.title}>
-                  <ProjectCard project={project} />
-                </SwiperSlide>
-              </div>
-            ))
-          }
-        </Swiper>
-      </div>
+      <Slider {...sliderSettings}>
+        {
+          projects.map(project => (
+            <div className='col-auto' key={project.title}>
+              <ProjectComponent project={project} />
+            </div>
+          ))
+        }
+      </Slider>
+      <br />
       <div className='flex align-content-center justify-content-center'>
         <a href="https://github.com/igokulganesh?tab=repositories" target="_blank" rel="noreferrer">
           <Button label='View All Projects' outlined />
