@@ -58,54 +58,6 @@ const projects = [
     img: exam,
     tech: ["Python", "Django", "ML"]
   },
-  {
-    title: "EasyExam",
-    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
-    description:
-      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
-      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
-      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
-      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
-    link: "https://github.com/igokulganesh/EasyExam",
-    img: exam,
-    tech: ["Python", "Django", "ML"]
-  },
-  {
-    title: "EasyExam",
-    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
-    description:
-      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
-      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
-      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
-      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
-    link: "https://github.com/igokulganesh/EasyExam",
-    img: exam,
-    tech: ["Python", "Django", "ML"]
-  },
-  {
-    title: "EasyExam",
-    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
-    description:
-      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
-      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
-      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
-      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
-    link: "https://github.com/igokulganesh/EasyExam",
-    img: exam,
-    tech: ["Python", "Django", "ML"]
-  },
-  {
-    title: "EasyExam",
-    subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
-    description:
-      `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
-      in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
-      The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
-      be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
-    link: "https://github.com/igokulganesh/EasyExam",
-    img: exam,
-    tech: ["Python", "Django", "ML"]
-  },
 ];
 
 function ArrowComponent(props) {
