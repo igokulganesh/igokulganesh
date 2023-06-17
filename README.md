@@ -38,28 +38,31 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
 <h2>Connect with me <img src='./app/src/assets/images/handshake.gif' width="140px"></h2> 
 
 <p align="left">
-    <a href="https://leetcode.com/igokulganesh/" target="blank">
+    <a href="https://leetcode.com/igokulganesh/" target="_blank">
         <img align="left" alt="Gokul's Leetcode" src="https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png" height="30" />
     </a>
-    <a href="https://www.hackerrank.com/igokulganesh" target="blank">
+    <a href="https://www.hackerrank.com/igokulganesh" target="_blank">
         <img align="left" alt="Gokul's HackerRank" height="30" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png" />
     </a>
     <a href="https://www.linkedin.com/in/igokulganesh/" target="_blank" rel="noreferrer">
         <img align="left" alt="Gokul's Linkdein" height="30" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
     </a>
-    <a href="mailto:igokulganesh@gmail.com">
+     <a href="https://wakatime.com/@igokulganesh" target="_blank" rel="noreferrer">
+        <img align="left" alt="Gokul's Waka Time" height="30" src="https://avatars.githubusercontent.com/u/4814844" />
+    </a>
+    <a href="mailto:igokulganesh@gmail.com" target="_blank">
         <img align="left" alt="Gokul's Mail" height="30" src="https://cdn-icons-png.flaticon.com/512/281/281769.png" />
     </a>
-    <a href="https://www.youtube.com/channel/UCBm7Eg2p8O8pImOrv8Udu3A/featured">
+    <a href="https://www.youtube.com/channel/UCBm7Eg2p8O8pImOrv8Udu3A/featured" target="_blank">
         <img align="left" alt="Gokul's Youtube" height="30" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" />
     </a>
     <a href="https://www.instagram.com/igokulganesh/">
-        <img align="left" alt="Gokul's Instagram" height="30" src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" />
+        <img align="left" alt="Gokul's Instagram" height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" />
     </a>
-    <a href="https://twitter.com/IGokulGanesh">
+    <a href="https://twitter.com/IGokulGanesh" target="_blank">
         <img align="left" alt="Gokul's Twitter" height="30" src="https://cdn-icons-png.flaticon.com/512/124/124021.png" />
     </a>
-    <a href="https://leetcode.com/igokulganesh/">
+    <a href="https://leetcode.com/igokulganesh/" target="_blank">
         <img align="left" alt="Gokul's Facebook" height="30" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" />
     </a>
 </p>
@@ -67,13 +70,15 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
 <br/><br/>
 
 <h3>Stats</h3>
-<img  src="https://github-readme-streak-stats.herokuapp.com/?user=igokulganesh&" alt="igokulganesh Streaks" />
-<img  src="https://github-readme-stats.vercel.app/api?username=igokulganesh&show_icons=true&theme=react" alt="igokulganesh Stats" />
-<img  src="https://github-readme-stats.vercel.app/api/top-langs?username=igokulganesh&show_icons=true&locale=en&layout=compact&theme=react" alt="igokulganesh Langs" />
-
 <a href="https://wakatime.com/@igokulganesh" target="blank">
-<img src="https://wakatime.com/badge/user/f814f21d-5940-435a-9cd2-f8f8bcf58b1a.svg" alt="igokul ganesh wakatime" />
+    <img src="https://wakatime.com/badge/user/f814f21d-5940-435a-9cd2-f8f8bcf58b1a.svg" alt="igokul ganesh wakatime" />
 </a>
-<img src="https://github-readme-stats.vercel.app/api/wakatime?username=igokulganesh&layout=compact" alt="Wakatime Week Stats" />
+<div style="display: flex; flex-wrap: wrap;">
+    <img  src="https://github-readme-streak-stats.herokuapp.com/?user=igokulganesh&layout=compact&theme=react" alt="igokulganesh Streaks" />
+    <img  src="https://github-readme-stats.vercel.app/api?username=igokulganesh&show_icons=true&theme=react" alt="igokulganesh Stats" />
+    <img src="https://github-readme-stats.vercel.app/api/wakatime?username=igokulganesh&layout=compact&theme=react" alt="Wakatime Week Stats" />
+    <img  src="https://github-readme-stats.vercel.app/api/top-langs?username=igokulganesh&show_icons=true&locale=en&layout=compact&theme=react" alt="igokulganesh Langs" />
+</div>
+
 
 <br/><br/>
