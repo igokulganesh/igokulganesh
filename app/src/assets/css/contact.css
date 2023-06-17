@@ -1,0 +1,34 @@
+.responsive-image {
+    height: 200PX;
+    /* Default width for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .responsive-image {
+        height: 300px;
+        /* Adjusted width for screens larger than 768px */
+    }
+}
+
+@media (min-width: 1200px) {
+    .responsive-image {
+        height: 300px;
+        /* Adjusted width for screens larger than 1200px */
+    }
+}
+
+.responsive-form {
+    width: 250px;
+}
+
+@media (min-width: 700px) {
+    .responsive-form {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .responsive-form {
+        width: 600px;
+    }
+}

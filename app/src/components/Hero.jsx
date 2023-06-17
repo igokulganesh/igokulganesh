@@ -13,8 +13,8 @@ function Hero() {
           <img className="image" src={igokulganesh} alt="Gokul Ganesh I" height={600} />
         </div>
         <div className="content">
-          <div className="">
-            <h2 className="typing-header font-bold text-bluegray-800">Gokul Ganesh I</h2>
+          <div style={{ color: "#0b2948" }}>
+            <h2 className="typing-header font-bold" style={{ color: "#0098e5" }}>Gokul Ganesh I</h2>
             <p className="font-light">
               Software Engineer of Secure Product Groups at Microchip
             </p>
@@ -46,7 +46,6 @@ function Hero() {
           </div>
         </div>
       </div>
-      {/* What I do? */}
     </div>
   );
 }

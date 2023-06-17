@@ -22,7 +22,7 @@ const experience = [
         endDate: new Date(),
         skills: ["C", "Embedded C", "Python", "Cryptography", "React JS"],
         description: (
-          <div>
+          <div className='text-black-alpha-90'>
             <p>I have been working on Trust Platform Design Suit (TPDS) Application and CryptoAuthLib within the Secure Product Groups.
             </p>
             <b>Responsibilities includes:</b>
@@ -87,7 +87,7 @@ const experience = [
         endDate: new Date(2021, 7, 1),
         skills: ["Java", "Object-Oriented Programming (OOP)", "Database Design"],
         description: (
-          <p>
+          <p className='text-black-alpha-90'>
             Completed the internship program offered by Zoho Corporation,
             during which I developed a banking application using Java and PostgreSql
           </p>
@@ -161,13 +161,13 @@ function Roles({ role }) {
 
   return (
     <div style={{ width: "200%" }} key={role.title}>
-      <h6>{role.title}</h6>
-      <p className='text-sm text-gray-700'>
+      <h6 className='text-blue-900'>{role.title}</h6>
+      <p className='text-sm text-black-alpha-90'>
         {timeLine}
       </p>
       <p>
-        <span className='font-medium'>Skills:</span>
-        {role.skills.map((skill, index) => ` ${skill} ${index !== role.skills.length - 1 ? " · " : ""}`)}
+        <span className='font-medium text-black-alpha-90'>Skills:</span>
+        {role.skills.map((skill, index) => <span className='text-black-alpha-90' key={skill}>{` ${skill} ${index !== role.skills.length - 1 ? " · " : ""}`}</span>)}
       </p>
       <Description description={role?.description} />
     </div>
@@ -176,9 +176,9 @@ function Roles({ role }) {
 
 function Experience() {
   return (
-    <div id="experience" className='bg-green-50 p-5'>
-      <div className="card" >
-        <h4 className="m-3">Experience</h4>
+    <div id="experience" className='p-5'>
+      <div className="card">
+        <h4 className="mt-6 mb-3 flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Experience</h4>
         {
           experience.map((exp, index) => {
 
@@ -190,17 +190,17 @@ function Experience() {
                   <div className="col-1">
                     <div className="flex align-content-center justify-content-center flex-wrap card-container">
                       <a href={exp?.link} target="_blank" rel="noreferrer">
-                        <img src={exp?.logo} align="left" alt={exp?.company} width="75px" className='align-items-center  ml-5 mt-3' />
+                        <img src={exp?.logo} align="left" alt={exp?.company} width="75px" className='align-items-center ml-5 mt-3' />
                       </a>
                     </div>
                   </div>
                   <div className="col m-2">
                     <h3 className="text-lg font-bold">
-                      <a href={exp?.link} target="_blank" rel="noreferrer" className='no-underline text-bluegray-700'>
+                      <a href={exp?.link} target="_blank" rel="noreferrer" className='no-underline text-blue-900'>
                         {exp.company}
                       </a>
                     </h3>
-                    <p className='text-sm text-gray-700'>
+                    <p className='text-sm text-black-alpha-90'>
                       {exp.roles.length > 1 ? <>{duration}<br /></> : ""}
                       {exp.location}
                     </p>
