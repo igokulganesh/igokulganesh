@@ -6,10 +6,10 @@ import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
 /* ******** Image Files ******** */
 import imageSkill from "../assets/images/Skills/skills.png";
 import imgProgram from "../assets/images/Skills/programming.jpg";
-import imgConcept from "../assets/images/Skills/concept.avif";
+import imgConcept from "../assets/images/Skills/concept.png";
 import imgWeb from "../assets/images/Skills/web.jpg";
 import imgFrame from "../assets/images/Skills/Frames.jpg";
-import imgTools from "../assets/images/Skills/tool.webp";
+import imgTools from "../assets/images/Skills/tool.png";
 import imgDB from "../assets/images/Skills/db.jpg";
 import imgOS from "../assets/images/Skills/os.jpg";
 
