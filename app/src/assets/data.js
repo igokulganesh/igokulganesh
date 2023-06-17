@@ -54,8 +54,17 @@ const Links = {
   Instagram: "https://www.instagram.com/igokulganesh/",
   Facebook: "https://www.facebook.com/GokulGaneshI/",
 
-  // Demo Links
+  // Project Demo Links
   EasyExamDemo: "https://youtu.be/l3dXsJ_nsxo",
+
+  // Project Github Links
+  MutiThreadFTP_Src: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
+  ConnectFour_Src: "https://github.com/igokulganesh/Connect-Four",
+  EasyExam_Src: "https://github.com/igokulganesh/EasyExam",
+
+
+  // Project Websites Links
+  ConnectFour_Web: "https://igokulganesh.github.io/Connect-Four/computer",
 }
 
 export { Images, Links };
