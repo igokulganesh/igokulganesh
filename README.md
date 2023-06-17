@@ -1,10 +1,10 @@
-<h3 align="center">< Hey There 👋 /></h3>
+<h2 align="center">< Hey There 👋 /></h2>
 
-<h6 align="Center">
+<h4 align="Center">
 I'm Gokul Ganesh, a developer who loves learning new technologies and solving complex problems.
-</h6>
+</h4>
 
-<img align="right" alt="Coding" width="400" src="./app/src/assets/images/programming.gif">
+<img align="right" alt="Coding" width="350" src="./app/src/assets/images/programming.gif">
 
 - 🔭 I’m currently looking for opportunities
 - 🌱 I’m currently learning Cryptography & Blockchain technology
@@ -34,10 +34,11 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
 
 -->
 
-### Connect with me <img src='./app/src/assets/images/handshake.gif' width="140px">
+<br />
+<h2>Connect with me <img src='./app/src/assets/images/handshake.gif' width="140px"></h2> 
 
 <p align="left">
-    <a href="https://leetcode.com/igokulganesh/">
+    <a href="https://leetcode.com/igokulganesh/" target="blank">
         <img align="left" alt="Gokul's Leetcode" src="https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png" height="30" />
     </a>
     <a href="https://www.hackerrank.com/igokulganesh" target="blank">
@@ -68,12 +69,11 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
 <h3>Stats</h3>
 <img  src="https://github-readme-streak-stats.herokuapp.com/?user=igokulganesh&" alt="igokulganesh Streaks" />
 <img  src="https://github-readme-stats.vercel.app/api?username=igokulganesh&show_icons=true&theme=react" alt="igokulganesh Stats" />
-<img  src="https://github-readme-stats.vercel.app/api/top-langs?username=igokulganesh&show_icons=true&locale=en&layout=compact" alt="igokulganesh Langs" />
+<img  src="https://github-readme-stats.vercel.app/api/top-langs?username=igokulganesh&show_icons=true&locale=en&layout=compact&theme=react" alt="igokulganesh Langs" />
+
+<a href="https://wakatime.com/@igokulganesh" target="blank">
+<img src="https://wakatime.com/badge/user/f814f21d-5940-435a-9cd2-f8f8bcf58b1a.svg" alt="igokul ganesh wakatime" />
+</a>
+<img src="https://github-readme-stats.vercel.app/api/wakatime?username=igokulganesh&layout=compact" alt="Wakatime Week Stats" />
 
 <br/><br/>
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=igokulganesh&layout=compact&theme=react)
-
-[![wakatime](https://wakatime.com/badge/user/f814f21d-5940-435a-9cd2-f8f8bcf58b1a.svg)](https://wakatime.com/@f814f21d-5940-435a-9cd2-f8f8bcf58b1a)
-
-![Wakatime Week Stats](https://github-readme-stats.vercel.app/api/wakatime?username=igokulganesh&layout=compact)
