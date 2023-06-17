@@ -44,7 +44,7 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
     <a href="https://www.hackerrank.com/igokulganesh" target="blank">
         <img align="left" alt="Gokul's HackerRank" height="30" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png" />
     </a>
-    <a href="https://www.linkedin.com/in/igokulganesh/">
+    <a href="https://www.linkedin.com/in/igokulganesh/" target="_blank" rel="noreferrer">
         <img align="left" alt="Gokul's Linkdein" height="30" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
     </a>
     <a href="mailto:igokulganesh@gmail.com">
