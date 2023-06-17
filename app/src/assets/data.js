@@ -33,6 +33,9 @@ const Links = {
   Twitter: "https://twitter.com/IGokulGanesh",
   Instagram: "https://www.instagram.com/igokulganesh/",
   Facebook: "https://www.facebook.com/GokulGaneshI/",
+
+  // Demo Links
+  EasyExamDemo: "https://youtu.be/l3dXsJ_nsxo",
 }
 
 export { Images, Links };

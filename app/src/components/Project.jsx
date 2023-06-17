@@ -1,6 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Images, Links } from "../assets/data";
+import { classNames } from 'primereact/utils';
 
 // Slider
 import Slider from "react-slick";
@@ -8,13 +9,13 @@ import Slider from "react-slick";
 // PrimeReact components
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
+import { ScrollPanel } from 'primereact/scrollpanel';
 
 // css
 import "../assets/css/Project.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { classNames } from 'primereact/utils';
 
 const projects = [
   {
@@ -26,7 +27,7 @@ const projects = [
       especially for large files. Each thread can be responsible for copying a different part
       of the file. This allows the file to be copied in parallel, which can significantly reduce
       the overall time it takes to complete the transfer.`,
-    link: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
+    source: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
     img: Images.MutiThreadFTP,
     tech: ["Java", "Threads"],
   },
@@ -38,7 +39,7 @@ const projects = [
       and then take turns dropping colored discs into a seven-column, six-row vertically suspended grid.
       The pieces fall straight down, occupying the lowest available space within the column.
       The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.`,
-    link: "https://igokulganesh.github.io/Connect-Four/computer",
+    website: "https://igokulganesh.github.io/Connect-Four/computer",
     img: Images.ConnectFour,
     tech: ["JavaScript", "HTML5", "CSS"],
   },
@@ -50,19 +51,16 @@ const projects = [
       in form of the input by the teacher which will provide equal distribution of marks and will reduce errors also.
       The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
       be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
-    link: "https://github.com/igokulganesh/EasyExam",
+    source: "https://github.com/igokulganesh/EasyExam",
+    demo: Links.EasyExamDemo,
     img: Images.EasyExam,
     tech: ["Python", "Django", "ML"]
   },
 ];
 
 function ArrowComponent(props) {
-  const { className, onClick } = props;
   return (
-    <span
-      className={className}
-      onClick={onClick}
-    />
+    <span className={props.className} onClick={props.onClick} />
   );
 }
 
@@ -94,9 +92,11 @@ const ProjectComponent = ({ project }) => {
         className="w-25rem shadow-6"
         style={{ height: "630px" }}
       >
-        <p className="m-0 overflow-auto" style={{ height: "200px" }}>
-          {project.description}
-        </p>
+        <ScrollPanel style={{ width: '100%', height: '200px' }} className='scrollStyle'>
+          <p className="m-0 overflow-auto">
+            {project.description}
+          </p>
+        </ScrollPanel>
       </Card>
     </div>
   );
@@ -156,7 +156,7 @@ function Project() {
             label='View All Projects'
             outlined
             icon={<img alt="github" src={Images.Github} className="h-2rem mr-2" />}
-            iconPos="right"
+            size="small"
           />
         </a>
       </div>

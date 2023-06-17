@@ -52,10 +52,10 @@ function SocialMedia() {
   ];
 
   return (
-    <div className="flex justify-content-center flex-wrap gap-2">
+    <div className="flex  flex-wrap gap-2">
       {socialLinks.map((item) => {
         return (
-          <a href={item.link} className="flex align-items-center justify-content-center" alt={`Gokul's ${item.code}`} key={item.code} target="_blank" rel="noreferrer">
+          <a href={item.link} className="flex justify-content-center" alt={`Gokul's ${item.code}`} key={item.code} target="_blank" rel="noreferrer">
             <img align="left" alt={item?.alt} className="logo-img" src={item.image} />
           </a>
         );

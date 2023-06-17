@@ -72,3 +72,45 @@ a {
 .text-dark-blue {
     color: #0b2948;
 }
+
+
+.p-scrollpanel.scrollStyle .p-scrollpanel-wrapper {
+    border-right: 10px solid var(--surface-ground);
+}
+
+.p-scrollpanel.scrollStyle .p-scrollpanel-bar {
+    background-color: var(--primary-300);
+    opacity: 0.5;
+    transition: background-color .3s;
+}
+
+.p-scrollpanel.scrollStyle .p-scrollpanel-bar:hover {
+    background-color: var(--primary-400);
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    /* Adjust the width as desired */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* Set the background color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d4e2f1;
+    /* Set the handle color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #a8c2db;
+    /* Set the handle color on hover */
+}
+
+.col-12 {
+    padding: 2rem;
+}
