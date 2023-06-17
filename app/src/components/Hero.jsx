@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { Button } from 'primereact/button';
 import SocialMedia from "./SocialMedia";
 import igokulganesh from "../assets/images/igokulganesh.png";
 import resume from "../assets/Gokul Ganesh I (Resume).pdf";
@@ -37,10 +38,10 @@ function Hero() {
                 offset={-70}
                 duration={10}
               >
-                <button className="button">Explore More</button>
+                <Button label="Explore More" size="small" className="border-noround" />
               </Link>
               <a href={resume} download="Gokul Ganesh I (Resume)" target="_blank" rel="noopener noreferrer">
-                <button className="download bg-primary-reverse">Download Resume</button>
+                <Button label="Download Resume" className="border-noround" size="small" outlined />
               </a>
             </div>
           </div>

@@ -79,7 +79,7 @@ a {
 }
 
 .p-scrollpanel.scrollStyle .p-scrollpanel-bar {
-    background-color: var(--primary-300);
+    background-color: #a6a6a6;
     opacity: 0.5;
     transition: background-color .3s;
 }

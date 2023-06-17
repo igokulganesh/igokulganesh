@@ -70,16 +70,15 @@ const ProjectComponent = ({ project }) => {
   );
 
   const footer = (
-    <div className="container">
-      <div className='elements'>
-        {
-          project.tech.map((item => (<span className='element p-badge bg-blue-900' key={item}>{item}</span>)))
-        }
+    <>
+      <div className="container">
+        <div className='elements'>
+        </div>
+        <a href={project.link} className='button-container' target="_blank" rel="noreferrer">
+          <Button icon="pi pi-arrow-up-right" size="small" />
+        </a>
       </div>
-      <a href={project.link} className='button-container' target="_blank" rel="noreferrer">
-        <Button icon="pi pi-arrow-up-right" size="small" />
-      </a>
-    </div>
+    </>
   );
 
   return (
@@ -90,13 +89,18 @@ const ProjectComponent = ({ project }) => {
         footer={footer}
         header={header}
         className="w-25rem shadow-6"
-        style={{ height: "630px" }}
+        style={{}}
       >
         <ScrollPanel style={{ width: '100%', height: '200px' }} className='scrollStyle'>
           <p className="m-0 overflow-auto">
             {project.description}
           </p>
         </ScrollPanel>
+        <div className='flex gap-1 mt-2'>
+          {
+            project.tech.map((item => (<span className='p-badge bg-blue-900' key={item}>{item}</span>)))
+          }
+        </div>
       </Card>
     </div>
   );

@@ -3,6 +3,16 @@ import MutiThreadFTP from "./images/FTP.png";
 import ConnectFour from "./images/connect4.jpg";
 import EasyExam from "./images/exam.png";
 
+// Skills
+import Skills from "../assets/images/Skills/skills.png";
+import Programming from "../assets/images/Skills/programming.jpg";
+import Concept from "../assets/images/Skills/concept.png";
+import Website from "../assets/images/Skills/web.jpg";
+import Framework from "../assets/images/Skills/Frames.jpg";
+import Tools from "../assets/images/Skills/tool.png";
+import Database from "../assets/images/Skills/db.jpg";
+import Os from "../assets/images/Skills/os.jpg";
+
 const Images = {
   // Social Media
   Github: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
@@ -19,6 +29,16 @@ const Images = {
   MutiThreadFTP,
   ConnectFour,
   EasyExam,
+
+  // Skills Images
+  Skills,
+  Programming,
+  Concept,
+  Website,
+  Framework,
+  Tools,
+  Database,
+  Os,
 }
 
 const Links = {
