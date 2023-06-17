@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { Images, Links } from "../assets/data";
 
 // Slider
 import Slider from "react-slick";
@@ -7,11 +8,6 @@ import Slider from "react-slick";
 // PrimeReact components
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-
-// images
-import ftp from "../assets/images/FTP.png";
-import connect4 from "../assets/images/connect4.jpg";
-import exam from "../assets/images/exam.png";
 
 // css
 import "../assets/css/Project.css";
@@ -31,7 +27,7 @@ const projects = [
       of the file. This allows the file to be copied in parallel, which can significantly reduce
       the overall time it takes to complete the transfer.`,
     link: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
-    img: ftp,
+    img: Images.MutiThreadFTP,
     tech: ["Java", "Threads"],
   },
   {
@@ -43,7 +39,7 @@ const projects = [
       The pieces fall straight down, occupying the lowest available space within the column.
       The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.`,
     link: "https://igokulganesh.github.io/Connect-Four/computer",
-    img: connect4,
+    img: Images.ConnectFour,
     tech: ["JavaScript", "HTML5", "CSS"],
   },
   {
@@ -55,7 +51,7 @@ const projects = [
       The Nlp checks for grammatical errors and linguistic analysis will be performed. The score of each process will
       be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
     link: "https://github.com/igokulganesh/EasyExam",
-    img: exam,
+    img: Images.EasyExam,
     tech: ["Python", "Django", "ML"]
   },
 ];
@@ -90,7 +86,14 @@ const ProjectComponent = ({ project }) => {
 
   return (
     <div className="flex justify-content-center m-3">
-      <Card title={project?.title} subTitle={project?.subTitle} footer={footer} header={header} className="w-25rem shadow-6" style={{ height: "630px" }}>
+      <Card
+        title={<span>{project?.title}</span>}
+        subTitle={<span>{project?.subTitle}</span>}
+        footer={footer}
+        header={header}
+        className="w-25rem shadow-6"
+        style={{ height: "630px" }}
+      >
         <p className="m-0 overflow-auto" style={{ height: "200px" }}>
           {project.description}
         </p>
@@ -135,7 +138,7 @@ function Project() {
 
   return (
     <div id="projects" className={classNames({ "p-5": !isMobile }, 'pt-0 pb-0')}>
-      <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Personal Projects</h3>
+      <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Projects</h3>
       <Slider {...sliderSettings}>
         {
           projects.map(project => (
@@ -147,8 +150,14 @@ function Project() {
       </Slider>
       <br />
       <div className='flex align-content-center justify-content-center'>
-        <a href="https://github.com/igokulganesh?tab=repositories" target="_blank" rel="noreferrer">
-          <Button label='View All Projects' outlined />
+        <a href={Links.GithubRepo} target="_blank" rel="noreferrer">
+          <Button
+            className="text-black-alpha-90 hover:bg-black-alpha-10 border-black-alpha-90"
+            label='View All Projects'
+            outlined
+            icon={<img alt="github" src={Images.Github} className="h-2rem mr-2" />}
+            iconPos="right"
+          />
         </a>
       </div>
       <div className='card mt-6'></div>

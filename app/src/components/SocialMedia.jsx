@@ -1,53 +1,53 @@
 import React from "react";
+import { Images, Links } from "../assets/data";
 import "../assets/css/socialMedia.css";
 
 function SocialMedia() {
   const socialLinks = [
     {
       code: "github",
-      link: "https://github.com/igokulganesh/",
-      image: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+      link: Links.Github,
+      image: Images.Github,
     },
     {
       code: "linkedin",
-      link: "https://www.linkedin.com/in/igokulganesh/",
-      image: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+      link: Links.LinkedIn,
+      image: Images.LinkedIn,
     },
     {
       code: "leetcode",
-      link: "https://leetcode.com/igokulganesh/",
-      image: "https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png",
+      link: Links.LeetCode,
+      image: Images.LeetCode,
     },
     {
       code: "hackerrank",
-      link: "https://www.hackerrank.com/igokulganesh",
-      image:
-        "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png",
+      link: Links.HackerRank,
+      image: Images.HackerRank,
     },
     {
       code: "mail",
-      link: "mailto:igokulganesh@gmail.com",
-      image: "https://cdn-icons-png.flaticon.com/512/281/281769.png",
+      link: Links.Gmail,
+      image: Images.Gmail,
     },
     {
       code: "youtube",
-      link: "https://www.youtube.com/@igokulganesh",
-      image: "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
+      link: Links.Youtube,
+      image: Images.Youtube,
     },
     {
       code: "twitter",
-      link: "https://twitter.com/IGokulGanesh",
-      image: "https://cdn-icons-png.flaticon.com/512/124/124021.png",
+      link: Links.Twitter,
+      image: Images.Twitter,
     },
     {
       code: "instagram",
-      link: "https://www.instagram.com/igokulganesh/",
-      image: "https://cdn-icons-png.flaticon.com/512/1384/1384063.png",
+      link: Links.Instagram,
+      image: Images.Instagram,
     },
     {
       code: "facebook",
-      link: "https://www.facebook.com/GokulGaneshI/",
-      image: "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+      link: Links.Facebook,
+      image: Images.Facebook,
     },
   ];
 
