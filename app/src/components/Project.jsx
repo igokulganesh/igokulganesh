@@ -91,7 +91,7 @@ const ProjectComponent = ({ project }) => {
               project.source &&
               <a href={project.source} target="_blank" rel="noreferrer">
                 <i
-                  className='pi pi-github text-black-alpha-90 tooltip1 text-2xl'
+                  className='pi pi-github text-blue-800 tooltip1 text-2xl'
                   data-pr-tooltip="Source Code"
                   data-pr-position="top"
                 />
@@ -101,7 +101,7 @@ const ProjectComponent = ({ project }) => {
               project.demo &&
               <a href={project.demo} target="_blank" rel="noreferrer">
                 <i
-                  className='pi pi-youtube text-red-500 tooltip2 text-2xl'
+                  className='pi pi-youtube text-blue-800 tooltip2 text-2xl'
                   data-pr-tooltip="Demo"
                   data-pr-position="top"
                 />
@@ -111,7 +111,7 @@ const ProjectComponent = ({ project }) => {
               project.website &&
               <a href={project.website} target="_blank" rel="noreferrer">
                 <i
-                  className='pi pi-globe text-blue-500 tooltip3 text-2xl'
+                  className='pi pi-globe text-blue-800 tooltip3 text-2xl'
                   data-pr-tooltip="Website"
                   data-pr-position="top"
                 />

@@ -24,6 +24,7 @@ const Images = {
   Twitter: "https://cdn-icons-png.flaticon.com/512/124/124021.png",
   Instagram: "https://cdn-icons-png.flaticon.com/512/1384/1384063.png",
   Facebook: "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+  WakaTime: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt9wtEx_mE_FJIntygwJy9ShubC3tr--4W5SpGUedWYw&s",
 
   // Projects Images
   MutiThreadFTP,
@@ -53,6 +54,7 @@ const Links = {
   Twitter: "https://twitter.com/IGokulGanesh",
   Instagram: "https://www.instagram.com/igokulganesh/",
   Facebook: "https://www.facebook.com/GokulGaneshI/",
+  WakaTime: "https://wakatime.com/@igokulganesh",
 
   // Project Demo Links
   EasyExamDemo: "https://youtu.be/l3dXsJ_nsxo",
