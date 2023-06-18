@@ -74,12 +74,15 @@ function Skills() {
   };
 
   return (
-    <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2")}>
-      <h4 className="flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Skills</h4>
+    <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
+      <h4 className="flex align-items-center justify-content-center font-bold text-blue-900 underline mb-5">Technical Expertise</h4>
       <div className='grid flex justify-content-center flex-wrap'>
-        <div className='col-auto'>
-          <img src={Images.Skills} alt='skill' height={"100px"} className='responsive-image' />
-        </div>
+        {
+          !isMobile &&
+          <div className='col-4'>
+            <img src={Images.Skills} alt='skill' height={"250px"} />
+          </div>
+        }
         <div className={classNames({ "col-5": !isMobile }, { "col-12": isMobile })}>
           <Slider {...sliderSettings}>
             {

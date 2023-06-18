@@ -4,7 +4,7 @@ import ConnectFour from "./images/connect4.jpg";
 import EasyExam from "./images/exam.png";
 
 // Skills
-import Skills from "../assets/images/Skills/skills.png";
+import Skills from "../assets/images/programming.gif";
 import Programming from "../assets/images/Skills/programming.jpg";
 import Concept from "../assets/images/Skills/concept.png";
 import Website from "../assets/images/Skills/web.jpg";

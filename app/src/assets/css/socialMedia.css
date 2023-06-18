@@ -1,11 +1,11 @@
 .logo-img {
-    width: 20px;
+    width: 24px;
     /* Default width for smaller screens */
 }
 
 @media (min-width: 768px) {
     .logo-img {
-        width: 25px;
+        width: 27px;
         /* Adjusted width for screens larger than 768px */
     }
 }

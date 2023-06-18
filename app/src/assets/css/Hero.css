@@ -1,36 +1,35 @@
 .hero {
     margin: auto;
-    padding: 8rem 1rem 0 1rem;
+    padding: 2rem 1rem 0 1rem;
     width: 100%;
 }
 
-.hero .container {
-    width: 1240px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 768px) {
+    .hero {
+        padding: 8rem 1rem 0 1rem;
+        /* Adjusted width for screens larger than 768px */
+    }
 }
 
-.typing-header {
+.typing-animation {
     overflow: hidden;
-    /* Hide the text initially */
-    border-right: .15em solid #ffea00;
-    /* Add the cursor effect */
+    /* Hide the overflowing text */
+    border-right: .15em solid;
+    /* Typing cursor effect */
     white-space: nowrap;
     /* Prevent line breaks */
-    font-size: 3em;
-    /* Adjust font size as desired */
-    animation: typing 2s steps(20), blink-caret 1s step-end infinite;
-    opacity: 0.7;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+    /* Animation properties: duration, steps, and infinite blinking caret */
+    width: 1000px;
 }
 
 @keyframes typing {
     from {
-        width: 0
+        width: 0;
     }
 
     to {
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -42,90 +41,55 @@
     }
 
     50% {
-        border-color: black;
+        border-color: rgb(0, 5, 45);
     }
 }
 
-.hero .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-}
-
-.hero .content p:first-of-type {
-    margin: 2rem 0;
-}
-
-.hero .content p:nth-child(4) {
-    font-size: 1.8rem;
-    font-style: italic;
-    font-weight: 600;
-}
-
-.hero button {
-    margin-top: 1rem;
-}
-
-.button {
-    padding: 17px 28px;
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: 600;
-    background-color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background: var(--primary-dark);
-    border: 1px solid var(--primary-dark);
-}
-
-button:active {
-    background-color: #0b29481a;
-    transform: translateY(4px);
-}
-
-.download {
-    padding: 17px 28px;
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: 600;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.download:hover {
-    background: var(--primary-dark);
-    color: var(--primary-dark) !important;
-    background-color: var(--primary-dark);
-    border: 1px solid var(--primary-dark);
-}
-
-@media screen and (max-width:940px) {
-    .hero .container {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 600px) {
+    .typing-animation {
+        font-size: 1.5rem;
+        /* Adjust the font size as per your requirements */
+        white-space: normal;
+        width: auto;
+        /* Allow content to wrap on smaller screens */
     }
+}
 
-    .hero .container {
-        width: 100%;
+.hero-image {
+    height: 350px;
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        height: 400px;
+        /* Adjusted width for screens larger than 768px */
     }
+}
 
-    .hero .container .image {
-        max-width: 50%;
-        height: auto;
+@media (min-width: 1200px) {
+    .hero-image {
+        height: 500px;
+        /* Adjusted width for screens larger than 1200px */
     }
+}
 
-    .hero .container .content {
-        padding: 0;
+.hero-container {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        width: 500px;
+        height: 400px;
+        /* Adjusted width for screens larger than 768px */
     }
+}
 
-    .hero button {
-        margin-bottom: 1rem;
+@media (min-width: 1200px) {
+    .hero-container {
+        width: 500px;
+        height: 500px;
+        /* Adjusted width for screens larger than 1200px */
     }
 }

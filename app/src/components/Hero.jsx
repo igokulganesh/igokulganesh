@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { Button } from 'primereact/button';
+import { Button } from "primereact/button";
 import SocialMedia from "./SocialMedia";
 import igokulganesh from "../assets/images/igokulganesh.png";
 import resume from "../assets/Gokul Ganesh I (Resume).pdf";
@@ -9,28 +9,35 @@ import "../assets/css/Hero.css";
 function Hero() {
   return (
     <div className="hero" id="hero">
-      <div className="container">
-        <div>
-          <img className="image" src={igokulganesh} alt="Gokul Ganesh I" height={600} />
+      <div className="grid">
+        <div className="col">
+          <div className="flex justify-content-center flex-wrap card-container">
+            <img
+              className="hero-image"
+              src={igokulganesh}
+              alt="Gokul Ganesh I"
+            />
+          </div>
         </div>
-        <div className="content">
-          <div style={{ color: "#0b2948" }}>
-            <h2 className="typing-header font-bold" style={{ color: "#0098e5" }}>Gokul Ganesh I</h2>
+        <div className="col flex justify-content-center">
+          <div className="hero-container flex align-content-center flex-wrap card-container">
+            <h2 className="font-bold" style={{ color: "#0098e5" }}>
+              Gokul Ganesh I
+            </h2>
             <p className="font-light">
               Software Engineer of Secure Product Groups at Microchip
             </p>
             <p className="mt-2 font-normal white-space-normal">
-              I'm a highly motivated and results-driven professional with a keen
-              eye for detail and natural problem-solving, program development, and
-              adapting to new environments. I'm innovative, proactive, and a quick
-              decision-maker who works effectively towards team goals. I leverage
-              my technical expertise and dynamic skill set to drive optimal
-              profitability for organizations, identifying and capitalizing on
-              growth opportunities to exceed targets. Let's connect and
-              collaborate for exciting opportunities!
+              Highly motivated and results-driven professional with strong
+              problem-solving skills. Adaptable and innovative, I excel in
+              program development and thrive in new environments. A proactive
+              team player with a keen eye for detail, I make quick decisions to
+              achieve team goals. Leveraging technical expertise, I drive
+              profitability and exceed targets by identifying and capitalizing
+              on growth opportunities.
             </p>
             <SocialMedia />
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-1 mt-3">
               <Link
                 to="experience"
                 spy={true}
@@ -38,10 +45,24 @@ function Hero() {
                 offset={-70}
                 duration={10}
               >
-                <Button label="Explore More" size="small" className="border-noround" />
+                <Button
+                  label="Explore More"
+                  size="small"
+                  className="border-noround"
+                />
               </Link>
-              <a href={resume} download="Gokul Ganesh I (Resume)" target="_blank" rel="noopener noreferrer">
-                <Button label="Download Resume" className="border-noround" size="small" outlined />
+              <a
+                href={resume}
+                download="Gokul Ganesh I (Resume)"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  label="Download Resume"
+                  className="border-noround"
+                  size="small"
+                  outlined
+                />
               </a>
             </div>
           </div>
