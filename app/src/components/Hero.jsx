@@ -19,11 +19,12 @@ function Hero() {
             />
           </div>
         </div>
-        <div className="col flex justify-content-center">
+        <div className="flex justify-content-center">
           <div className="hero-container flex align-content-center flex-wrap card-container">
             <h2 className="font-bold" style={{ color: "#0098e5" }}>
               Gokul Ganesh I
             </h2>
+            <br />
             <p className="font-light">
               Software Engineer of Secure Product Groups at Microchip
             </p>
