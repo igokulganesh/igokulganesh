@@ -3,6 +3,16 @@ import MutiThreadFTP from "./images/FTP.png";
 import ConnectFour from "./images/connect4.jpg";
 import EasyExam from "./images/exam.png";
 
+// Skills
+import Skills from "../assets/images/programming.gif";
+import Programming from "../assets/images/Skills/programming.jpg";
+import Concept from "../assets/images/Skills/concept.png";
+import Website from "../assets/images/Skills/web.jpg";
+import Framework from "../assets/images/Skills/Frames.jpg";
+import Tools from "../assets/images/Skills/tool.png";
+import Database from "../assets/images/Skills/db.jpg";
+import Os from "../assets/images/Skills/os.jpg";
+
 const Images = {
   // Social Media
   Github: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
@@ -14,11 +24,22 @@ const Images = {
   Twitter: "https://cdn-icons-png.flaticon.com/512/124/124021.png",
   Instagram: "https://cdn-icons-png.flaticon.com/512/1384/1384063.png",
   Facebook: "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+  WakaTime: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt9wtEx_mE_FJIntygwJy9ShubC3tr--4W5SpGUedWYw&s",
 
   // Projects Images
   MutiThreadFTP,
   ConnectFour,
   EasyExam,
+
+  // Skills Images
+  Skills,
+  Programming,
+  Concept,
+  Website,
+  Framework,
+  Tools,
+  Database,
+  Os,
 }
 
 const Links = {
@@ -33,9 +54,19 @@ const Links = {
   Twitter: "https://twitter.com/IGokulGanesh",
   Instagram: "https://www.instagram.com/igokulganesh/",
   Facebook: "https://www.facebook.com/GokulGaneshI/",
+  WakaTime: "https://wakatime.com/@igokulganesh",
 
-  // Demo Links
+  // Project Demo Links
   EasyExamDemo: "https://youtu.be/l3dXsJ_nsxo",
+
+  // Project Github Links
+  MutiThreadFTP_Src: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
+  ConnectFour_Src: "https://github.com/igokulganesh/Connect-Four",
+  EasyExam_Src: "https://github.com/igokulganesh/EasyExam",
+
+
+  // Project Websites Links
+  ConnectFour_Web: "https://igokulganesh.github.io/Connect-Four/computer",
 }
 
 export { Images, Links };

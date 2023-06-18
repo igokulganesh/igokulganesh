@@ -47,8 +47,8 @@ function Contact() {
               <InputTextarea autoResize value={message} onChange={(e) => setMessage(e.target.value)} rows={5} placeholder='Message' />
             </div>
             <div className="flex justify-content-center mt-3 gap-2">
-              <Button label="Submit" size='small' className='' severity="info" />
-              <Button label="Clear" size='small' severity="danger" onClick={clearForm} />
+              <Button label="Submit" size='small' className='border-noround' severity="info" />
+              <Button label="Clear" size='small' severity="danger" className='border-noround' onClick={clearForm} />
             </div>
           </form>
         </div>
