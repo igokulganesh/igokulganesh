@@ -1,14 +1,12 @@
 import React from "react";
 import { useMediaQuery } from 'react-responsive';
 import { Button } from 'primereact/button';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
 import { Images } from "../assets/data";
+import { ArrowComponent } from "../assets/ArrowComponent";
 
-// css
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// Slider
+import Slider from "react-slick";
+import { classNames } from "primereact/utils";
 import "../assets/css/skills.css";
 
 const skills = [
@@ -21,58 +19,79 @@ const skills = [
   { group: "Operating System", color: "orange", bgImg: Images.Os, items: ["Linux", "Windows"] },
 ];
 
+function SkillCard({ skill }) {
+  return (
+    <>
+      <div className={`skill-card bg-${skill.color}-900 p-5`} style={{ backgroundImage: `url(${skill?.bgImg})` }}>
+        <div className="flex">
+          <p className={`font-bold text-lg text-${skill.color}-200`}>{skill.group}</p>
+        </div>
+        <div className={`flex flex-wrap gap-2`}>
+          {skill.items.map(item => {
+            return (
+              <div key={item}>
+                <Button label={item} raised outlined size="small" className={`text-${skill.color}-300`} />
+              </div>
+            )
+          })}
+        </div>
+      </div>
+      <br />
+    </>
+  );
+};
+
 function Skills() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: !isMobile,
+    nextArrow: <ArrowComponent />,
+    prevArrow: <ArrowComponent />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
+
   return (
-    <div id="skills" className="m-5">
+    <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2")}>
       <h4 className="flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Skills</h4>
-      <div className='flex justify-content-center flex-wrap  align-items-center gap-3'>
-        <div className=''>
+      <div className='grid flex justify-content-center flex-wrap'>
+        <div className='col-auto'>
           <img src={Images.Skills} alt='skill' height={"100px"} className='responsive-image' />
         </div>
-        <div>
-          <div className="skill-outer-width">
-            <br />
-            <Swiper
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: true,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              loop={true}
-              slidesPerView={1}
-              navigation={!isMobile}
-              modules={[Autoplay, Pagination, Navigation, Keyboard]}
-              className="mySwiper"
-              keyboard={true}
-            >
-              {
-                skills.map(skill => {
-                  return (
-                    <SwiperSlide key={skill.group}>
-                      <div className={`p-5 bg-${skill.color}-900 skill-card-height MyCard`} style={{ backgroundImage: `url(${skill?.bgImg})` }}>
-                        <p className={`flex font-bold text-lg text-${skill.color}-200`}>{skill.group}</p>
-                        <div className="flex flex-wrap gap-2 skill-card-width">
-                          {skill.items.map(item => {
-                            return (
-                              <div key={item}>
-                                <Button label={item} raised outlined size="small" className={`text-${skill.color}-300`} />
-                              </div>
-                            )
-                          })}
-                        </div>
-                      </div>
-                      <br />
-                    </SwiperSlide>
-                  );
-                })
-              }
-              <br /><br />
-            </Swiper>
-          </div>
+        <div className={classNames({ "col-5": !isMobile }, { "col-12": isMobile })}>
+          <Slider {...sliderSettings}>
+            {
+              skills.map(skill => {
+                return (
+                  <div className="flex justify-content-center flex-wrap" key={skill.group}>
+                    <SkillCard skill={skill} />
+                  </div>
+                );
+              })
+            }
+          </Slider>
         </div>
       </div>
     </div>
