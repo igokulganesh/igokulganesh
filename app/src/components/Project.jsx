@@ -2,6 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Images, Links } from "../assets/data";
 import { classNames } from 'primereact/utils';
+import { ArrowComponent } from "../assets/ArrowComponent";
 
 // Slider
 import Slider from "react-slick";
@@ -14,9 +15,6 @@ import { ScrollPanel } from 'primereact/scrollpanel';
 
 // css
 import "../assets/css/Project.css";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const projects = [
   {
@@ -60,12 +58,6 @@ const projects = [
     tech: ["Python", "Django", "ML"]
   },
 ];
-
-function ArrowComponent(props) {
-  return (
-    <span className={props.className} onClick={props.onClick} />
-  );
-}
 
 const ProjectComponent = ({ project }) => {
   const header = (
