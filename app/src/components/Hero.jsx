@@ -9,21 +9,19 @@ import "../assets/css/Hero.css";
 function Hero() {
   return (
     <div className="hero" id="hero">
-      <div className="grid">
-        <div className="col">
-          <div className="flex justify-content-center flex-wrap card-container">
-            <img
-              className="hero-image"
-              src={igokulganesh}
-              alt="Gokul Ganesh I"
-            />
-          </div>
+      <div className="flex flex-wrap justify-content-center gap-3">
+        <div className="flex justify-content-center flex-wrap card-container">
+          <img
+            className="hero-image"
+            src={igokulganesh}
+            alt="Gokul Ganesh I"
+          />
         </div>
         <div className="flex justify-content-center">
           <div className="hero-container flex align-content-center flex-wrap card-container">
-            <h2 className="font-bold" style={{ color: "#0098e5" }}>
+            <h1 className="font-bold" style={{ color: "#0098e5" }}>
               Gokul Ganesh I
-            </h2>
+            </h1>
             <br />
             <p className="font-light">
               Software Engineer of Secure Product Groups at Microchip

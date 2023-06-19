@@ -170,7 +170,7 @@ function Project() {
   };
 
   return (
-    <div id="projects" className={classNames({ "p-5": !isMobile }, 'pt-0 pb-0')}>
+    <div id="projects" className={classNames({ "p-5": !isMobile }, 'pt-5 pb-0')}>
       <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Projects</h3>
       <Slider {...sliderSettings}>
         {
