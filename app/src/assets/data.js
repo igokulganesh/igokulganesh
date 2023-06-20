@@ -13,6 +13,10 @@ import Tools from "../assets/images/Skills/tool.png";
 import Database from "../assets/images/Skills/db.jpg";
 import Os from "../assets/images/Skills/os.jpg";
 
+// Company Logo
+import Microchip from "../assets/images/microchip.png";
+import Zoho from "../assets/images/zoho.png";
+
 const Images = {
   // Social Media
   Github: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
@@ -40,6 +44,10 @@ const Images = {
   Tools,
   Database,
   Os,
+
+  // company logo
+  Microchip,
+  Zoho
 }
 
 const Links = {
@@ -67,6 +75,11 @@ const Links = {
 
   // Project Websites Links
   ConnectFour_Web: "https://igokulganesh.github.io/Connect-Four/computer",
+
+
+  // Company Link
+  Microchip: "https://www.microchip.com/",
+  Zoho: "https://www.zoho.com/",
 }
 
 export { Images, Links };

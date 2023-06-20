@@ -20,7 +20,10 @@
     /* Prevent line breaks */
     animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
     /* Animation properties: duration, steps, and infinite blinking caret */
-    width: 1000px;
+    width: 70%;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 @keyframes typing {
@@ -29,7 +32,7 @@
     }
 
     to {
-        width: 100%;
+        width: 70%;
     }
 }
 
@@ -42,16 +45,6 @@
 
     50% {
         border-color: rgb(0, 5, 45);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .typing-animation {
-        font-size: 1.5rem;
-        /* Adjust the font size as per your requirements */
-        white-space: normal;
-        width: auto;
-        /* Allow content to wrap on smaller screens */
     }
 }
 

@@ -17,9 +17,9 @@ function Hero() {
             alt="Gokul Ganesh I"
           />
         </div>
-        <div className="flex justify-content-center">
-          <div className="hero-container flex align-content-center flex-wrap card-container">
-            <h1 className="font-bold" style={{ color: "#0098e5" }}>
+        <div className="flex flex-column align-content-center justify-content-center flex-wrap card-container">
+          <div className="hero-container">
+            <h1 className="font-bold typing-animation" style={{ color: "#0098e5" }}>
               Gokul Ganesh I
             </h1>
             <br />
