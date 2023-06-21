@@ -53,9 +53,8 @@ const projects = [
       be used to determine the final score of the student. Evaluating Descriptive Answer using Cosine-Similarity Algorithm. `,
     source: Links.EasyExam_Src,
     demo: Links.EasyExamDemo,
-    website: Links.EasyExamDemo,
     img: Images.EasyExam,
-    tech: ["Python", "Django", "ML"]
+    tech: ["Python", "Django", "ML"],
   },
 ];
 
