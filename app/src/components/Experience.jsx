@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Divider } from 'primereact/divider';
-import { Button } from 'primereact/button';
 import { useMediaQuery } from 'react-responsive';
 import { Images, Links } from "../assets/data";
-import '../assets/css/Experience.css';
 import { classNames } from 'primereact/utils';
+import { Button } from 'primereact/button';
+import { Divider } from 'primereact/divider';
+import { Fieldset } from 'primereact/fieldset';
+
+import '../assets/css/Experience.css';
 
 
 const experience = [
@@ -135,13 +137,13 @@ function Description({ description }) {
             label={toggle ? "View less" : "View more"}
             onClick={() => setToggle(!toggle)}
             size='small'
-            className='mb-3 p-button-text more-button'
+            className='p-button-text more-button'
             icon={toggle ? "pi pi-angle-up" : "pi pi-angle-down"} iconPos='right'
           />
         )
       }
       {
-        toggle ? description : <></>
+        toggle ? <div className='card p-3 overflow-auto max-h-20rem'>{description}</div> : <></>
       }
     </>
   );
@@ -160,15 +162,16 @@ function Roles({ role }) {
   const timeLine = `${startDate} - ${endDate} · ${duration}`;
 
   return (
-    <ul className="pl-5" key={role.title}>
-      <h6>{role.title}</h6>
+    <div className="" key={role.title}>
+      <h6 className='font-bold'>{role.title}</h6>
       <p className='font-light text-sm'>{timeLine}</p>
       <p>
         <span className='font-semibold text-black-alpha-80'>Skills:</span>
         {role.skills.map((skill, index) => <span className='text-sm font-italic' key={skill}>{` ${skill} ${index !== role.skills.length - 1 ? " · " : ""}`}</span>)}
       </p>
       <Description description={role?.description} />
-    </ul>
+      <Divider />
+    </div>
   );
 }
 
@@ -178,46 +181,38 @@ function Experience() {
 
   return (
     <div id="experience" className={classNames({ "p-5": !isMobile }, "p-1 pt-3")}>
-      <div className="card">
+      <div>
         <h4 className="mt-3 mb-3 flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Experience</h4>
         {
-          experience.map((exp, index) => {
+          experience.map((exp) => {
 
             const duration = calculateDuration(exp.startDate, exp.endDate);
 
-            return (
-              <div key={exp.company}>
-                <div className='flex flex-wrap gap-2 ml-2'>
-                  <div className="flex align-content-center justify-content-center flex-wrap card-container">
-                    <a href={exp?.link} target="_blank" rel="noreferrer">
-                      <img src={exp?.logo} alt={exp?.company} width="75px" />
-                    </a>
-                  </div>
-                  <div className='flex align-content-center justify-content-center flex-wrap card-container'>
-                    <div className='flex flex-column card-container'>
-                      <h3 className="text-lg font-bold">
-                        <a href={exp?.link} target="_blank" rel="noreferrer" className='no-underline text-black-alpha-80'>
-                          {exp.company}
-                        </a>
-                      </h3>
-                      <p className='text-sm font-light'>
-                        {exp.roles.length > 1 ? <>{duration}<br /></> : ""}
-                        {exp.location}
-                      </p>
-                    </div>
-                  </div>
+            const header = (
+              <div className="flex flex-wrap">
+                <a href={exp?.link} target="_blank" rel="noreferrer">
+                  <img src={exp?.logo} alt={exp?.company} width="75px" />
+                </a>
+                <div className="">
+                  <h3 className="text-lg font-bold">
+                    {exp.company}
+                  </h3>
+                  <p className='text-sm font-light'>
+                    {exp.roles.length > 1 ? <>{duration}<br /></> : ""}
+                    {exp.location}
+                  </p>
                 </div>
-                <div>
+              </div>
+            );
+
+            return (
+              <div key={exp.company} className=''>
+                <Fieldset legend={header} toggleable collapseIcon="pi" expandIcon="pi">
+                  <Description description={exp?.description} />
                   {
                     exp.roles.map(role => <Roles role={role} />)
                   }
-                </div>
-                <div className='card-container ml-5'>
-                  <Description description={exp?.description} />
-                </div>
-                {
-                  (index !== experience.length - 1) ? <Divider /> : <></>
-                }
+                </Fieldset>
               </div>
             );
           })
