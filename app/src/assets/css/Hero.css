@@ -49,19 +49,19 @@
 }
 
 .hero-image {
-    height: 350px;
+    height: 250px;
 }
 
 @media (min-width: 768px) {
     .hero-image {
-        height: 400px;
+        height: 250px;
         /* Adjusted width for screens larger than 768px */
     }
 }
 
 @media (min-width: 1200px) {
     .hero-image {
-        height: 500px;
+        height: 300px;
         /* Adjusted width for screens larger than 1200px */
     }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import { Button } from "primereact/button";
 import SocialMedia from "./SocialMedia";
-import igokulganesh from "../assets/images/igokulganesh.png";
+import { Images } from "../assets/data";
 import resume from "../assets/Gokul Ganesh I (Resume).pdf";
 import "../assets/css/Hero.css";
 
@@ -13,7 +13,7 @@ function Hero() {
         <div className="flex justify-content-center flex-wrap card-container">
           <img
             className="hero-image"
-            src={igokulganesh}
+            src={Images.igokulganesh}
             alt="Gokul Ganesh I"
           />
         </div>

@@ -1,3 +1,5 @@
+import igokulganesh from "./images/igokulganesh.png";
+
 // Projects
 import MutiThreadFTP from "./images/FTP.png";
 import ConnectFour from "./images/connect4.jpg";
@@ -18,6 +20,7 @@ import Microchip from "../assets/images/microchip.png";
 import Zoho from "../assets/images/zoho.png";
 
 const Images = {
+  igokulganesh,
   // Social Media
   Github: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
   LinkedIn: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
