@@ -2,7 +2,6 @@ import React from "react";
 import { useMediaQuery } from 'react-responsive';
 import { Button } from 'primereact/button';
 import { Images } from "../assets/data";
-import { Accordion, AccordionTab } from 'primereact/accordion';
 import { ArrowComponent } from "../assets/ArrowComponent";
 
 // Slider
@@ -28,13 +27,15 @@ function SkillCard({ skill }) {
           <p className={`font-bold text-lg text-${skill.color}-200`}>{skill.group}</p>
         </div>
         <div className={`flex flex-wrap gap-2`}>
-          {skill.items.map(item => {
-            return (
-              <div key={item}>
-                <Button label={item} raised outlined size="small" className={`text-${skill.color}-300`} />
-              </div>
-            )
-          })}
+          {
+            skill.items.map(item => {
+              return (
+                <div key={item}>
+                  <Button label={item} raised outlined size="small" className={`text-${skill.color}-300`} />
+                </div>
+              )
+            })
+          }
         </div>
       </div>
       <br />
@@ -75,32 +76,36 @@ function Skills() {
   };
 
   return (
-    <div id="skills" className="card-section">
-      <Accordion activeIndex={0} expandIcon="pi" collapseIcon="pi">
-        <AccordionTab header={<span className="font-bold text-blue-900 text-xl">Technical Expertise</span>}>
-          <div className='grid flex justify-content-center flex-wrap'>
-            {
-              !isMobile &&
-              <div className='col-4'>
-                <img src={Images.Skills} alt='skill' height={"250px"} />
-              </div>
-            }
-            <div className={classNames({ "col-5": !isMobile }, { "col-12": isMobile })}>
-              <Slider {...sliderSettings}>
-                {
-                  skills.map(skill => {
-                    return (
-                      <div className="flex justify-content-center flex-wrap" key={skill.group}>
-                        <SkillCard skill={skill} />
-                      </div>
-                    );
-                  })
-                }
-              </Slider>
-            </div>
+    <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
+      <div className='flex justify-content-center'>
+        <h3 className='flex justify-content-center align-items-center font-bold text-light-blue mt-5'>Technical Expertise</h3>
+      </div>
+      <div className='flex flex-wrap justify-content-center align-items-center'>
+        <p className='flex flex-wrap justify-content-center align-items-center text-light-blue'>
+          Over the course of my career, I have gained extensive experience in these areas
+        </p>
+      </div>
+      <div className='grid flex justify-content-center flex-wrap'>
+        {
+          !isMobile &&
+          <div className='col-4'>
+            <img src={Images.Skills} alt='skill' height={"250px"} />
           </div>
-        </AccordionTab>
-      </Accordion>
+        }
+        <div className={classNames({ "col-5": !isMobile }, { "col-12": isMobile })}>
+          <Slider {...sliderSettings}>
+            {
+              skills.map(skill => {
+                return (
+                  <div className="flex justify-content-center flex-wrap" key={skill.group}>
+                    <SkillCard skill={skill} />
+                  </div>
+                );
+              })
+            }
+          </Slider>
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import '../assets/css/Navbar.css';
 const headers = [
   { label: "About me", to: "hero", offset: -100 },
   { label: "Relevant Experience", to: "experience", offset: -70 },
-  { label: "Technical Expertise", to: "skills", offset: -120 },
+  { label: "Technical Expertise", to: "skills", offset: -70 },
   { label: "Personal projects", to: "projects", offset: -140 },
   { label: "Contact", to: "contact", offset: -90 },
 ];
