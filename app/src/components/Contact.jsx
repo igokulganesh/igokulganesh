@@ -4,13 +4,12 @@ import { Button } from 'primereact/button';
 import { InputTextarea } from 'primereact/inputtextarea';
 import SocialMedia from "./SocialMedia";
 import { ScrollTop } from 'primereact/scrolltop';
-import connectImg from "../assets/images/contact.jpg";
+import { Images, Links } from "../assets/data";
 
 import "../assets/css/contact.css";
 
 
 function Contact() {
-  const email = "igokulganesh@gmail.com";
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
@@ -18,7 +17,7 @@ function Contact() {
     e.preventDefault();
 
     // Create a mailto link
-    const mailto = `mailto:${email}?subject=${subject}&body=${message}`;
+    const mailto = `mailto:${Links.mail_id}?subject=${subject}&body=${message}`;
 
     // Open the default mail app in the user's system
     window.location.href = mailto;
@@ -36,10 +35,10 @@ function Contact() {
         <h2 className='flex justify-content-center align-items-center font-bold text-light-blue mt-5'>Let's Connect</h2>
       </div>
       <div className='flex justify-content-center'>
-        <p className='justify-content-center align-items-center text-light-blue'>Write me an email</p>
+        <p className='justify-content-center align-items-center text-light-blue'>I would be happy to hear from you</p>
       </div>
       <div className='flex justify-content-center flex-wrap  align-items-center gap-3'>
-        <img src={connectImg} alt='contact' height={"300px"} className='responsive-image' />
+        <img src={Images.Contact} alt='contact' height={"300px"} className='responsive-image' />
         <div className='flex justify-content-center align-content-center flex-wrap'>
           <form onSubmit={handleSubmit} className='responsive-form'>
             <InputText value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Title' style={{ width: "100%" }} />
@@ -58,7 +57,7 @@ function Contact() {
       </div>
       <div className='flex justify-content-center'>
         <p className='justify-content-center align-items-center text-sm mt-1 font-medium'>
-          Check out my profiles on these platforms
+          Take a look at my profiles on these platforms
         </p>
       </div>
       <ScrollTop />
