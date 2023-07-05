@@ -27,13 +27,15 @@ function SkillCard({ skill }) {
           <p className={`font-bold text-lg text-${skill.color}-200`}>{skill.group}</p>
         </div>
         <div className={`flex flex-wrap gap-2`}>
-          {skill.items.map(item => {
-            return (
-              <div key={item}>
-                <Button label={item} raised outlined size="small" className={`text-${skill.color}-300`} />
-              </div>
-            )
-          })}
+          {
+            skill.items.map(item => {
+              return (
+                <div key={item}>
+                  <Button label={item} raised outlined size="small" className={`text-${skill.color}-300`} />
+                </div>
+              )
+            })
+          }
         </div>
       </div>
       <br />
@@ -75,7 +77,14 @@ function Skills() {
 
   return (
     <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
-      <h4 className="flex align-items-center justify-content-center font-bold text-blue-900 underline mb-5">Technical Expertise</h4>
+      <div className='flex justify-content-center'>
+        <h3 className='flex justify-content-center align-items-center font-bold text-light-blue mt-5'>Technical Expertise</h3>
+      </div>
+      <div className='flex flex-wrap justify-content-center align-items-center'>
+        <p className='flex flex-wrap justify-content-center align-items-center text-light-blue'>
+          Over the course of my career, I have gained extensive experience in these areas
+        </p>
+      </div>
       <div className='grid flex justify-content-center flex-wrap'>
         {
           !isMobile &&

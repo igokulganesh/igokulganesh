@@ -1,7 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Images, Links } from "../assets/data";
-import { classNames } from 'primereact/utils';
 import { ArrowComponent } from "../assets/ArrowComponent";
 
 // Slider
@@ -169,8 +168,15 @@ function Project() {
   };
 
   return (
-    <div id="projects" className={classNames({ "p-5": !isMobile }, 'pt-5 pb-0')}>
-      <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Projects</h3>
+    <div id="projects" className="card-section">
+      <div className='flex justify-content-center'>
+        <h3 className='flex justify-content-center align-items-center font-bold text-light-blue mt-5'>Personal Projects</h3>
+      </div>
+      <div className='flex flex-wrap justify-content-center align-items-center'>
+        <p className='flex flex-wrap justify-content-center align-items-center text-light-blue'>
+          These are some of my personal projects that I have worked on
+        </p>
+      </div>
       <Slider {...sliderSettings}>
         {
           projects.map(project => (
@@ -192,7 +198,6 @@ function Project() {
           />
         </a>
       </div>
-      <div className='card mt-6'></div>
     </div>
   );
 }

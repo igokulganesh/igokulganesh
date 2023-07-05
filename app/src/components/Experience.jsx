@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import React, { useEffect, useState } from 'react';
 import { Images, Links } from "../assets/data";
-import { classNames } from 'primereact/utils';
 import { Button } from 'primereact/button';
 import { Divider } from 'primereact/divider';
-import { Fieldset } from 'primereact/fieldset';
-
+import { Accordion, AccordionTab } from 'primereact/accordion';
 import '../assets/css/Experience.css';
 
 
@@ -177,23 +174,45 @@ function Roles({ role }) {
 
 function Experience() {
 
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [totalExp, setTotalExp] = useState("");
+
+  useEffect(() => {
+    let years = 0, months = 0;
+    experience.forEach(exp => {
+      const start = exp.startDate;
+      const end = exp.endDate;
+      const diff = getDiff(start, end);
+
+      years += diff.years;
+      months += diff.months;
+
+    });
+
+    years += Math.floor(months / 12);
+    months = months % 12;
+    let sum = `${years} years`;
+    if (months) sum += ` ${months} months`;
+    setTotalExp(sum);
+  }, []);
 
   return (
-    <div id="experience" className={classNames({ "p-5": !isMobile }, "p-1 pt-3")}>
-      <div>
-        <h4 className="mt-3 mb-3 flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Experience</h4>
+    <div id="experience" className="card-section">
+      <div className='flex justify-content-center'>
+        <h3 className='flex justify-content-center align-items-center font-bold text-light-blue mt-5'>Relevant Experience</h3>
+      </div>
+      <div className='flex flex-wrap justify-content-center align-items-center'>
+        <p className='flex flex-wrap justify-content-center align-items-center text-light-blue'>As a professional, I have over {totalExp} of experience</p>
+      </div>
+      <Accordion activeIndex={0} expandIcon="pi" collapseIcon="pi">
         {
           experience.map((exp) => {
-
             const duration = calculateDuration(exp.startDate, exp.endDate);
-
             const header = (
               <div className="flex flex-wrap">
-                <a href={exp?.link} target="_blank" rel="noreferrer">
+                <a href={exp?.link} target="_blank" rel="noreferrer" className='pt-2'>
                   <img src={exp?.logo} alt={exp?.company} width="75px" />
                 </a>
-                <div className="">
+                <div className="pl-3">
                   <h3 className="text-lg font-bold">
                     {exp.company}
                   </h3>
@@ -206,18 +225,16 @@ function Experience() {
             );
 
             return (
-              <div key={exp.company} className=''>
-                <Fieldset legend={header} toggleable collapseIcon="pi" expandIcon="pi">
-                  <Description description={exp?.description} />
-                  {
-                    exp.roles.map(role => <Roles role={role} />)
-                  }
-                </Fieldset>
-              </div>
+              <AccordionTab header={header} key={exp.company}>
+                <Description description={exp?.description} />
+                {
+                  exp.roles.map(role => <Roles role={role} />)
+                }
+              </AccordionTab>
             );
           })
         }
-      </div>
+      </Accordion>
     </div>
   );
 };

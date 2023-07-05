@@ -15,6 +15,8 @@ import Tools from "../assets/images/Skills/tool.png";
 import Database from "../assets/images/Skills/db.jpg";
 import Os from "../assets/images/Skills/os.jpg";
 
+import Contact from "../assets/images/contact.jpg";
+
 // Company Logo
 import Microchip from "../assets/images/microchip.png";
 import Zoho from "../assets/images/zoho.png";
@@ -48,6 +50,9 @@ const Images = {
   Database,
   Os,
 
+  // contact
+  Contact,
+
   // company logo
   Microchip,
   Zoho
@@ -61,6 +66,7 @@ const Links = {
   LeetCode: "https://leetcode.com/igokulganesh/",
   HackerRank: "https://www.hackerrank.com/igokulganesh",
   Gmail: "mailto:igokulganesh@gmail.com",
+  mail_id: "igokulganesh@gmail.com",
   Youtube: "https://www.youtube.com/@igokulganesh",
   Twitter: "https://twitter.com/IGokulGanesh",
   Instagram: "https://www.instagram.com/igokulganesh/",

@@ -5,9 +5,9 @@ import '../assets/css/Navbar.css';
 const headers = [
   { label: "About me", to: "hero", offset: -100 },
   { label: "Relevant Experience", to: "experience", offset: -70 },
-  { label: "Technical Expertise", to: "skills", offset: -120 },
-  { label: "Personal projects", to: "projects", offset: -140 },
-  { label: "Contact", to: "contact", offset: -90 },
+  { label: "Technical Expertise", to: "skills", offset: -70 },
+  { label: "Personal projects", to: "projects", offset: -70 },
+  { label: "Contact", to: "contact", offset: -70 },
 ];
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
   const NavItems = headers.map(item => {
     return (
       <li className='my-navItem' key={item.to}>
-        <Link to={item.to} spy={true} smooth={true} offset={item.offset} duration={0} onClick={() => setDropDown(false)} className="text-50 no-underline cursor-pointer">
+        <Link to={item.to} spy={true} smooth={true} offset={-50} duration={10} onClick={() => setDropDown(false)} className="text-50 no-underline cursor-pointer">
           {item.label}
         </Link>
       </li>
