@@ -16,7 +16,7 @@ const Navbar = () => {
   const NavItems = headers.map(item => {
     return (
       <li className='my-navItem' key={item.to}>
-        <Link to={item.to} spy={true} smooth={true} offset={item.offset} duration={0} onClick={() => setDropDown(false)} className="text-50 no-underline cursor-pointer">
+        <Link to={item.to} spy={true} smooth={true} offset={item.offset} duration={10} onClick={() => setDropDown(false)} className="text-50 no-underline cursor-pointer">
           {item.label}
         </Link>
       </li>
