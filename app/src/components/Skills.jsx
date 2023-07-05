@@ -2,6 +2,7 @@ import React from "react";
 import { useMediaQuery } from 'react-responsive';
 import { Button } from 'primereact/button';
 import { Images } from "../assets/data";
+import { Accordion, AccordionTab } from 'primereact/accordion';
 import { ArrowComponent } from "../assets/ArrowComponent";
 
 // Slider
@@ -74,29 +75,32 @@ function Skills() {
   };
 
   return (
-    <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
-      <h4 className="flex align-items-center justify-content-center font-bold text-blue-900 underline mb-5">Technical Expertise</h4>
-      <div className='grid flex justify-content-center flex-wrap'>
-        {
-          !isMobile &&
-          <div className='col-4'>
-            <img src={Images.Skills} alt='skill' height={"250px"} />
-          </div>
-        }
-        <div className={classNames({ "col-5": !isMobile }, { "col-12": isMobile })}>
-          <Slider {...sliderSettings}>
+    <div id="skills" className="card-section">
+      <Accordion activeIndex={0} expandIcon="pi" collapseIcon="pi">
+        <AccordionTab header={<span className="font-bold text-blue-900 text-xl">Technical Expertise</span>}>
+          <div className='grid flex justify-content-center flex-wrap'>
             {
-              skills.map(skill => {
-                return (
-                  <div className="flex justify-content-center flex-wrap" key={skill.group}>
-                    <SkillCard skill={skill} />
-                  </div>
-                );
-              })
+              !isMobile &&
+              <div className='col-4'>
+                <img src={Images.Skills} alt='skill' height={"250px"} />
+              </div>
             }
-          </Slider>
-        </div>
-      </div>
+            <div className={classNames({ "col-5": !isMobile }, { "col-12": isMobile })}>
+              <Slider {...sliderSettings}>
+                {
+                  skills.map(skill => {
+                    return (
+                      <div className="flex justify-content-center flex-wrap" key={skill.group}>
+                        <SkillCard skill={skill} />
+                      </div>
+                    );
+                  })
+                }
+              </Slider>
+            </div>
+          </div>
+        </AccordionTab>
+      </Accordion>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Images, Links } from "../assets/data";
-import { classNames } from 'primereact/utils';
 import { ArrowComponent } from "../assets/ArrowComponent";
 
 // Slider
@@ -11,6 +10,7 @@ import Slider from "react-slick";
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
+import { Accordion, AccordionTab } from 'primereact/accordion';
 import { ScrollPanel } from 'primereact/scrollpanel';
 
 // css
@@ -169,30 +169,32 @@ function Project() {
   };
 
   return (
-    <div id="projects" className={classNames({ "p-5": !isMobile }, 'pt-5 pb-0')}>
-      <h3 className='flex align-items-center justify-content-center font-bold text-blue-900 underline mb-3'>Projects</h3>
-      <Slider {...sliderSettings}>
-        {
-          projects.map(project => (
-            <div className='col-auto' key={project.title}>
-              <ProjectComponent project={project} />
-            </div>
-          ))
-        }
-      </Slider>
-      <br />
-      <div className='flex align-content-center justify-content-center'>
-        <a href={Links.GithubRepo} target="_blank" rel="noreferrer">
-          <Button
-            className="text-black-alpha-90 hover:bg-black-alpha-10 border-black-alpha-90"
-            label='View All Projects'
-            outlined
-            icon={<img alt="github" src={Images.Github} className="h-2rem mr-2" />}
-            size="small"
-          />
-        </a>
-      </div>
-      <div className='card mt-6'></div>
+    <div id="projects" className="card-section">
+      <Accordion activeIndex={0} expandIcon="pi" collapseIcon="pi">
+        <AccordionTab header={<span className="font-bold text-blue-900 text-xl">Projects</span>}>
+          <Slider {...sliderSettings}>
+            {
+              projects.map(project => (
+                <div className='col-auto' key={project.title}>
+                  <ProjectComponent project={project} />
+                </div>
+              ))
+            }
+          </Slider>
+          <br />
+          <div className='flex align-content-center justify-content-center'>
+            <a href={Links.GithubRepo} target="_blank" rel="noreferrer">
+              <Button
+                className="text-black-alpha-90 hover:bg-black-alpha-10 border-black-alpha-90"
+                label='View All Projects'
+                outlined
+                icon={<img alt="github" src={Images.Github} className="h-2rem mr-2" />}
+                size="small"
+              />
+            </a>
+          </div>
+        </AccordionTab>
+      </Accordion>
     </div>
   );
 }

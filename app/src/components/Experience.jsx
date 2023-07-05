@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { Images, Links } from "../assets/data";
-import { classNames } from 'primereact/utils';
 import { Button } from 'primereact/button';
 import { Divider } from 'primereact/divider';
-import { Fieldset } from 'primereact/fieldset';
-
+import { Accordion, AccordionTab } from 'primereact/accordion';
 import '../assets/css/Experience.css';
 
 
@@ -177,47 +174,45 @@ function Roles({ role }) {
 
 function Experience() {
 
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-
   return (
-    <div id="experience" className={classNames({ "p-5": !isMobile }, "p-1 pt-3")}>
-      <div>
-        <h4 className="mt-3 mb-3 flex align-items-center justify-content-center font-bold text-blue-900 underline">Relevant Experience</h4>
-        {
-          experience.map((exp) => {
+    <div id="experience" className="card-section">
+      <Accordion activeIndex={0} expandIcon="pi" collapseIcon="pi">
+        <AccordionTab header={<span className="font-bold text-blue-900 text-xl">Relevant Experience</span>}>
+          <Accordion activeIndex={0} expandIcon="pi" collapseIcon="pi">
+            {
+              experience.map((exp) => {
+                const duration = calculateDuration(exp.startDate, exp.endDate);
+                const header = (
+                  <div className="flex w-30rem">
+                    <a href={exp?.link} target="_blank" rel="noreferrer" className='pt-2'>
+                      <img src={exp?.logo} alt={exp?.company} width="75px" />
+                    </a>
+                    <div className="pl-3">
+                      <h3 className="text-lg font-bold">
+                        {exp.company}
+                      </h3>
+                      <p className='text-sm font-light'>
+                        {exp.roles.length > 1 ? <>{duration}<br /></> : ""}
+                        {exp.location}
+                      </p>
+                    </div>
+                  </div>
+                );
 
-            const duration = calculateDuration(exp.startDate, exp.endDate);
+                return (
+                  <AccordionTab header={header} key={exp.company}>
+                    <Description description={exp?.description} />
+                    {
+                      exp.roles.map(role => <Roles role={role} />)
+                    }
+                  </AccordionTab>
+                );
+              })
+            }
+          </Accordion>
+        </AccordionTab>
+      </Accordion>
 
-            const header = (
-              <div className="flex flex-wrap">
-                <a href={exp?.link} target="_blank" rel="noreferrer">
-                  <img src={exp?.logo} alt={exp?.company} width="75px" />
-                </a>
-                <div className="">
-                  <h3 className="text-lg font-bold">
-                    {exp.company}
-                  </h3>
-                  <p className='text-sm font-light'>
-                    {exp.roles.length > 1 ? <>{duration}<br /></> : ""}
-                    {exp.location}
-                  </p>
-                </div>
-              </div>
-            );
-
-            return (
-              <div key={exp.company} className=''>
-                <Fieldset legend={header} toggleable collapseIcon="pi" expandIcon="pi">
-                  <Description description={exp?.description} />
-                  {
-                    exp.roles.map(role => <Roles role={role} />)
-                  }
-                </Fieldset>
-              </div>
-            );
-          })
-        }
-      </div>
     </div>
   );
 };

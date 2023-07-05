@@ -26,7 +26,7 @@ function Hero() {
             <p className="font-light">
               Software Engineer of Secure Product Groups at Microchip
             </p>
-            <p className="mt-2 font-normal white-space-normal">
+            <p className="font-normal white-space-normal">
               Highly motivated and results-driven professional with strong
               problem-solving skills. Adaptable and innovative, I excel in
               program development and thrive in new environments. A proactive

@@ -114,3 +114,20 @@ a {
 .col-12 {
     padding: 2rem;
 }
+
+.card-section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.card-section {
+    padding: 1%;
+}
+
+@media (min-width: 768px) {
+    .card-section {
+        padding-left: 5%;
+        padding-right: 5%;
+        /* Adjusted width for screens larger than 768px */
+    }
+}
