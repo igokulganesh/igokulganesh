@@ -55,6 +55,17 @@ const projects = [
     img: Images.EasyExam,
     tech: ["Python", "Django", "ML"],
   },
+  {
+    title: "Tic Tac Toe",
+    subTitle: "Classic Tic Tac Toe Game using Solar2D Game Engine",
+    description:
+      `The classic Tic Tac Toe game was developed in Lua and Solar2D for Android and Windows platforms.
+      It has two modes of play: Play with friends and Play with the computer using the Min-Max Algorithm, which is unbeatable.`,
+    img: Images.TicTacToe,
+    tech: ["Lua", "Solar2D"],
+    source: Links.TicTacToe_src,
+    website: Links.TicTacToe_Web,
+  },
 ];
 
 const ProjectComponent = ({ project }) => {
