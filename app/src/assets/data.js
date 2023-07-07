@@ -5,6 +5,7 @@ import MutiThreadFTP from "./images/Projects/FTP.png";
 import ConnectFour from "./images/Projects/connect4.jpg";
 import EasyExam from "./images/Projects/exam.png";
 import TicTacToe from "./images/Projects/tictactoe.png";
+import GlobalInventory from "./images/Projects/Industry.jpg";
 
 // Skills
 import Skills from "../assets/images/programming.gif";
@@ -41,6 +42,7 @@ const Images = {
   ConnectFour,
   EasyExam,
   TicTacToe,
+  GlobalInventory,
 
   // Skills Images
   Skills,
@@ -82,8 +84,8 @@ const Links = {
   MutiThreadFTP_Src: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
   ConnectFour_Src: "https://github.com/igokulganesh/Connect-Four",
   EasyExam_Src: "https://github.com/igokulganesh/EasyExam",
-  TicTacToe_src: "https://github.com/igokulganesh/Tic_Tac_Toe",
-
+  TicTacToe_Src: "https://github.com/igokulganesh/Tic_Tac_Toe",
+  GlobalInventory_src: "https://github.com/igokulganesh/Global-Industry",
 
   // Project Websites Links
   ConnectFour_Web: "https://igokulganesh.github.io/Connect-Four/computer",

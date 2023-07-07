@@ -75,17 +75,17 @@ a {
 
 
 .p-scrollpanel.scrollStyle .p-scrollpanel-wrapper {
-    border-right: 10px solid var(--surface-ground);
+    border-right: 10px solid white;
 }
 
 .p-scrollpanel.scrollStyle .p-scrollpanel-bar {
-    background-color: #a6a6a6;
+    background-color: #a6a6a6c1;
     opacity: 0.5;
     transition: background-color .3s;
 }
 
 .p-scrollpanel.scrollStyle .p-scrollpanel-bar:hover {
-    background-color: var(--primary-400);
+    background-color: #7e7e7e;
 }
 
 ::-webkit-scrollbar {
