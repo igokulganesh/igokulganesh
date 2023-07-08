@@ -55,6 +55,31 @@ const projects = [
     img: Images.EasyExam,
     tech: ["Python", "Django", "ML"],
   },
+  {
+    title: "Tic Tac Toe",
+    subTitle: "Classic Tic Tac Toe Game using Solar2D Engine",
+    description:
+      `The classic Tic Tac Toe game was developed in Lua and Solar2D for Android and Windows platforms.
+      It has two modes of play: Play with friends and Play with the computer using the Min-Max Algorithm, which is unbeatable.`,
+    img: Images.TicTacToe,
+    tech: ["Lua", "Solar2D"],
+    source: Links.TicTacToe_Src,
+    website: Links.TicTacToe_Web,
+  },
+  {
+    title: "Global Industry",
+    subTitle: "Inventory management system for manufacturing companies",
+    description: `
+      Global Industry is a web-based administrative tool that enables small-scale manufacturing companies
+      to manage their operations more efficiently. The tool provides a centralized platform for companies
+      to maintain stock and production details, manage employees and their salaries and track customer orders.
+      Each company is assigned a separate database schema, which ensures their data is secure and protected
+      from unauthorized access.
+    `,
+    source: Links.GlobalInventory_src,
+    img: Images.GlobalInventory,
+    tech: ["Python", "Django", "PostgreSQL"],
+  },
 ];
 
 const ProjectComponent = ({ project }) => {
@@ -68,14 +93,14 @@ const ProjectComponent = ({ project }) => {
       <Tooltip target=".tooltip2" />
       <Tooltip target=".tooltip3" />
       <div className='grid'>
-        <div className='col-7'>
+        <div className='col-auto'>
           <div className='flex flex-row flex-wrap card-container gap-2'>
             {
               project.tech.map((item => (<span className='p-badge bg-blue-900' key={item}>{item}</span>)))
             }
           </div>
         </div>
-        <div className='col-5'>
+        <div className='col'>
           <div className="flex flex-row-reverse flex-wrap card-container gap-2">
             {
               project.source &&

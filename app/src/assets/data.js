@@ -1,9 +1,11 @@
 import igokulganesh from "./images/igokulganesh.png";
 
 // Projects
-import MutiThreadFTP from "./images/FTP.png";
-import ConnectFour from "./images/connect4.jpg";
-import EasyExam from "./images/exam.png";
+import MutiThreadFTP from "./images/Projects/FTP.png";
+import ConnectFour from "./images/Projects/connect4.jpg";
+import EasyExam from "./images/Projects/exam.png";
+import TicTacToe from "./images/Projects/tictactoe.png";
+import GlobalInventory from "./images/Projects/Industry.jpg";
 
 // Skills
 import Skills from "../assets/images/programming.gif";
@@ -39,6 +41,8 @@ const Images = {
   MutiThreadFTP,
   ConnectFour,
   EasyExam,
+  TicTacToe,
+  GlobalInventory,
 
   // Skills Images
   Skills,
@@ -55,7 +59,7 @@ const Images = {
 
   // company logo
   Microchip,
-  Zoho
+  Zoho,
 }
 
 const Links = {
@@ -80,11 +84,12 @@ const Links = {
   MutiThreadFTP_Src: "https://github.com/igokulganesh/Multithreaded-File-Transfer",
   ConnectFour_Src: "https://github.com/igokulganesh/Connect-Four",
   EasyExam_Src: "https://github.com/igokulganesh/EasyExam",
-
+  TicTacToe_Src: "https://github.com/igokulganesh/Tic_Tac_Toe",
+  GlobalInventory_src: "https://github.com/igokulganesh/Global-Industry",
 
   // Project Websites Links
   ConnectFour_Web: "https://igokulganesh.github.io/Connect-Four/computer",
-
+  TicTacToe_Web: "https://drive.google.com/drive/folders/1b5MWTrNgd1tuo1b9HZz2Ot4s8ECz1jzZ?usp=sharing",
 
   // Company Link
   Microchip: "https://www.microchip.com/",
