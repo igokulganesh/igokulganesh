@@ -19,21 +19,16 @@ function Hero() {
         </div>
         <div className="hero-container">
           <div className="flex flex-column align-content-center justify-content-center flex-wrap card-container">
-            <h1 className="font-bold typing-animation" style={{ color: "#0098e5" }}>
+            <h1
+              className="font-bold typing-animation"
+              style={{ color: "#0098e5" }}
+            >
               Gokul Ganesh I
             </h1>
-            <br />
-            <p className="font-light">
-              Software Engineer of Secure Product Groups at Microchip
-            </p>
-            <p className="font-normal white-space-normal">
+            <p>Software Engineer at Microchip Technology</p>
+            <p className="font-light mt-2 mb-5">
               Highly motivated and results-driven professional with strong
-              problem-solving skills. Adaptable and innovative, I excel in
-              program development and thrive in new environments. A proactive
-              team player with a keen eye for detail, I make quick decisions to
-              achieve team goals. Leveraging technical expertise, I drive
-              profitability and exceed targets by identifying and capitalizing
-              on growth opportunities.
+              problem-solving skills.
             </p>
             <SocialMedia />
             <div className="flex flex-wrap gap-1 mt-3">
@@ -48,6 +43,7 @@ function Hero() {
                   label="Explore More"
                   size="small"
                   className="border-noround"
+                  style={{ background: "#0098e5" }}
                 />
               </Link>
               <a
@@ -61,6 +57,7 @@ function Hero() {
                   className="border-noround"
                   size="small"
                   outlined
+                  style={{ color: "#0098e5" }}
                 />
               </a>
             </div>

@@ -7,7 +7,7 @@
     z-index: 10;
     transition: .3s ease-in;
     overflow: hidden;
-    background: rgba(11, 41, 72, 1);
+    /* background: rgba(11, 41, 72, 1); */
     backdrop-filter: blur(25px);
 }
 
@@ -65,7 +65,7 @@
     top: 60px;
     width: 300px;
     height: 0;
-    background: rgb(11, 41, 71, 0.5);
+    /* background: rgb(11, 41, 71, 0.5); */
     backdrop-filter: blur(25px);
     border-radius: 10px;
     overflow: hidden;
