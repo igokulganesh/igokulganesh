@@ -23,22 +23,27 @@ import Contact from "../assets/images/contact.jpg";
 import Microchip from "../assets/images/microchip.png";
 import Zoho from "../assets/images/zoho.png";
 
+// Icons
+import Github from "../assets/images/icons/github.png";
+import LinkedIn from "../assets/images/icons/linkedin.png";
+import Gmail from "../assets/images/icons/gmail.png";
+import WakaTime from "../assets/images/icons/wakaTime.png";
+import HackerRank from "../assets/images/icons/HackerRank.png";
+import LeetCode from "../assets/images/icons/LeetCode.png";
+
 const Images = {
   igokulganesh,
   // Social Media
-  Github: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-  LinkedIn: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-  LeetCode:
-    "https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png",
-  HackerRank:
-    "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png",
-  Gmail: "https://cdn-icons-png.flaticon.com/512/281/281769.png",
+  Github,
+  LinkedIn,
+  LeetCode,
+  HackerRank,
+  Gmail,
   Youtube: "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
   Twitter: "https://cdn-icons-png.flaticon.com/512/124/124021.png",
   Instagram: "https://cdn-icons-png.flaticon.com/512/1384/1384063.png",
   Facebook: "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-  WakaTime:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt9wtEx_mE_FJIntygwJy9ShubC3tr--4W5SpGUedWYw&s",
+  WakaTime,
 
   // Projects Images
   MutiThreadFTP,
