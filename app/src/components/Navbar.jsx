@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "../assets/css/Navbar.css";
+import { classNames } from "primereact/utils";
 
 const headers = [
   { label: "About me", to: "hero", offset: -100 },
@@ -13,6 +14,12 @@ const headers = [
 const Navbar = () => {
   const [dropDownShow, setDropDown] = useState(false);
 
+  const [activeItem, setActiveItem] = useState("");
+
+  const handleSetActive = (to) => {
+    setActiveItem(to);
+  };
+
   const NavItems = headers.map((item) => {
     return (
       <li className="my-navItem" key={item.to}>
@@ -23,7 +30,10 @@ const Navbar = () => {
           offset={-50}
           duration={10}
           onClick={() => setDropDown(false)}
-          className="no-underline cursor-pointer"
+          onSetActive={handleSetActive}
+          className={classNames("no-underline cursor-pointer", {
+            "active-nav": activeItem === item.to,
+          })}
         >
           {item.label}
         </Link>
