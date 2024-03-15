@@ -1,112 +1,112 @@
 .my-navHeader {
-    position: fixed;
-    height: 90px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    transition: .3s ease-in;
-    overflow: hidden;
-    /* background: rgba(11, 41, 72, 1); */
-    backdrop-filter: blur(25px);
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  /* background: rgba(11, 41, 72, 1); */
+  backdrop-filter: blur(25px);
 }
 
 .my-navHeader .myNavbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1240px;
-    margin: auto;
-    height: 100%;
-    padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin: auto;
+  height: 100%;
+  padding: 0 1rem;
 }
 
 .my-navHeader .my-navMenu a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .my-navHeader .myNavbar img {
-    width: 250px;
-    height: auto;
+  width: 250px;
+  height: auto;
 }
 
 .my-navHeader .my-navMenu {
-    display: flex;
+  display: flex;
 }
 
 .my-navHeader .my-navItem {
-    padding: 1rem;
-    font-weight: 500;
+  padding: 1rem;
+  font-weight: 500;
 }
 
-.my-navItem .active {
-    padding-bottom: 12px;
-    border-bottom: 3px solid var(--secondary-color);
+.active-nav {
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
 .toggle_btn {
-    cursor: pointer;
-    display: none;
+  cursor: pointer;
+  display: none;
 }
 
 .my-navHeader .my-navItem a:hover {
-    padding-bottom: 12px;
-    border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
 .my-navItem:active {
-    scale: 1.05;
+  scale: 1.05;
 }
 
 .dropdown_menu {
-    display: none;
-    position: fixed;
-    right: 2rem;
-    top: 60px;
-    width: 300px;
-    height: 0;
-    /* background: rgb(11, 41, 71, 0.5); */
-    backdrop-filter: blur(25px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: none;
+  position: fixed;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  height: 0;
+  /* background: rgb(11, 41, 71, 0.5); */
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.openDropdown {
-    height: 300px;
+  height: 300px;
 }
 
 .dropdown_menu li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media(max-width: 900px) {
-    .my-navHeader {
-        background: none;
-        backdrop-filter: none;
-    }
+@media (max-width: 900px) {
+  .my-navHeader {
+    background: none;
+    backdrop-filter: none;
+  }
 
-    .myNavbar .my-navItem {
-        display: none;
-    }
+  .myNavbar .my-navItem {
+    display: none;
+  }
 
-    .myNavbar .toggle_btn {
-        display: block;
-        z-index: 100;
-    }
+  .myNavbar .toggle_btn {
+    display: block;
+    z-index: 100;
+  }
 
-    .dropdown_menu {
-        display: block;
-        z-index: 100;
-    }
+  .dropdown_menu {
+    display: block;
+    z-index: 100;
+  }
 }
 
-@media(max-width: 400px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
+@media (max-width: 400px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
 }
