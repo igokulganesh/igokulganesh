@@ -58,7 +58,7 @@ function SocialMedia() {
   ];
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex align-items-center flex-wrap gap-2">
       {socialLinks.map((item) => {
         return (
           <div key={item.code}>

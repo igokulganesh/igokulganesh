@@ -80,7 +80,7 @@ const experience = [
       {
         title: "Intern",
         startDate: new Date(2022, 1, 1),
-        endDate: new Date(2022, 7, 1),
+        endDate: new Date(2022, 6, 1),
         skills: ["Python", "React JS", "FastApi", "Embedded C", "Redux JS"],
         description: "",
       },
@@ -264,13 +264,13 @@ function Experience() {
 
   return (
     <div id="experience" className="card-section">
-      <div className="flex justify-content-center">
-        <h3 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5">
+      <div className="flex justify-content-center text-gradient">
+        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5">
           Experience
-        </h3>
+        </h2>
       </div>
       <div className="flex flex-wrap justify-content-center align-items-center">
-        <p className="flex flex-wrap justify-content-center align-items-center">
+        <p className="flex flex-wrap justify-content-center align-items-center text-white font-light">
           As a professional, I have over &nbsp;
           <span className="font-bold"> {totalExp} </span> &nbsp; of experience
         </p>

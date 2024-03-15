@@ -19,14 +19,21 @@ function Hero() {
         </div>
         <div className="hero-container">
           <div className="flex flex-column align-content-center justify-content-center flex-wrap card-container">
-            <h1
-              className="font-bold typing-animation"
-              style={{ color: "#0098e5" }}
-            >
-              Gokul Ganesh I
-            </h1>
-            <p>Software Engineer at Microchip Technology</p>
-            <p className="font-light mt-2 mb-5">
+            <div className="flex align-items-center flex-wrap gap-2">
+              <p className="flex align-items-center justify-content-center m-0">
+                Hi, I'm
+              </p>
+              <h1
+                className="flex align-items-center justify-content-center font-bold m-0"
+                style={{ color: "#0098e5" }}
+              >
+                Gokul Ganesh I
+              </h1>
+            </div>
+            <p className="text-white mt-2">
+              Software Engineer at Microchip Technology
+            </p>
+            <p className="font-light mt-2 mb-5 text-white">
               Highly motivated and results-driven professional with strong
               problem-solving skills.
             </p>
