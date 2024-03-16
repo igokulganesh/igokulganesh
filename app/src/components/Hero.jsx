@@ -24,7 +24,7 @@ function Hero() {
                 Hi, I'm
               </p>
               <h1
-                className="flex align-items-center justify-content-center font-bold m-0"
+                className="flex align-items-center justify-content-center font-bold m-0 typing-text"
                 style={{ color: "#0098e5" }}
               >
                 Gokul Ganesh I
