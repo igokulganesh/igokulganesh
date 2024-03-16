@@ -11,6 +11,7 @@ import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 import { Tooltip } from "primereact/tooltip";
 import { ScrollPanel } from "primereact/scrollpanel";
+import { Badge } from "primereact/badge";
 
 // css
 import "../assets/css/Project.css";
@@ -93,9 +94,7 @@ const ProjectComponent = ({ project }) => {
         <div className="col-auto">
           <div className="flex flex-row flex-wrap card-container gap-2">
             {project.tech.map((item) => (
-              <span className="p-badge bg-blue-900" key={item}>
-                {item}
-              </span>
+              <Badge key={item} value={item} className="bg-blue-300" />
             ))}
           </div>
         </div>
@@ -104,7 +103,7 @@ const ProjectComponent = ({ project }) => {
             {project.source && (
               <a href={project.source} target="_blank" rel="noreferrer">
                 <i
-                  className="pi pi-github text-blue-800 tooltip1 text-2xl"
+                  className="pi pi-github text-blue-300 tooltip1 text-2xl"
                   data-pr-tooltip="Source Code"
                   data-pr-position="top"
                 />
@@ -113,7 +112,7 @@ const ProjectComponent = ({ project }) => {
             {project.demo && (
               <a href={project.demo} target="_blank" rel="noreferrer">
                 <i
-                  className="pi pi-youtube text-blue-800 tooltip2 text-2xl"
+                  className="pi pi-youtube text-blue-300 tooltip2 text-2xl"
                   data-pr-tooltip="Demo"
                   data-pr-position="top"
                 />
@@ -122,7 +121,7 @@ const ProjectComponent = ({ project }) => {
             {project.website && (
               <a href={project.website} target="_blank" rel="noreferrer">
                 <i
-                  className="pi pi-globe text-blue-800 tooltip3 text-2xl"
+                  className="pi pi-globe text-blue-300 tooltip3 text-2xl"
                   data-pr-tooltip="Website"
                   data-pr-position="top"
                 />
@@ -142,13 +141,11 @@ const ProjectComponent = ({ project }) => {
         footer={footer}
         header={header}
         className="w-25rem shadow-6"
-        style={{}}
       >
-        <ScrollPanel
-          style={{ width: "100%", height: "200px" }}
-          className="scrollStyle"
-        >
-          <p className="m-0 overflow-auto">{project.description}</p>
+        <ScrollPanel style={{ width: "100%", height: "200px" }}>
+          <p className="m-0 overflow-auto font-light text-color text-sm text-justify">
+            {project.description}
+          </p>
         </ScrollPanel>
       </Card>
     </div>
@@ -192,12 +189,12 @@ function Project() {
   return (
     <div id="projects" className="card-section">
       <div className="flex justify-content-center">
-        <h2 className="flex justify-content-center align-items-center font-bold text-gradient mt-5">
+        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5 mb-0">
           Personal Projects
         </h2>
       </div>
       <div className="flex flex-wrap justify-content-center align-items-center">
-        <p className="flex flex-wrap justify-content-center align-items-center text-white font-light">
+        <p className="flex flex-wrap justify-content-center align-items-center text-white font-light ">
           These are some of my personal projects that I have worked on
         </p>
       </div>
@@ -212,7 +209,7 @@ function Project() {
       <div className="flex align-content-center justify-content-center">
         <a href={Links.GithubRepo} target="_blank" rel="noreferrer">
           <Button
-            className="text-black-alpha-90 hover:bg-black-alpha-10 border-black-alpha-90"
+            className="text-white bg-black-alpha-10 border-black-alpha-90 hover:surface-50"
             label="View All Projects"
             outlined
             icon={

@@ -143,7 +143,7 @@ function Skills() {
   return (
     <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
       <div className="flex justify-content-center text-gradient">
-        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5">
+        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5 mb-0">
           Technical Expertise
         </h2>
       </div>

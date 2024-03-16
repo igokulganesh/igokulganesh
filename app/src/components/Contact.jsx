@@ -31,7 +31,7 @@ function Contact() {
   return (
     <div id="contact" style={{ minHeight: "75vh" }}>
       <div className="flex justify-content-center">
-        <h2 className="flex justify-content-center align-items-center font-bold text-gradient mt-5">
+        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5 mb-0">
           Let's Connect
         </h2>
       </div>
@@ -69,14 +69,13 @@ function Contact() {
               <Button
                 label="Submit"
                 size="small"
-                className="border-noround"
-                severity="info"
+                className="border-noround bg-blue-700 text-white"
+                style={{ background: "#2FB4CB" }}
               />
               <Button
                 label="Clear"
                 size="small"
-                severity="danger"
-                className="border-noround"
+                className="border-noround bg-red-700 text-white"
                 onClick={clearForm}
               />
             </div>

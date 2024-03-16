@@ -265,7 +265,7 @@ function Experience() {
   return (
     <div id="experience" className="card-section">
       <div className="flex justify-content-center text-gradient">
-        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5">
+        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5 mb-0">
           Experience
         </h2>
       </div>
