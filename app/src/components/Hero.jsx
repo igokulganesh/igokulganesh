@@ -19,21 +19,23 @@ function Hero() {
         </div>
         <div className="hero-container">
           <div className="flex flex-column align-content-center justify-content-center flex-wrap card-container">
-            <h1 className="font-bold typing-animation" style={{ color: "#0098e5" }}>
-              Gokul Ganesh I
-            </h1>
-            <br />
-            <p className="font-light">
-              Software Engineer of Secure Product Groups at Microchip
+            <div className="flex align-items-center flex-wrap gap-2">
+              <p className="flex align-items-center justify-content-center m-0">
+                Hi, I'm
+              </p>
+              <h1
+                className="flex align-items-center justify-content-center font-bold m-0 typing-text"
+                style={{ color: "#0098e5" }}
+              >
+                Gokul Ganesh I
+              </h1>
+            </div>
+            <p className="text-white mt-2">
+              Software Engineer at Microchip Technology
             </p>
-            <p className="font-normal white-space-normal">
+            <p className="font-light mt-2 mb-5 text-white">
               Highly motivated and results-driven professional with strong
-              problem-solving skills. Adaptable and innovative, I excel in
-              program development and thrive in new environments. A proactive
-              team player with a keen eye for detail, I make quick decisions to
-              achieve team goals. Leveraging technical expertise, I drive
-              profitability and exceed targets by identifying and capitalizing
-              on growth opportunities.
+              problem-solving skills.
             </p>
             <SocialMedia />
             <div className="flex flex-wrap gap-1 mt-3">
@@ -48,6 +50,7 @@ function Hero() {
                   label="Explore More"
                   size="small"
                   className="border-noround"
+                  style={{ background: "#0098e5" }}
                 />
               </Link>
               <a
@@ -61,6 +64,7 @@ function Hero() {
                   className="border-noround"
                   size="small"
                   outlined
+                  style={{ color: "#0098e5" }}
                 />
               </a>
             </div>
