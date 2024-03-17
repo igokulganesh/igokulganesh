@@ -78,6 +78,17 @@ const projects = [
     img: Images.GlobalInventory,
     tech: ["Python", "Django", "PostgreSQL"],
   },
+  {
+    title: "Portfolio Website",
+    subTitle: "Website for Showcasing My Skills & Experience",
+    description: `
+      I've always wanted to develop a platform to professionally present myself, and I'm proud to finally bring this project to life. 
+      The website is built using ReactJS, ensuring it is responsive and adapts seamlessly to all screen sizes.
+    `,
+    source: Links.portfolio_src,
+    img: Images.Portfolio,
+    tech: ["ReactJS", "PrimeReact"],
+  },
 ];
 
 const ProjectComponent = ({ project }) => {

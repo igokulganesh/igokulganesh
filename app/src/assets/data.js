@@ -6,6 +6,7 @@ import ConnectFour from "./images/Projects/connect4.jpg";
 import EasyExam from "./images/Projects/exam.png";
 import TicTacToe from "./images/Projects/tictactoe.png";
 import GlobalInventory from "./images/Projects/Industry.jpg";
+import Portfolio from "./images/Projects/portfolio.png";
 
 // Skills
 import Skills from "../assets/images/programming.gif";
@@ -51,6 +52,7 @@ const Images = {
   EasyExam,
   TicTacToe,
   GlobalInventory,
+  Portfolio,
 
   // Skills Images
   Skills,
@@ -95,6 +97,7 @@ const Links = {
   EasyExam_Src: "https://github.com/igokulganesh/EasyExam",
   TicTacToe_Src: "https://github.com/igokulganesh/Tic_Tac_Toe",
   GlobalInventory_src: "https://github.com/igokulganesh/Global-Industry",
+  portfolio_src: "https://github.com/igokulganesh/igokulganesh",
 
   // Project Websites Links
   ConnectFour_Web: "https://igokulganesh.github.io/Connect-Four/computer",

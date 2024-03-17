@@ -14,7 +14,16 @@ const skills = [
     group: "Programming Languages",
     color: "blue",
     bgImg: Images.Programming,
-    items: ["C", "C++", "Python", "Rust", "Java Script", "Java", "SQL"],
+    items: [
+      "Rust",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C++",
+      "C",
+      "Java",
+      "SQL",
+    ],
   },
   {
     group: "Concepts",
@@ -53,6 +62,8 @@ const skills = [
     bgImg: Images.Tools,
     items: [
       "Git",
+      "Jenkins",
+      "Docker",
       "VS Code",
       "Visual Studio",
       "Jira",
@@ -65,7 +76,7 @@ const skills = [
     group: "Database System",
     color: "pink",
     bgImg: Images.Database,
-    items: ["PostgreSQL", "MySQL", "MS SQL Server"],
+    items: ["PostgreSQL", "MySQL", "MS SQL Server", "SQLite"],
   },
   {
     group: "Operating System",
