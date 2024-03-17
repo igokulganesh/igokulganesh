@@ -15,9 +15,10 @@ function App() {
     document.addEventListener("DOMContentLoaded", () => {
       setLoading(false);
     });
-    window.addEventListener("load", () => {
+
+    setTimeout(() => {
       setLoading(false);
-    });
+    }, 10000);
   }, []);
 
   useEffect(() => {
