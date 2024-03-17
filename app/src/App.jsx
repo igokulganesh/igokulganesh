@@ -12,9 +12,12 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
+    document.addEventListener("DOMContentLoaded", () => {
       setLoading(false);
-    }, 5000);
+    });
+    window.addEventListener("load", () => {
+      setLoading(false);
+    });
   }, []);
 
   useEffect(() => {
