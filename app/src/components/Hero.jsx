@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-scroll";
 import { Button } from "primereact/button";
 import SocialMedia from "./SocialMedia";
-import { Images } from "../assets/data";
-import resume from "../assets/Gokul Ganesh I (Resume).pdf";
+import { Images, Links } from "../assets/data";
+
 import "../assets/css/Hero.css";
 
 function Hero() {
@@ -54,8 +54,8 @@ function Hero() {
                 />
               </Link>
               <a
-                href={resume}
-                download="Gokul Ganesh I (Resume)"
+                href={Links.resume}
+                //download="Gokul Ganesh I (Resume)"
                 target="_blank"
                 rel="noopener noreferrer"
               >

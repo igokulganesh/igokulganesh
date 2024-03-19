@@ -4,7 +4,7 @@
 I'm Gokul Ganesh, a developer who loves learning new technologies and solving complex problems.
 </h4>
 
-<img align="right" alt="Coding" width="350" src="./app/src/assets/images/programming.gif">
+<img align="right" alt="Coding" width="350" src="./app/src/assets/images/others/programming.gif">
 
 - 🔭 I’m currently looking for opportunities
 - 🌱 I’m currently learning Cryptography & Blockchain technology
@@ -35,7 +35,7 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
 -->
 
 <br />
-<h2>Connect with me <img src='./app/src/assets/images/handshake.gif' width="140px"></h2> 
+<h2>Connect with me <img src='./app/src/assets/images/others/handshake.gif' width="140px"></h2>
 
 <p align="left">
     <a href="https://leetcode.com/igokulganesh/" target="_blank">
@@ -79,6 +79,5 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
     <img src="https://github-readme-stats.vercel.app/api/wakatime?username=igokulganesh&layout=compact&theme=react" alt="Wakatime Week Stats" />
     <img  src="https://github-readme-stats.vercel.app/api/top-langs?username=igokulganesh&show_icons=true&locale=en&layout=compact&theme=react" alt="igokulganesh Langs" />
 </div>
-
 
 <br/><br/>

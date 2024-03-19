@@ -1,28 +1,29 @@
 import igokulganesh from "./images/igokulganesh.png";
 
 // Projects
-import MutiThreadFTP from "./images/Projects/FTP.png";
-import ConnectFour from "./images/Projects/connect4.jpg";
-import EasyExam from "./images/Projects/exam.png";
-import TicTacToe from "./images/Projects/tictactoe.png";
-import GlobalInventory from "./images/Projects/Industry.jpg";
-import Portfolio from "./images/Projects/portfolio.png";
+import MutiThreadFTP from "./images/projects/FTP.png";
+import ConnectFour from "./images/projects/connect4.jpg";
+import EasyExam from "./images/projects/exam.png";
+import TicTacToe from "./images/projects/tictactoe.png";
+import GlobalInventory from "./images/projects/Industry.jpg";
+import Portfolio from "./images/projects/portfolio.png";
 
 // Skills
-import Skills from "../assets/images/programming.gif";
-import Programming from "../assets/images/Skills/programming.jpg";
-import Concept from "../assets/images/Skills/concept.png";
-import Website from "../assets/images/Skills/web.jpg";
-import Framework from "../assets/images/Skills/Frames.jpg";
-import Tools from "../assets/images/Skills/tool.png";
-import Database from "../assets/images/Skills/db.jpg";
-import Os from "../assets/images/Skills/os.jpg";
+import Programming from "../assets/images/skills/programming.jpg";
+import Concept from "../assets/images/skills/concept.png";
+import Website from "../assets/images/skills/web.jpg";
+import Framework from "../assets/images/skills/Frames.jpg";
+import Tools from "../assets/images/skills/tool.png";
+import Database from "../assets/images/skills/db.jpg";
+import Os from "../assets/images/skills/os.jpg";
 
-import Contact from "../assets/images/contact.jpg";
+// Headers/others
+import Contact from "../assets/images/others/contact.jpg";
+import Skills from "../assets/images/others/programming.gif";
 
 // Company Logo
-import Microchip from "../assets/images/microchip.png";
-import Zoho from "../assets/images/zoho.png";
+import Microchip from "../assets/images/company/microchip.png";
+import Zoho from "../assets/images/company/microchip.png";
 
 // Icons
 import Github from "../assets/images/icons/github.png";
@@ -107,6 +108,10 @@ const Links = {
   // Company Link
   Microchip: "https://www.microchip.com/",
   Zoho: "https://www.zoho.com/",
+
+  // Resume
+  resume:
+    "https://drive.google.com/file/d/1FDyTZGbIDMyUsMUy1l9e3k9NdcuoD1se/view?usp=drive_link",
 };
 
 export { Images, Links };

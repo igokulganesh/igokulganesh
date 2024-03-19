@@ -30,19 +30,6 @@ const projects = [
     tech: ["Java", "Threads"],
   },
   {
-    title: "Connect Four Game",
-    subTitle:
-      "Classic Connect Four Game: Compete with Friends and AI Opponents",
-    description: `Connect four is a two player connection board game, in which the players choose a color
-      and then take turns dropping colored discs into a seven-column, six-row vertically suspended grid.
-      The pieces fall straight down, occupying the lowest available space within the column.
-      The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.`,
-    website: Links.ConnectFour_Web,
-    source: Links.ConnectFour_Src,
-    img: Images.ConnectFour,
-    tech: ["JavaScript", "HTML5", "CSS"],
-  },
-  {
     title: "EasyExam",
     subTitle: "Evaluating Descriptive Answer using Cosine-Similarity Algorithm",
     description: `EasyExam provides an automatic evaluation of answer based on the keyword provided to the application
@@ -53,16 +40,6 @@ const projects = [
     demo: Links.EasyExamDemo,
     img: Images.EasyExam,
     tech: ["Python", "Django", "ML"],
-  },
-  {
-    title: "Tic Tac Toe",
-    subTitle: "Classic Tic Tac Toe Game using Solar2D Engine",
-    description: `The classic Tic Tac Toe game was developed in Lua and Solar2D for Android and Windows platforms.
-      It has two modes of play: Play with friends and Play with the computer using the Min-Max Algorithm, which is unbeatable.`,
-    img: Images.TicTacToe,
-    tech: ["Lua", "Solar2D"],
-    source: Links.TicTacToe_Src,
-    website: Links.TicTacToe_Web,
   },
   {
     title: "Global Industry",
@@ -88,6 +65,28 @@ const projects = [
     source: Links.portfolio_src,
     img: Images.Portfolio,
     tech: ["ReactJS", "PrimeReact"],
+  },
+  {
+    title: "Connect Four Game",
+    subTitle: "Connect Four Game: Compete with Friends and AI Opponents",
+    description: `Connect four is a two player connection board game, in which the players choose a color
+      and then take turns dropping colored discs into a seven-column, six-row vertically suspended grid.
+      The pieces fall straight down, occupying the lowest available space within the column.
+      The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.`,
+    website: Links.ConnectFour_Web,
+    source: Links.ConnectFour_Src,
+    img: Images.ConnectFour,
+    tech: ["JavaScript", "HTML5", "CSS"],
+  },
+  {
+    title: "Tic Tac Toe",
+    subTitle: "Classic Tic Tac Toe Game using Solar2D Engine",
+    description: `The classic Tic Tac Toe game was developed in Lua and Solar2D for Android and Windows platforms.
+      It has two modes of play: Play with friends and Play with the computer using the Min-Max Algorithm, which is unbeatable.`,
+    img: Images.TicTacToe,
+    tech: ["Lua", "Solar2D"],
+    source: Links.TicTacToe_Src,
+    website: Links.TicTacToe_Web,
   },
 ];
 

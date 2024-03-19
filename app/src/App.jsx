@@ -16,9 +16,13 @@ function App() {
       setLoading(false);
     });
 
+    window.addEventListener("load", () => {
+      setLoading(false);
+    });
+
     setTimeout(() => {
       setLoading(false);
-    }, 10000);
+    }, 5000);
   }, []);
 
   useEffect(() => {
