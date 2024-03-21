@@ -23,7 +23,7 @@ import Skills from "../assets/images/others/programming.gif";
 
 // Company Logo
 import Microchip from "../assets/images/company/microchip.png";
-import Zoho from "../assets/images/company/microchip.png";
+import Zoho from "../assets/images/company/zoho.png";
 
 // Icons
 import Github from "../assets/images/icons/github.png";

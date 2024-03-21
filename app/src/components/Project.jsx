@@ -64,7 +64,7 @@ const projects = [
     `,
     source: Links.portfolio_src,
     img: Images.Portfolio,
-    tech: ["ReactJS", "PrimeReact"],
+    tech: ["ReactJS", "PrimeReact", "Webpack"],
   },
   {
     title: "Connect Four Game",
