@@ -20,14 +20,13 @@ const projects = [
   {
     title: "Multithreaded File Transfer",
     subTitle: "File Transfer Protocol using Multithreads concept in Java",
-    description: `Multithreaded file transfer is a technique that uses multiple threads to copy files
-      from one location to another. This can significantly improve the speed of file transfer,
-      especially for large files. Each thread can be responsible for copying a different part
-      of the file. This allows the file to be copied in parallel, which can significantly reduce
-      the overall time it takes to complete the transfer.`,
+    description: `The project aims to enhance network file transfer speed by 
+    utilizing multiple threads to handle independent Read/Write operations concurrently, 
+    thereby maximizing CPU utilization. Additionally, files are compressed to minimize 
+    data size, expediting transfer, and encrypted to ensure security.`,
     source: Links.MutiThreadFTP_Src,
     img: Images.MutiThreadFTP,
-    tech: ["Java", "Threads"],
+    tech: ["Java", "Multithreading", "Socket"],
   },
   {
     title: "EasyExam",
