@@ -8,15 +8,6 @@ import TicTacToe from "./images/projects/tictactoe.png";
 import GlobalInventory from "./images/projects/Industry.jpg";
 import Portfolio from "./images/projects/portfolio.png";
 
-// Skills
-import Programming from "../assets/images/skills/programming.jpg";
-import Concept from "../assets/images/skills/concept.png";
-import Website from "../assets/images/skills/web.jpg";
-import Framework from "../assets/images/skills/Frames.jpg";
-import Tools from "../assets/images/skills/tool.png";
-import Database from "../assets/images/skills/db.jpg";
-import Os from "../assets/images/skills/os.jpg";
-
 // Headers/others
 import Contact from "../assets/images/others/contact.jpg";
 import Skills from "../assets/images/others/programming.gif";
@@ -32,6 +23,36 @@ import Gmail from "../assets/images/icons/gmail.png";
 import WakaTime from "../assets/images/icons/wakaTime.png";
 import HackerRank from "../assets/images/icons/HackerRank.png";
 import LeetCode from "../assets/images/icons/LeetCode.png";
+
+// Skills
+import Java from "../assets/images/skills/java.png";
+import React from "../assets/images/skills/react.png";
+import Spring from "../assets/images/skills/spring.png";
+import Maven from "../assets/images/skills/maven.jpg";
+import Python from "../assets/images/skills/python.png";
+import JavaScript from "../assets/images/skills/js.png";
+import TypeScript from "../assets/images/skills/TypeScript.png";
+import PostgreSQL from "../assets/images/skills/postgresql.jpg";
+import MySQL from "../assets/images/skills/MySQL.jpeg";
+import Jenkins from "../assets/images/skills/Jenkins.png";
+import Docker from "../assets/images/skills/docker.png";
+import Git from "../assets/images/skills/git.png";
+
+const skills = {
+  Skills,
+  Java,
+  React,
+  Spring,
+  Maven,
+  Python,
+  JavaScript,
+  TypeScript,
+  PostgreSQL,
+  MySQL,
+  Jenkins,
+  Docker,
+  Git,
+};
 
 const Images = {
   igokulganesh,
@@ -56,15 +77,7 @@ const Images = {
   Portfolio,
 
   // Skills Images
-  Skills,
-  Programming,
-  Concept,
-  Website,
-  Framework,
-  Tools,
-  Database,
-  Os,
-
+  ...skills,
   // contact
   Contact,
 

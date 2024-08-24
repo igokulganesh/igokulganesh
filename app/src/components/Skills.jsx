@@ -1,155 +1,65 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import { Button } from "primereact/button";
 import { Images } from "../assets/data";
-import { ArrowComponent } from "../assets/ArrowComponent";
 
 // Slider
-import Slider from "react-slick";
 import { classNames } from "primereact/utils";
 import "../assets/css/skills.css";
+import { Tooltip } from "primereact/tooltip";
 
-const skills = [
+const techStack = [
   {
-    group: "Programming Languages",
-    color: "blue",
-    bgImg: Images.Programming,
-    items: [
-      "Rust",
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "C++",
-      "C",
-      "Java",
-      "SQL",
-    ],
+    name: "Java",
+    icon: Images.Java,
   },
   {
-    group: "Concepts",
-    color: "green",
-    bgImg: Images.Concept,
-    items: [
-      "Cryptography",
-      "Data Structure",
-      "Algorithm",
-      "Database design",
-      "Object Oriented Programming",
-    ],
+    name: "Python",
+    icon: Images.Python,
   },
   {
-    group: "Web Designing Languages",
-    color: "red",
-    bgImg: Images.Website,
-    items: [
-      "React JS",
-      "Redux",
-      "HTML",
-      "CSS",
-      "Jquery",
-      "Bootstrap & Grid System",
-    ],
+    name: "Spring Framework",
+    icon: Images.Spring,
   },
   {
-    group: "Frameworks",
-    color: "yellow",
-    bgImg: Images.Framework,
-    items: ["Fast Api", "Django", "Rest Api"],
+    name: "React",
+    icon: Images.React,
   },
   {
-    group: "Tools & Utilities",
-    color: "teal",
-    bgImg: Images.Tools,
-    items: [
-      "Git",
-      "Jenkins",
-      "Docker",
-      "VS Code",
-      "Visual Studio",
-      "Jira",
-      "Bitbucket",
-      "Shell Script",
-      "Jupyter Notebook",
-    ],
+    name: "Java Script",
+    icon: Images.JavaScript,
   },
   {
-    group: "Database System",
-    color: "pink",
-    bgImg: Images.Database,
-    items: ["PostgreSQL", "MySQL", "MS SQL Server", "SQLite"],
+    name: "Type Script",
+    icon: Images.TypeScript,
   },
   {
-    group: "Operating System",
-    color: "orange",
-    bgImg: Images.Os,
-    items: ["Linux", "Windows"],
+    name: "PostgreSQL",
+    icon: Images.PostgreSQL,
+  },
+  {
+    name: "MySQL",
+    icon: Images.MySQL,
+  },
+  {
+    name: "Maven",
+    icon: Images.Maven,
+  },
+  {
+    name: "Jenkins",
+    icon: Images.Jenkins,
+  },
+  {
+    name: "Docker",
+    icon: Images.Docker,
+  },
+  {
+    name: "Git",
+    icon: Images.Git,
   },
 ];
 
-function SkillCard({ skill }) {
-  return (
-    <>
-      <div
-        className={`skill-card bg-${skill.color}-900 p-5`}
-        style={{ backgroundImage: `url(${skill?.bgImg})` }}
-      >
-        <div className="flex">
-          <p className={`font-bold text-lg text-${skill.color}-200`}>
-            {skill.group}
-          </p>
-        </div>
-        <div className={`flex flex-wrap gap-2`}>
-          {skill.items.map((item) => {
-            return (
-              <div key={item}>
-                <Button
-                  label={item}
-                  raised
-                  outlined
-                  size="small"
-                  className={`text-${skill.color}-300`}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <br />
-    </>
-  );
-}
-
 function Skills() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: !isMobile,
-    nextArrow: <ArrowComponent />,
-    prevArrow: <ArrowComponent />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
-  };
 
   return (
     <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
@@ -171,20 +81,29 @@ function Skills() {
           </div>
         )}
         <div
-          className={classNames({ "col-5": !isMobile }, { "col-12": isMobile })}
+          className={classNames(
+            { "col-4": !isMobile },
+            { "col-12": isMobile },
+            "bg-white border-round m-5"
+          )}
         >
-          <Slider {...sliderSettings}>
-            {skills.map((skill) => {
-              return (
-                <div
-                  className="flex justify-content-center flex-wrap"
-                  key={skill.group}
-                >
-                  <SkillCard skill={skill} />
-                </div>
-              );
-            })}
-          </Slider>
+          <div className="card flex flex-row flex-wrap gap-2">
+            {techStack.map((tech) => (
+              <div
+                key={tech.name}
+                className="flex align-items-center justify-content-center"
+              >
+                <Tooltip target=".ImgToolTip" event="both" position="top" />
+                <img
+                  align="left"
+                  data-pr-tooltip={tech.name}
+                  alt={tech.name}
+                  className="ImgToolTip w-4rem m-1 border-round"
+                  src={tech.icon}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
