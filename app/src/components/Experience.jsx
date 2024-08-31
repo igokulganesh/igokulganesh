@@ -3,7 +3,7 @@ import { Images, Links } from "../assets/data";
 import { Button } from "primereact/button";
 import { Divider } from "primereact/divider";
 import { Accordion, AccordionTab } from "primereact/accordion";
-//import "../assets/css/Experience.css";
+import "../assets/css/Experience.css";
 
 const experience = [
   {
@@ -64,8 +64,8 @@ const experience = [
                 crucial for ACVP certifications.
               </li>
               <li>
-                Added Package manager to the TPDS Application for managing the
-                installation of packages.
+                Implemented Package manager to the TPDS Application for managing
+                the installation of packages.
               </li>
             </ul>
           </div>
@@ -81,8 +81,9 @@ const experience = [
           <div className="text-sm">
             <ul className="list-disc">
               <li>
-                Enhanced the user experience on TPDS by integrating Redux and
-                Formik for state management and streamlining user forms.
+                Enhanced the user experience on TPDS by integrating PrimeReact
+                Components and addded Redux and Formik for state management and
+                streamlining user forms.
               </li>
               <li>
                 Created Symmetric and Asymmetric Authentication use cases for
@@ -114,9 +115,9 @@ const experience = [
         skills: ["Java", "JDBC", "Database Design", "PostgreSql"],
         description: (
           <p className="text-sm">
-            Completed the internship program offered by Zoho Corporation, during
-            which I developed a banking application using Java, JDBC and
-            PostgreSql.
+            Completed the internship program offered by Zoho Corporation, During
+            this period, I developed a banking application using Java, JDBC, and
+            PostgreSQL.
           </p>
         ),
         collapse: false,
