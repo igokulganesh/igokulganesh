@@ -11,14 +11,14 @@ function SocialMedia() {
       image: Images.Github,
     },
     {
-      code: "LeetCode",
-      link: Links.LeetCode,
-      image: Images.LeetCode,
-    },
-    {
       code: "HackerRank",
       link: Links.HackerRank,
       image: Images.HackerRank,
+    },
+    {
+      code: "LeetCode",
+      link: Links.LeetCode,
+      image: Images.LeetCode,
     },
     {
       code: "WakaTime",
@@ -35,26 +35,6 @@ function SocialMedia() {
       link: Links.Gmail,
       image: Images.Gmail,
     },
-    // {
-    //   code: "Youtube",
-    //   link: Links.Youtube,
-    //   image: Images.Youtube,
-    // },
-    // {
-    //   code: "Twitter",
-    //   link: Links.Twitter,
-    //   image: Images.Twitter,
-    // },
-    // {
-    //   code: "Instagram",
-    //   link: Links.Instagram,
-    //   image: Images.Instagram,
-    // },
-    // {
-    //   code: "Facebook",
-    //   link: Links.Facebook,
-    //   image: Images.Facebook,
-    // },
   ];
 
   return (

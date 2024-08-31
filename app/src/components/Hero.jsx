@@ -60,7 +60,7 @@ function Hero() {
                 rel="noopener noreferrer"
               >
                 <Button
-                  label="Download Resume"
+                  label="View Resume"
                   className="border-noround"
                   size="small"
                   outlined

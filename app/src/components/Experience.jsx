@@ -18,38 +18,36 @@ const experience = [
         title: "Software Engineer",
         startDate: new Date(2022, 7, 1),
         endDate: new Date(),
-        skills: ["C", "Embedded C", "Python", "Cryptography", "React JS"],
+        skills: [
+          "Java",
+          "Spring boot",
+          "React",
+          "Cryptography",
+          "Redux",
+          "TypeScript",
+        ],
         description: (
           <div className="text-sm">
             <p>
-              I have been working on Trust Platform Design Suit (TPDS)
-              Application and CryptoAuthLib within the Secure Product Groups.
+              As a software developer at Microchip Technology, I have been
+              working on Development of Trust Platform Design Suite (TPDS) using
+              Java, Spring boot and React to demonstrate Crypto product features
+              and usage.
             </p>
-            <b>Responsibilities includes:</b>
-            <ul className="list-disc">
-              <li>
-                Development of Trust Platform Design Suite (TPDS) using Python
-                and React applications to demonstrate Crypto product features
-                and usage.
-              </li>
-              <li>
-                Development of library support for Microchip Crypto Products.
-              </li>
-              <li>
-                Development of Secure Provisioning Services for Microchip Crypto
-                Products through TPDS.
-              </li>
-            </ul>
             <b>Projects executed/executing:</b>
             <ul className="list-disc">
               <li>
-                Developed WPC (Wireless Power Consortium) Qi 1.3 application
-                usecase and firmware project for Microchip secure elements using
-                Python, C, Reactjs and cryptographic library.
+                Developed React app for Secure Provisioning Services for
+                Microchip Crypto Products through TPDS.
               </li>
               <li>
-                Created Symmetric and Asymmetric Authentication use cases for
-                Secure Devices
+                Developed multiple Interactive Usecases and configurators for
+                Microchip Crypto devices using Java and React.
+              </li>
+              <li>
+                Developed the Java SDK for Azure IoT to enable seamless
+                interaction with Azure cloud services, utilized in cloud based
+                Usecases.
               </li>
               <li>
                 Design and developed various utility tools for the TPDS
@@ -58,16 +56,12 @@ const experience = [
                 decoder.
               </li>
               <li>
-                Developed the Configurators to Generate the Provisioning Package
-                for Secure Provisioning Services.
+                Designed and implemented a React-based generic framework for
+                configuring CEC devices.
               </li>
               <li>
-                Added support for Proto Provisioning the Microchip secure
-                devices in the TPDS Application.
-              </li>
-              <li>
-                Enhanced the user experience by integrating Redux and Formik for
-                state management and streamlining user forms.
+                Developed a Java project for AES-GCM encryption and decryption,
+                crucial for ACVP certifications.
               </li>
               <li>
                 Added Package manager to the TPDS Application for managing the
@@ -76,13 +70,31 @@ const experience = [
             </ul>
           </div>
         ),
+        collapse: false,
       },
       {
         title: "Intern",
         startDate: new Date(2022, 1, 1),
         endDate: new Date(2022, 6, 1),
-        skills: ["Python", "React JS", "FastApi", "Embedded C", "Redux JS"],
-        description: "",
+        collapse: false,
+        description: (
+          <div className="text-sm">
+            <ul className="list-disc">
+              <li>
+                Enhanced the user experience on TPDS by integrating Redux and
+                Formik for state management and streamlining user forms.
+              </li>
+              <li>
+                Created Symmetric and Asymmetric Authentication use cases for
+                Secure Devices
+              </li>
+              <li>
+                Developed WPC (Wireless Power Consortium) Qi 1.3 application
+                usecase and configurator
+              </li>
+            </ul>
+          </div>
+        ),
       },
     ],
   },
@@ -99,15 +111,12 @@ const experience = [
         title: "Summer Internship",
         startDate: new Date(2021, 5, 1),
         endDate: new Date(2021, 7, 1),
-        skills: [
-          "Java",
-          "Object-Oriented Programming (OOP)",
-          "Database Design",
-        ],
+        skills: ["Java", "JDBC", "Database Design", "PostgreSql"],
         description: (
           <p className="text-sm">
             Completed the internship program offered by Zoho Corporation, during
-            which I developed a banking application using Java and PostgreSql.
+            which I developed a banking application using Java, JDBC and
+            PostgreSql.
           </p>
         ),
         collapse: false,
@@ -181,18 +190,24 @@ function Roles({ role }) {
 
   const timeLine = `${startDate} - ${endDate} · ${duration}`;
 
-  return (
-    <div key={role.title}>
-      <h3 className="font-bold">{role.title}</h3>
-      <p className="font-light text-sm">{timeLine}</p>
+  const showSkill = (skills) => {
+    return (
       <p>
         <span className="font-semibold">Skills:</span>
-        {role.skills.map((skill, index) => (
+        {skills.map((skill, index) => (
           <span className="text-sm font-italic" key={skill}>{` ${skill} ${
             index !== role.skills.length - 1 ? " · " : ""
           }`}</span>
         ))}
       </p>
+    );
+  };
+
+  return (
+    <div key={role.title}>
+      <h3 className="font-bold">{role.title}</h3>
+      <p className="font-light text-sm">{timeLine}</p>
+      {role?.skills && showSkill(role.skills)}
       <Description description={role?.description} collapse={role?.collapse} />
       <Divider />
     </div>
