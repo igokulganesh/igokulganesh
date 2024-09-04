@@ -154,6 +154,7 @@ function Skills() {
           responsiveOptions={responsiveOptions}
           autoplayInterval={3000}
           itemTemplate={skillTemplate}
+          showNavigators={isMobile ? false : true}
         />
       </div>
     );

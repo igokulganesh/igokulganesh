@@ -9,10 +9,6 @@ import "primereact/resources/primereact.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
 import "primeflex/primeflex.css"; // flex
 
-// slider
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import { PrimeReactProvider } from "primereact/api";
 
 const root = createRoot(document.getElementById("root"));

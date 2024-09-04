@@ -18,34 +18,3 @@
   margin-left: auto;
   /* Push the button to the right */
 }
-
-.slick-prev:before,
-.slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  opacity: 0.75;
-  color: var(--blue-300) !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li {
-  list-style: none !important; /* Remove default list styles */
-  font-style: none;
-}
-
-.slick-dots li {
-  content: "";
-  display: inline-block;
-  width: 7px !important;
-  height: 7px !important;
-  border-radius: 50%;
-  background-color: var(--blue-300) !important;
-}
-
-.slick-dots .slick-active {
-  background-color: var(--blue-500) !important;
-  width: 7.5px !important;
-  height: 7.5px !important;
-}

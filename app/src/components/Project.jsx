@@ -1,10 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { Images, Links } from "../assets/data";
-import { ArrowComponent } from "../assets/ArrowComponent";
-
-// Slider
-import Slider from "react-slick";
+import { Carousel } from "primereact/carousel";
 
 // PrimeReact components
 import { Card } from "primereact/card";
@@ -89,145 +86,165 @@ const projects = [
   },
 ];
 
-const ProjectComponent = ({ project }) => {
-  const header = (
-    <img alt={project.title} src={project.img} style={{ maxHeight: "200px" }} />
-  );
-
-  const footer = (
-    <>
-      <Tooltip target=".tooltip1" />
-      <Tooltip target=".tooltip2" />
-      <Tooltip target=".tooltip3" />
-      <div className="grid">
-        <div className="col-auto">
-          <div className="flex flex-row flex-wrap card-container gap-2">
-            {project.tech.map((item) => (
-              <Badge key={item} value={item} className="bg-blue-300" />
-            ))}
-          </div>
-        </div>
-        <div className="col">
-          <div className="flex flex-row-reverse flex-wrap card-container gap-2">
-            {project.source && (
-              <a href={project.source} target="_blank" rel="noreferrer">
-                <i
-                  className="pi pi-github text-blue-300 tooltip1 text-2xl"
-                  data-pr-tooltip="Source Code"
-                  data-pr-position="top"
-                />
-              </a>
-            )}
-            {project.demo && (
-              <a href={project.demo} target="_blank" rel="noreferrer">
-                <i
-                  className="pi pi-youtube text-blue-300 tooltip2 text-2xl"
-                  data-pr-tooltip="Demo"
-                  data-pr-position="top"
-                />
-              </a>
-            )}
-            {project.website && (
-              <a href={project.website} target="_blank" rel="noreferrer">
-                <i
-                  className="pi pi-globe text-blue-300 tooltip3 text-2xl"
-                  data-pr-tooltip="Website"
-                  data-pr-position="top"
-                />
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-
-  return (
-    <div className="flex justify-content-center m-3">
-      <Card
-        title={<span>{project?.title}</span>}
-        subTitle={<span>{project?.subTitle}</span>}
-        footer={footer}
-        header={header}
-        className="w-25rem shadow-6"
-      >
-        <ScrollPanel style={{ width: "100%", height: "200px" }}>
-          <p className="m-0 overflow-auto font-light text-color text-sm text-justify">
-            {project.description}
-          </p>
-        </ScrollPanel>
-      </Card>
-    </div>
-  );
-};
-
 function Project() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: !isMobile,
-    nextArrow: <ArrowComponent />,
-    prevArrow: <ArrowComponent />,
-    responsive: [
+  const header = (
+    <div className="flex justify-content-center">
+      <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5 mb-0">
+        Personal Projects
+      </h2>
+    </div>
+  );
+
+  const description = (
+    <div className="flex flex-wrap justify-content-center align-items-center">
+      <p className="flex flex-wrap justify-content-center align-items-center text-white font-light ">
+        These are some of my personal projects that I have worked on
+      </p>
+    </div>
+  );
+
+  const projectGroups = () => {
+    const projectTemplate = (project) => {
+      const header = (
+        <img
+          alt={project.title}
+          src={project.img}
+          style={{ maxHeight: "200px" }}
+        />
+      );
+
+      const footer = (
+        <>
+          <Tooltip target=".tooltip1" />
+          <Tooltip target=".tooltip2" />
+          <Tooltip target=".tooltip3" />
+          <div className="grid">
+            <div className="col-auto">
+              <div className="flex flex-row flex-wrap card-container gap-2">
+                {project.tech.map((item) => (
+                  <Badge key={item} value={item} className="bg-blue-300" />
+                ))}
+              </div>
+            </div>
+            <div className="col">
+              <div className="flex flex-row-reverse flex-wrap card-container gap-2">
+                {project.source && (
+                  <a href={project.source} target="_blank" rel="noreferrer">
+                    <i
+                      className="pi pi-github text-blue-300 tooltip1 text-2xl"
+                      data-pr-tooltip="Source Code"
+                      data-pr-position="top"
+                    />
+                  </a>
+                )}
+                {project.demo && (
+                  <a href={project.demo} target="_blank" rel="noreferrer">
+                    <i
+                      className="pi pi-youtube text-blue-300 tooltip2 text-2xl"
+                      data-pr-tooltip="Demo"
+                      data-pr-position="top"
+                    />
+                  </a>
+                )}
+                {project.website && (
+                  <a href={project.website} target="_blank" rel="noreferrer">
+                    <i
+                      className="pi pi-globe text-blue-300 tooltip3 text-2xl"
+                      data-pr-tooltip="Website"
+                      data-pr-position="top"
+                    />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </>
+      );
+
+      return (
+        <div className="m-2">
+          <Card
+            title={<span>{project?.title}</span>}
+            subTitle={<span>{project?.subTitle}</span>}
+            footer={footer}
+            header={header}
+            className="hadow-6"
+          >
+            <ScrollPanel style={{ width: "100%", height: "200px" }}>
+              <p className="m-0 overflow-auto font-light text-color text-sm text-justify">
+                {project.description}
+              </p>
+            </ScrollPanel>
+          </Card>
+        </div>
+      );
+    };
+
+    const responsiveOptions = [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
+        breakpoint: "1200px",
+        numVisible: 3,
+        numScroll: 1,
       },
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
+        breakpoint: "1000px",
+        numVisible: 2,
+        numScroll: 1,
       },
-    ],
+      {
+        breakpoint: "767px",
+        numVisible: 2,
+        numScroll: 1,
+      },
+      {
+        breakpoint: "575px",
+        numVisible: 1,
+        numScroll: 1,
+      },
+    ];
+
+    return (
+      <div className="justify-content-cente">
+        <div className="card">
+          <Carousel
+            value={projects}
+            circular
+            numVisible={3}
+            numScroll={1}
+            responsiveOptions={responsiveOptions}
+            autoplayInterval={3000}
+            itemTemplate={projectTemplate}
+            showNavigators={isMobile ? false : true}
+          />
+        </div>
+      </div>
+    );
   };
+
+  const footer = (
+    <div className="flex align-content-center justify-content-center mt-2">
+      <a href={Links.GithubRepo} target="_blank" rel="noreferrer">
+        <Button
+          className="text-white bg-black-alpha-10 border-black-alpha-90 hover:surface-50"
+          label="View All Projects"
+          outlined
+          icon={
+            <img alt="github" src={Images.Github} className="h-2rem mr-2" />
+          }
+          size="small"
+        />
+      </a>
+    </div>
+  );
 
   return (
     <div id="projects" className="card-section">
-      <div className="flex justify-content-center">
-        <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5 mb-0">
-          Personal Projects
-        </h2>
-      </div>
-      <div className="flex flex-wrap justify-content-center align-items-center">
-        <p className="flex flex-wrap justify-content-center align-items-center text-white font-light ">
-          These are some of my personal projects that I have worked on
-        </p>
-      </div>
-      <Slider {...sliderSettings}>
-        {projects.map((project) => (
-          <div className="col-auto" key={project.title}>
-            <ProjectComponent project={project} />
-          </div>
-        ))}
-      </Slider>
-      <br />
-      <div className="flex align-content-center justify-content-center">
-        <a href={Links.GithubRepo} target="_blank" rel="noreferrer">
-          <Button
-            className="text-white bg-black-alpha-10 border-black-alpha-90 hover:surface-50"
-            label="View All Projects"
-            outlined
-            icon={
-              <img alt="github" src={Images.Github} className="h-2rem mr-2" />
-            }
-            size="small"
-          />
-        </a>
-      </div>
+      {header}
+      {description}
+      {projectGroups()}
+      {footer}
     </div>
   );
 }
