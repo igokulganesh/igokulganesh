@@ -1,68 +1,71 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { Images } from "../assets/data";
+import { Carousel } from "primereact/carousel";
+import { Button } from "primereact/button";
 
 // Slider
 import { classNames } from "primereact/utils";
 import "../assets/css/skills.css";
-import { Tooltip } from "primereact/tooltip";
 
-const techStack = [
+const skillSet = [
   {
-    name: "Java",
-    icon: Images.Java,
+    name: "Programming Languages",
+    color: "blue",
+    items: ["Java", "Python", "JavaScript", "TypeScript", "C++", "C", "Rust"],
   },
   {
-    name: "Python",
-    icon: Images.Python,
+    name: "Backend Frameworks",
+    color: "pink",
+    items: [
+      "Spring Boot",
+      "Spring Framework",
+      "Hibernate",
+      "JPA",
+      "Fast Api",
+      "Django",
+      "MVC",
+      "Microservice",
+    ],
   },
   {
-    name: "Spring Framework",
-    icon: Images.Spring,
+    name: "Frontend tools",
+    color: "green",
+    items: ["React", "Redux", "HTML5", "CSS5", "Bootstrap & Grid System"],
   },
   {
-    name: "React",
-    icon: Images.React,
+    name: "Concepts",
+    color: "teal",
+    items: [
+      "Data Structure",
+      "Algorithm",
+      "Cryptography",
+      "Database design",
+      "Object Oriented Programming",
+    ],
   },
   {
-    name: "Java Script",
-    icon: Images.JavaScript,
+    name: "Tools & Utilities",
+    color: "white",
+    items: ["Git", "Jenkins", "Docker", "Maven"],
   },
   {
-    name: "Type Script",
-    icon: Images.TypeScript,
+    name: "Database System",
+    color: "red",
+    items: ["PostgreSQL", "MySQL", "SQLite"],
   },
   {
-    name: "PostgreSQL",
-    icon: Images.PostgreSQL,
-  },
-  {
-    name: "MySQL",
-    icon: Images.MySQL,
-  },
-  {
-    name: "Maven",
-    icon: Images.Maven,
-  },
-  {
-    name: "Jenkins",
-    icon: Images.Jenkins,
-  },
-  {
-    name: "Docker",
-    icon: Images.Docker,
-  },
-  {
-    name: "Git",
-    icon: Images.Git,
+    name: "Operating System",
+    color: "yellow",
+    items: ["Linux", "Windows"],
   },
 ];
 
 function Skills() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
-  return (
-    <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
+  const header = (
+    <>
       <div className="flex justify-content-center text-gradient">
         <h2 className="flex justify-content-center align-items-center font-bold text-light-blue mt-5 mb-0">
           Technical Expertise
@@ -74,38 +77,93 @@ function Skills() {
           these areas
         </p>
       </div>
-      <div className="grid flex justify-content-center flex-wrap">
-        {!isMobile && (
-          <div className="col-4">
-            <img src={Images.Skills} alt="skill" height={"250px"} />
-          </div>
-        )}
+    </>
+  );
+
+  const ImageSection = () => {
+    return (
+      <img src={Images.Skills} alt="skill" style={{ maxHeight: "250px" }} />
+    );
+  };
+
+  const skillSection = () => {
+    const responsiveOptions = [
+      {
+        breakpoint: "1400px",
+        numVisible: 4,
+        numScroll: 1,
+      },
+      {
+        breakpoint: "1199px",
+        numVisible: 3,
+        numScroll: 1,
+      },
+      {
+        breakpoint: "767px",
+        numVisible: 2,
+        numScroll: 1,
+      },
+      {
+        breakpoint: "575px",
+        numVisible: 1,
+        numScroll: 1,
+      },
+    ];
+
+    const skillTemplate = (skill) => {
+      return (
         <div
-          className={classNames(
-            { "col-4": !isMobile },
-            { "col-12": isMobile },
-            "bg-white border-round m-5"
-          )}
+          className="border-1 surface-border border-round m-2 text-center py-5 px-3"
+          style={{ minHeight: "300px" }}
         >
-          <div className="card flex flex-row flex-wrap gap-2">
-            {techStack.map((tech) => (
-              <div
-                key={tech.name}
-                className="flex align-items-center justify-content-center"
-              >
-                <Tooltip target=".ImgToolTip" event="both" position="top" />
-                <img
-                  align="left"
-                  data-pr-tooltip={tech.name}
-                  alt={tech.name}
-                  className="ImgToolTip w-4rem m-1 border-round"
-                  src={tech.icon}
-                />
-              </div>
-            ))}
+          <div className="mb-3">
+            <div className="flex">
+              <p className={`font-bold text-lg text-${skill.color}-200`}>
+                {skill.name}
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className={`flex flex-wrap gap-2`}>
+              {skill.items.map((item) => {
+                return (
+                  <div key={item}>
+                    <Button
+                      label={item}
+                      raised
+                      outlined
+                      size="small"
+                      className={`text-${skill.color}-300`}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
+      );
+    };
+
+    return (
+      <div className="card">
+        <Carousel
+          value={skillSet}
+          circular
+          numVisible={4}
+          numScroll={1}
+          responsiveOptions={responsiveOptions}
+          autoplayInterval={3000}
+          itemTemplate={skillTemplate}
+        />
       </div>
+    );
+  };
+
+  return (
+    <div id="skills" className={classNames({ "m-5": !isMobile }, "m-2 mt-2")}>
+      {header}
+      <div className="flex justify-content-center">{ImageSection()}</div>
+      <div className="mt-6 justify-content-center">{skillSection()}</div>
     </div>
   );
 }

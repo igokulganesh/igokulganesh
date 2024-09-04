@@ -10,7 +10,7 @@ import Portfolio from "./images/projects/portfolio.png";
 
 // Headers/others
 import Contact from "../assets/images/others/contact.jpg";
-import Skills from "../assets/images/others/programming.gif";
+import Skills from "../assets/images/others/programming-2.gif";
 
 // Company Logo
 import Microchip from "../assets/images/company/microchip.png";

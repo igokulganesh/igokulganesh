@@ -4,11 +4,11 @@ import "../assets/css/Navbar.css";
 import { classNames } from "primereact/utils";
 
 const headers = [
-  { label: "About me", to: "hero", offset: -100 },
-  { label: "Experience", to: "experience", offset: -70 },
-  { label: "Technical Expertise", to: "skills", offset: -70 },
-  { label: "Personal projects", to: "projects", offset: -70 },
-  { label: "Contact", to: "contact", offset: -70 },
+  { label: "About me", to: "hero", offset: 0 },
+  { label: "Experience", to: "experience", offset: -50 },
+  { label: "Technical Expertise", to: "skills", offset: -90 },
+  { label: "Personal projects", to: "projects", offset: -90 },
+  { label: "Contact", to: "contact", offset: -120 },
 ];
 
 const Navbar = () => {
@@ -27,11 +27,11 @@ const Navbar = () => {
           to={item.to}
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={item.offset}
           duration={10}
           onClick={() => setDropDown(false)}
           onSetActive={handleSetActive}
-          className={classNames("no-underline cursor-pointer", {
+          className={classNames("text-white	no-underline cursor-pointer", {
             "active-nav": activeItem === item.to,
           })}
         >
