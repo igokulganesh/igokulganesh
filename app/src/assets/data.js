@@ -24,34 +24,8 @@ import WakaTime from "../assets/images/icons/wakaTime.png";
 import HackerRank from "../assets/images/icons/HackerRank.png";
 import LeetCode from "../assets/images/icons/LeetCode.png";
 
-// Skills
-import Java from "../assets/images/skills/java.png";
-import React from "../assets/images/skills/react.png";
-import Spring from "../assets/images/skills/spring.png";
-import Maven from "../assets/images/skills/maven.jpg";
-import Python from "../assets/images/skills/python.png";
-import JavaScript from "../assets/images/skills/js.png";
-import TypeScript from "../assets/images/skills/TypeScript.png";
-import PostgreSQL from "../assets/images/skills/postgresql.jpg";
-import MySQL from "../assets/images/skills/MySQL.jpeg";
-import Jenkins from "../assets/images/skills/Jenkins.png";
-import Docker from "../assets/images/skills/docker.png";
-import Git from "../assets/images/skills/git.png";
-
 const skills = {
   Skills,
-  Java,
-  React,
-  Spring,
-  Maven,
-  Python,
-  JavaScript,
-  TypeScript,
-  PostgreSQL,
-  MySQL,
-  Jenkins,
-  Docker,
-  Git,
 };
 
 const Images = {

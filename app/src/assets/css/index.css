@@ -95,24 +95,28 @@ a {
 
 ::-webkit-scrollbar {
   width: 0.5rem;
+  display: none;
   /* Adjust the width as desired */
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
+  display: none;
   /* Set the background color */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #d4e2f1;
+  display: none;
   /* Set the handle color */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #a8c2db;
+  display: none;
   /* Set the handle color on hover */
 }
 

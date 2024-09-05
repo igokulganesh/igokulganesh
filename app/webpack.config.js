@@ -52,17 +52,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ["file-loader?name=[name].[ext]"],
       },
-      {
-        test: /\.pdf$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-            },
-          },
-        ],
-      },
     ],
   },
   devServer: {
