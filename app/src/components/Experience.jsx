@@ -291,7 +291,7 @@ function Experience() {
           <span className="font-bold"> {totalExp} </span> &nbsp; of experience
         </p>
       </div>
-      <Accordion activeIndex={0} multiple={true}>
+      <Accordion activeIndex={[0]} multiple={true}>
         {eachAccordion}
       </Accordion>
     </div>

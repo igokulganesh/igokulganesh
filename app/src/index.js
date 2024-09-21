@@ -14,8 +14,6 @@ import { PrimeReactProvider } from "primereact/api";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <PrimeReactProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <App />
   </PrimeReactProvider>
 );
