@@ -8,7 +8,7 @@ import Project from "./components/Project";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 
-function App() {
+export function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

@@ -10,7 +10,6 @@ const experience = [
     company: "Microchip Technology",
     location: "Chennai, Tamil Nadu, India",
     logo: Images.Microchip,
-    link: Links.Microchip,
     startDate: new Date(2022, 2, 1),
     endDate: new Date(),
     roles: [
@@ -105,7 +104,6 @@ const experience = [
     logo: Images.Zoho,
     startDate: new Date(2021, 5, 1),
     endDate: new Date(2021, 7, 1),
-    link: Links.Zoho,
     description: undefined,
     roles: [
       {
@@ -237,20 +235,11 @@ function Experience() {
     setTotalExp(sum);
   }, []);
 
-  const openLink = (link) => {
-    window.open(link, "_blank", "noopener, noreferrer");
-  };
-
   const eachAccordion = experience.map((exp) => {
     const duration = calculateDuration(exp.startDate, exp.endDate);
     const header = (
       <div className="flex flex-wrap">
-        <img
-          src={exp?.logo}
-          alt={exp?.company}
-          height="50px"
-          onClick={() => openLink(exp?.link)}
-        />
+        <img src={exp?.logo} alt={exp?.company} height="50px" />
         <div className="pl-3 text-white">
           <h3 className="text-lg font-bold">{exp.company}</h3>
           <p className="text-sm font-light">

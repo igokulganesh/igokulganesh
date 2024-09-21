@@ -92,10 +92,6 @@ const Links = {
   TicTacToe_Web:
     "https://drive.google.com/drive/folders/1b5MWTrNgd1tuo1b9HZz2Ot4s8ECz1jzZ?usp=sharing",
 
-  // Company Link
-  Microchip: "https://www.microchip.com/",
-  Zoho: "https://www.zoho.com/",
-
   // Resume
   resume:
     "https://drive.google.com/file/d/1FDyTZGbIDMyUsMUy1l9e3k9NdcuoD1se/view?usp=drive_link",
