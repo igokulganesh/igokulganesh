@@ -19,7 +19,7 @@ const experience = [
         endDate: new Date(),
         skills: [
           "Java",
-          "Spring boot",
+          "Python",
           "React",
           "Cryptography",
           "Redux",
@@ -30,8 +30,8 @@ const experience = [
             <p>
               As a software developer at Microchip Technology, I have been
               working on Development of Trust Platform Design Suite (TPDS) using
-              Java, Spring boot and React to demonstrate Crypto product features
-              and usage.
+              Java, Python and React to demonstrate Crypto product features and
+              usage.
             </p>
             <b>Projects executed/executing:</b>
             <ul className="list-disc">
@@ -41,10 +41,10 @@ const experience = [
               </li>
               <li>
                 Developed multiple Interactive Usecases and configurators for
-                Microchip Crypto devices using Java and React.
+                Microchip Crypto devices using Python and React.
               </li>
               <li>
-                Developed the Java SDK for Azure IoT to enable seamless
+                Developed the Python SDK for Azure IoT to enable seamless
                 interaction with Azure cloud services, utilized in cloud based
                 Usecases.
               </li>
@@ -59,7 +59,7 @@ const experience = [
                 configuring CEC devices.
               </li>
               <li>
-                Developed a Java project for AES-GCM encryption and decryption,
+                Developed a project for AES-GCM encryption and decryption,
                 crucial for ACVP certifications.
               </li>
               <li>
