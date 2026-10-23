@@ -56,15 +56,6 @@ I'm Gokul Ganesh, a developer who loves learning new technologies and solving co
     <a href="https://www.youtube.com/channel/UCBm7Eg2p8O8pImOrv8Udu3A/featured" target="_blank">
         <img align="left" alt="Gokul's Youtube" height="30" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" />
     </a>
-    <a href="https://www.instagram.com/igokulganesh/">
-        <img align="left" alt="Gokul's Instagram" height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" />
-    </a>
-    <a href="https://twitter.com/IGokulGanesh" target="_blank">
-        <img align="left" alt="Gokul's Twitter" height="30" src="https://cdn-icons-png.flaticon.com/512/124/124021.png" />
-    </a>
-    <a href="https://leetcode.com/igokulganesh/" target="_blank">
-        <img align="left" alt="Gokul's Facebook" height="30" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" />
-    </a>
 </p>
 
 <br/><br/>
